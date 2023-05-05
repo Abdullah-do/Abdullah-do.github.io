@@ -79,7 +79,7 @@
   --bs-highlight-bg: #fff3cd;
 }
 .dropbtn {
-  background-color: #4CAF50;
+  background-color: #a38c07 ;
   color: white;
   padding: 16px;
   font-size: 16px;
@@ -104,7 +104,7 @@ border: none;
 }
 .submit-btn:hover{
   color: white;
-  background-color: #FFD700;
+  background-color: #a38c07;
 }
 /* Dropdown Content (Hidden by Default) */
 .dropdown-content {
@@ -117,7 +117,7 @@ border: none;
 }
 .cart-btn{
   color: white;
-  background-color: #4CAF50;
+  background-color: #a38c07 ;
 margin-left: 1076px;
 position: absolute
 ;
@@ -148,7 +148,7 @@ position: absolute;
 /* Change color of dropdown links on hover */
 .dropdown-content a:hover {
   color: white;
-  background-color:#4CAF50}
+  background-color:#a38c07 }
 
 /* Show the dropdown menu on hover */
 .dropdown:hover .dropdown-content {
@@ -166,7 +166,7 @@ position: absolute;
 }
 
 .col mb-5:hover{
-color: #FFD700;
+color: #a38c07;
 
 }
 
@@ -329,7 +329,7 @@ sup {
 }
 
 a {
-  color: #FFD700;
+  color: #a38c07;
   text-decoration: underline;
 }
 a:hover {
@@ -441,7 +441,7 @@ textarea {
   font-family: inherit;
   font-size: inherit;
   line-height: inherit;
-  border-color: #FFD700;
+  border-color: #a38c07;
 }
 
 button,
@@ -2844,7 +2844,7 @@ textarea.form-control-lg {
 }
 
 .btn {
-  background-color: #FFD700;
+  background-color: #a38c07;
   --bs-btn-padding-x: 0.75rem;
   --bs-btn-padding-y: 0.375rem;
   --bs-btn-font-family: ;
@@ -2889,7 +2889,7 @@ margin-bottom: 10px;
 }
 .btn:hover {
   color:white;
-  background-color: #FFD700;
+  background-color: #a38c07;
   border-color: var(--bs-btn-hover-border-color);
 }
 .btn-check + .btn:hover {
