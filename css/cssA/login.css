@@ -49,8 +49,8 @@ a {
 
 button {
 	border-radius: 20px;
-	border: 1px solid #88d200;
-	background-color: #88d200;
+	border: 1px solid #aba205;
+	background-color: #aba205;
 	color: #FFFFFF;
 	font-size: 12px;
 	font-weight: bold;
@@ -168,9 +168,9 @@ input {
 }
 
 .overlay {
-	background: #88d200;
-	background:#88d200;
-	background: #88d200;
+	background: #aba205;
+	background:#aba205;
+	background: #aba205;
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: 0 0;
@@ -235,7 +235,7 @@ input {
 }
 .social-container a:hover{
     color: white;
-    background-color: #88d200;
+    background-color: #aba205;
     border-radius: 20px;
     transition: all 0.5s;
 }
