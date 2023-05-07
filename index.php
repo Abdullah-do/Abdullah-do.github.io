@@ -39,7 +39,7 @@
 			<span>or use your account</span>
 			<input type="email" placeholder="Email" />
 			<input type="password" placeholder="Password" />
-			<a href="view/forget.html">Forgot your password?</a>
+			<a href="view/forget.php">Forgot your password?</a>
 			<button><a href="view/main.html" style="color: white;">Sign In</a></button>
 		</form>
 	</div>

@@ -20,7 +20,7 @@
 
 	<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet">
 	<!--
-			CSS
+			CS
 			============================================= -->
 	<link rel="stylesheet" href="css/linearicons.css">
 	<link rel="stylesheet" href="css/font-awesome.min.css">
@@ -30,8 +30,7 @@
 	<link rel="stylesheet" href="css/animate.min.css">
 	<link rel="stylesheet" href="css/owl.carousel.css">
 	<link rel="stylesheet" href="css/main.css">
-
-	<link href="css/css7/met-zodiac-generated.css" rel="stylesheet">
+	<link href="./css/css7/met-zodiac-generated.css" rel="stylesheet">
     <link rel="stylesheet" href="css/css7/style.css">
 </head>
 
@@ -51,7 +50,7 @@
 					</ul>
 				</div>
 				<div class="col-6 top-head-left">
-					<li><a href="profile.html"><i class='fa fa-user'></i></a></li>
+					<li><a href="profile.php"><i class='fa fa-user'></i></a></li>
 				</div>
 			</div>
 		</div>
@@ -64,17 +63,17 @@
 				<nav id="nav-menu-container">
 					<ul class="nav-menu">
 						<li class="menu-active"><a href="main.html">Home</a></li>
-						<li><a href="gallery.html">Gallery</a></li>
-						<li><a href="event.html">Events</a></li>
+						<li><a href="gallery.php">Gallery</a></li>
+						<li><a href="event.php">Events</a></li>
 
 						<li><a href="Reserve restaurant.html">Restaurant</a></li>
-						<li><a href="Membership.html">Membership</a></li>
-						<li><a href="reserve study room.html">Study Rooms</a></li>
-						<li><a href="contact.html">Contact</a></li>
+						<li><a href="Membership.php">Membership</a></li>
+						<li><a href="reserve study room.php">Study Rooms</a></li>
+						<li><a href="contact.php">Contact</a></li>
 
-						<li><a href="allproducts_shop.html">Shop</a></li>
-						<li><a href="donation.html">Donate</a></li>
-						<li><a href="feedback.html">FeedBack</a></li>
+						<li><a href="allproducts_shop.php">Shop</a></li>
+						<li><a href="donation.php">Donate</a></li>
+						<li><a href="feedback.php">FeedBack</a></li>
 
 					</ul>
 				</nav><!-- #nav-menu-container -->
@@ -91,7 +90,7 @@
 				<div class="banner-content col-lg-8">
 
 					<h1 class="text-white">
-						family and kids study room
+						teen study room
 					</h1>
 
 
@@ -108,13 +107,14 @@
 
 
 
+
 			<div class="main-wrapper wrapper" id="main-content">
     <div class="wor">
         <div class="med-hide lrg-c2"></div>
         <div class="content content-centered">    <section class="image-block image-block--xlarge image-block--text-above-below z-container">
     </section>
     <h1 class="page-title">
-Family Guides
+teen Guides
 </h1>
 
     <div class="rich-text z-container">
@@ -127,7 +127,7 @@ A study room dedicated to ancient Egypt can be a great way to introduce kids to 
 
 <div class="promo-area--body z-container">
     <div class="promo-area__image-container">
-            <img src="img\OIP (5).jpg" class="image-block__image" alt="Cover of a brochure with a very colorful illustration of visitors and families on The Met&#39;s Plaza.">
+            <img src="img\46c9c581d9004370d808f2710177dc75.jpg" class="image-block__image" alt="Cover of a brochure with a very colorful illustration of visitors and families on The Met&#39;s Plaza.">
         
     </div>
     <div class="image-block__description rich-text">
@@ -139,11 +139,11 @@ A study room dedicated to ancient Egypt can be a great way to introduce kids to 
 </div>
 <div class="promo-area--body z-container">
     <div class="promo-area__image-container">
-            <img src="img\croix_vie_or.jpg" class="image-block__image" alt="Cover of a brochure with a very colorful illustration of jousting knights on horseback galloping">
+            <img src="img\71d5968167ba8191f4d33378be0c8ed8.jpg" class="image-block__image" alt="Cover of a brochure with a very colorful illustration of jousting knights on horseback galloping">
      
     </div>
     <div class="image-block__description rich-text">
-        <h3>Ankh</h3>
+        <h3>ancient egypt jewelry</h3>
         <p>The ankh is a symbol of life and is often seen in ancient Egyptian art and inscriptions.</p>
 <p><em> A replica of an ankh can be a great way to teach kids about the beliefs and religion of ancient Egyptians.</em></p>
     </div>
@@ -246,6 +246,7 @@ A study room dedicated to ancient Egypt can be a great way to introduce kids to 
         <div class="med-hide lrg-c2"></div>
     </div>
 </div>
+			
 
 
 

@@ -10,16 +10,16 @@
             e.preventDefault(); // prevent default form submit
 
             $.ajax({
-                url: 'mail.html', // form action url
+                url: 'mail.php', // form action url
                 type: 'POST', // form submit method get/post
                 dataType: 'html', // request type html/json/xml
                 data: form.serialize(), // serialize form data
                 beforeSend: function() {
                     alert.fadeOut();
-                    submit.html('Sending....'); // change submit button text
+                    submit.php('Sending....'); // change submit button text
                 },
                 success: function(data) {
-                    alert.html(data).fadeIn(); // fade in response data
+                    alert.php(data).fadeIn(); // fade in response data
                     form.trigger('reset'); // reset form
                     submit.attr("style", "display: none !important");; // reset submit button text
                 },

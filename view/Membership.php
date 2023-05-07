@@ -47,7 +47,7 @@
 				  			</ul>
 				  		</div>	
 						  <div class="col-6 top-head-left">
-							<li><a href="profile.html"><i class='fa fa-user'></i></a></li>
+							<li><a href="profile.php"><i class='fa fa-user'></i></a></li>
 				  		</div>		  			
 			  		</div>
 			  	</div>
@@ -60,17 +60,17 @@
 				      <nav id="nav-menu-container">
 				        <ul class="nav-menu">
 				          <li class="menu-active"><a href="main.html">Home</a></li>
-				          <li><a href="gallery.html">Gallery</a></li>
-				          <li><a href="event.html">Events</a></li>
+				          <li><a href="gallery.php">Gallery</a></li>
+				          <li><a href="event.php">Events</a></li>
 				      
 				          <li><a href="Reserve restaurant.html">Restaurant</a></li>
-						  <li><a href="Membership.html">Membership</a></li>
-						  <li><a href="reserve study room.html">Study Rooms</a></li>
-				          <li><a href="contact.html">Contact</a></li>
+						  <li><a href="Membership.php">Membership</a></li>
+						  <li><a href="reserve study room.php">Study Rooms</a></li>
+				          <li><a href="contact.php">Contact</a></li>
 						 
-						  <li><a href="allproducts_shop.html">Shop</a></li>
-						  <li><a href="donation.html">Donate</a></li>
-						  <li><a href="feedback.html">FeedBack</a></li>
+						  <li><a href="allproducts_shop.php">Shop</a></li>
+						  <li><a href="donation.php">Donate</a></li>
+						  <li><a href="feedback.php">FeedBack</a></li>
 				          	          
 				        </ul>
 				      </nav><!-- #nav-menu-container -->		    		

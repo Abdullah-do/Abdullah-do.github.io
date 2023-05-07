@@ -47,7 +47,7 @@
 				  			</ul>
 				  		</div>	
 						  <div class="col-6 top-head-left">
-							<li><a href="profile.html"><i class='fa fa-user'></i></a></li>
+							<li><a href="profile.php"><i class='fa fa-user'></i></a></li>
 				  		</div>		  			
 			  		</div>
 			  	</div>
@@ -60,17 +60,17 @@
 				      <nav id="nav-menu-container">
 				        <ul class="nav-menu">
 				          <li class="menu-active"><a href="main.html">Home</a></li>
-				          <li><a href="gallery.html">Gallery</a></li>
-				          <li><a href="event.html">Events</a></li>
+				          <li><a href="gallery.php">Gallery</a></li>
+				          <li><a href="event.php">Events</a></li>
 				      
 				          <li><a href="Reserve restaurant.html">Restaurant</a></li>
-						  <li><a href="Membership.html">Membership</a></li>
-						  <li><a href="reserve study room.html">Study Rooms</a></li>
-				          <li><a href="contact.html">Contact</a></li>
+						  <li><a href="Membership.php">Membership</a></li>
+						  <li><a href="reserve study room.php">Study Rooms</a></li>
+				          <li><a href="contact.php">Contact</a></li>
 						 
-						  <li><a href="allproducts_shop.html">Shop</a></li>
-						  <li><a href="donation.html">Donate</a></li>
-						  <li><a href="feedback.html">FeedBack</a></li>
+						  <li><a href="allproducts_shop.php">Shop</a></li>
+						  <li><a href="donation.php">Donate</a></li>
+						  <li><a href="feedback.php">FeedBack</a></li>
 				          	          
 				        </ul>
 				      </nav><!-- #nav-menu-container -->		    		
@@ -87,10 +87,8 @@
 						<div class="banner-content col-lg-8">
 							
 							<h1 class="text-white">
-						Replica		
+						Clothing	
 							</h1>
-							
-							
 						</div>											
 					</div>
 				</div>					
@@ -106,145 +104,145 @@
 					<div class="row d-flex justify-content-center">
 						<div class="menu-content pb-70 col-lg-8">
 							<div class="title text-center">
-								<h1 class="mb-10">Every purchase supports the egyptian Museum</h1>
+								<h1 class="mb-10">Show off your love for ancient history with our fun collection of clothing and accessories</h1>
 								
 							</div>
 						</div>
 					</div>						
-					<div class="test"><a  href="cartt33.html"><div class ="cartt">
+					<div class="test"><a  href="cartt33.php"><div class ="cartt">
 						<button class="cart-btn">cart &nbsp;<i class="bi bi-basket"></i></button></div>	</a>				
 										<div class="dropdown">
 											<button class="dropbtn">categories</button>
 											<div class="dropdown-content">
-											  <a href="replica.html">replica</a>
-											  <a href="jewellery.html">jewellery</a>
-											  <a href="clothing.html">clothing</a>
+											  <a href="replica.php">replica</a>
+											  <a href="jewellery.php">jewellery</a>
+											  <a href="clothing.php">clothing</a>
 											</div>
 										</div>
 										</div>
-					  <section class="py-5">
-						<div class="container px-4 px-lg-5 mt-5">
-							<div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
-								
-								<div class="col mb-5">
-									<div class="card h-100">
-										<!-- Product image-->
-										<img class="card-img-top" src="shopimages\image6.jpg" alt="..." />
-										<!-- Product details-->
-										<div class="card-body p-4">
-											<div class="text-center">
-												<!-- Product name-->
-												<h5 class="fw-bolder">Gayer-Anderson Cat Statue Replica</h5>
-												<div class="d-flex justify-content-center small text-warning mb-2">
-													<div class="bi-star-fill"></div>
-													<div class="bi-star-fill"></div>
-													<div class="bi-star-fill"></div>
-													<div class="bi-star-fill"></div>
-													<div class="bi-star-half"></div>
+				
+							<section class="py-5">
+								<div class="container px-4 px-lg-5 mt-5">
+									<div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
+										
+										<div class="col mb-5">
+											<div class="card h-100">
+												<!-- Product image-->
+												<img class="card-img-top" src="shopimages\image10.jpg" alt="Story of Troy Unisex T-Shirt (L)" />
+												<!-- Product details-->
+												<div class="card-body p-4">
+													<div class="text-center">
+														<!-- Product name-->
+														<h5 class="fw-bolder">Story of Troy Unisex T-Shirt (L)</h5>
+														<div class="d-flex justify-content-center small text-warning mb-2">
+															<div class="bi-star-fill"></div>
+															<div class="bi-star-fill"></div>
+															<div class="bi-star-fill"></div>
+															<div class="bi-star-fill"></div>
+															<div class="bi-star-half"></div>
+														</div>
+														<!-- Product price-->
+														£450.00
+													</div>
 												</div>
-												<!-- Product price-->
-												£450.00
+												<!-- Product actions-->
+												<div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+													<div class="text-center"><a class="btn btn-outline-dark mt-auto" href="Story of Troy Unisex T-Shirt (L).php">View options</a></div>
+												</div>
 											</div>
 										</div>
-										<!-- Product actions-->
-										<div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-											<div class="text-center"><a class="btn btn-outline-dark mt-auto" href="file:///D:/wed%20development/startbootstrap-shop-item-gh-pages/profile.html">View options</a></div>
+										<div class="col mb-5">
+											<div class="card h-100">
+												<!-- Sale badge-->
+												<div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Sale</div>
+												<!-- Product image-->
+												<img class="card-img-top" src="shopimages\image11.jpg" alt="Eye of Horus Men's Socks" />
+												<!-- Product details-->
+												<div class="card-body p-4">
+													<div class="text-center">
+														<!-- Product name-->
+														<h5 class="fw-bolder">Eye of Horus Men's Socks</h5>
+														<!-- Product reviews-->
+														<div class="d-flex justify-content-center small text-warning mb-2">
+															<div class="bi-star-fill"></div>
+															<div class="bi-star-fill"></div>
+															<div class="bi-star-fill"></div>
+															<div class="bi-star-fill"></div>
+															<div class="bi-star-fill"></div>
+														</div>
+														<!-- Product price-->
+														<span class="text-muted text-decoration-line-through">£14.00</span>
+														$12.00
+													</div>
+												</div>
+												<!-- Product actions-->
+												<div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+													<div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">View options</a></div>
+												</div>
+											</div>
 										</div>
+										<div class="col mb-5">
+											<div class="card h-100">
+												<!-- Sale badge-->
+												<div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Sale</div>
+												<!-- Product image-->
+												<img class="card-img-top" src="shopimages\image12.jpg" alt="Fuji Wave Face Mask" />
+												<!-- Product details-->
+												<div class="card-body p-4">
+													<div class="text-center">
+														<!-- Product name-->
+														<h5 class="fw-bolder">Fuji Wave Face Mask</h5>
+														<div class="d-flex justify-content-center small text-warning mb-2">
+															<div class="bi-star-fill"></div>
+															<div class="bi-star-fill"></div>
+															<div class="bi-star-fill"></div>
+															<div class="bi-star-half"></div>
+															<div class="bi-star-empty"></div>
+														</div>
+														<!-- Product price-->
+														<span class="text-muted text-decoration-line-through">£7.00</span>
+														£6.00
+													</div>
+												</div>
+												<!-- Product actions-->
+												<div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+													<div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">View options</a></div>
+												</div>
+											</div>
+										</div>
+										<div class="col mb-5">
+											<div class="card h-100">
+												<!-- Product image-->
+												<img class="card-img-top" src="shopimages\image13.jpg" alt="Fuji Wave Slim Fit T-shirt, (M)" />
+												<!-- Product details-->
+												<div class="card-body p-4">
+													<div class="text-center">
+														<!-- Product name-->
+														<h5 class="fw-bolder">Fuji Wave Slim Fit T-shirt, (M)</h5>
+														<!-- Product reviews-->
+														<div class="d-flex justify-content-center small text-warning mb-2">
+															<div class="bi-star-fill"></div>
+															<div class="bi-star-fill"></div>
+															<div class="bi-star-fill"></div>
+															<div class="bi-star"></div>
+															<div class="bi-star"></div>
+														</div>
+														<!-- Product price-->
+														£27.00
+													</div>
+												</div>
+												<!-- Product actions-->
+												<div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+													<div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">View options</a></div>
+												</div>
+											</div>
+										</div>
+							  
+							  
 									</div>
 								</div>
-								<div class="col mb-5">
-									<div class="card h-100">
-										<!-- Sale badge-->
-										<div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Sale</div>
-										<!-- Product image-->
-										<img class="card-img-top" src="shopimages\image7.jpg" alt="..." />
-										<!-- Product details-->
-										<div class="card-body p-4">
-											<div class="text-center">
-												<!-- Product name-->
-												<h5 class="fw-bolder">Anglo-Saxon Instrument Case Replica</h5>
-												<!-- Product reviews-->
-												<div class="d-flex justify-content-center small text-warning mb-2">
-													<div class="bi-star-fill"></div>
-													<div class="bi-star-fill"></div>
-													<div class="bi-star-fill"></div>
-													<div class="bi-star-fill"></div>
-													<div class="bi-star-fill"></div>
-												</div>
-												<!-- Product price-->
-												<span class="text-muted text-decoration-line-through">£140.00</span>
-												$180.00
-											</div>
-										</div>
-										<!-- Product actions-->
-										<div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-											<div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">View options</a></div>
-										</div>
-									</div>
-								</div>
-								<div class="col mb-5">
-									<div class="card h-100">
-										<!-- Sale badge-->
-										<div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Sale</div>
-										<!-- Product image-->
-										<img class="card-img-top" src="shopimages\image8.jpg" alt="Horse of Selene Sculpture, Large" />
-										<!-- Product details-->
-										<div class="card-body p-4">
-											<div class="text-center">
-												<!-- Product name-->
-												<h5 class="fw-bolder">Horse of Selene Sculpture, Large</h5>
-												<div class="d-flex justify-content-center small text-warning mb-2">
-													<div class="bi-star-fill"></div>
-													<div class="bi-star-fill"></div>
-													<div class="bi-star-fill"></div>
-													<div class="bi-star-half"></div>
-													<div class="bi-star-empty"></div>
-												</div>
-												<!-- Product price-->
-												<span class="text-muted text-decoration-line-through">£750.00</span>
-												£650.00
-											</div>
-										</div>
-										<!-- Product actions-->
-										<div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-											<div class="text-center"><a class="btn btn-outline-dark mt-auto" href="Horse of Selene Sculpture, Large.html">View options</a></div>
-										</div>
-									</div>
-								</div>
-								<div class="col mb-5">
-									<div class="card h-100">
-										<!-- Product image-->
-										<img class="card-img-top" src="shopimages\image9.jpg" alt="Head of Hypnos Replica" />
-										<!-- Product details-->
-										<div class="card-body p-4">
-											<div class="text-center">
-												<!-- Product name-->
-												<h5 class="fw-bolder">Head of Hypnos Replica</h5>
-												<!-- Product reviews-->
-												<div class="d-flex justify-content-center small text-warning mb-2">
-													<div class="bi-star-fill"></div>
-													<div class="bi-star-fill"></div>
-													<div class="bi-star-fill"></div>
-													<div class="bi-star"></div>
-													<div class="bi-star"></div>
-												</div>
-												<!-- Product price-->
-												£7,150.00
-											</div>
-										</div>
-										<!-- Product actions-->
-										<div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-											<div class="text-center"><a class="btn btn-outline-dark mt-auto" href="Head of Hypnos Replica.html">View options</a></div>
-										</div>
-									</div>
-								</div>
-							
-					  
-							</div>
-						</div>
-					</section>
-					</section>
-
+							</section>
+							</section>
 
 
 			<!-- start footer Area -->		

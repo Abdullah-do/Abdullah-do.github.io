@@ -47,7 +47,7 @@
 				  			</ul>
 				  		</div>	
 						  <div class="col-6 top-head-left">
-							<li><a href="profile.html"><i class='fa fa-user'></i></a></li>
+							<li><a href="profile.php"><i class='fa fa-user'></i></a></li>
 				  		</div>		  			
 			  		</div>
 			  	</div>
@@ -60,17 +60,17 @@
 				      <nav id="nav-menu-container">
 				        <ul class="nav-menu">
 				          <li class="menu-active"><a href="main.html">Home</a></li>
-				          <li><a href="gallery.html">Gallery</a></li>
-				          <li><a href="event.html">Events</a></li>
+				          <li><a href="gallery.php">Gallery</a></li>
+				          <li><a href="event.php">Events</a></li>
 				      
 				          <li><a href="Reserve restaurant.html">Restaurant</a></li>
-						  <li><a href="Membership.html">Membership</a></li>
-						  <li><a href="reserve study room.html">Study Rooms</a></li>
-				          <li><a href="contact.html">Contact</a></li>
+						  <li><a href="Membership.php">Membership</a></li>
+						  <li><a href="reserve study room.php">Study Rooms</a></li>
+				          <li><a href="contact.php">Contact</a></li>
 						 
-						  <li><a href="allproducts_shop.html">Shop</a></li>
-						  <li><a href="donation.html">Donate</a></li>
-						  <li><a href="feedback.html">FeedBack</a></li>
+						  <li><a href="allproducts_shop.php">Shop</a></li>
+						  <li><a href="donation.php">Donate</a></li>
+						  <li><a href="feedback.php">FeedBack</a></li>
 				          	          
 				        </ul>
 				      </nav><!-- #nav-menu-container -->		    		
@@ -111,14 +111,14 @@
 							</div>
 						</div>
 					</div>						
-					<div class="test"><a  href="cartt33.html"><div class ="cartt">
+					<div class="test"><a  href="cartt33.php"><div class ="cartt">
 						<button class="cart-btn">cart &nbsp;<i class="bi bi-basket"></i></button></div>	</a>				
 										<div class="dropdown">
 											<button class="dropbtn">categories</button>
 											<div class="dropdown-content">
-											  <a href="replica.html">replica</a>
-											  <a href="jewellery.html">jewellery</a>
-											  <a href="clothing.html">clothing</a>
+											  <a href="replica.php">replica</a>
+											  <a href="jewellery.php">jewellery</a>
+											  <a href="clothing.php">clothing</a>
 											</div>
 										</div>
 										</div>
@@ -147,7 +147,7 @@
 										</div>
 										<!-- Product actions-->
 										<div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-											<div class="text-center"><a class="btn btn-outline-dark mt-auto" href="Oval Hieroglyphs Stud Earrings.html">View options</a></div>
+											<div class="text-center"><a class="btn btn-outline-dark mt-auto" href="Oval Hieroglyphs Stud Earrings.php">View options</a></div>
 										</div>
 									</div>
 								</div>
@@ -177,7 +177,7 @@
 										</div>
 										<!-- Product actions-->
 										<div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-											<div class="text-center"><a class="btn btn-outline-dark mt-auto" href="Little Owl Badge.html">View options</a></div>
+											<div class="text-center"><a class="btn btn-outline-dark mt-auto" href="Little Owl Badge.php">View options</a></div>
 										</div>
 									</div>
 								</div>
@@ -319,7 +319,7 @@
 										</div>
 										<!-- Product actions-->
 										<div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-											<div class="text-center"><a class="btn btn-outline-dark mt-auto" href="Horse of Selene Sculpture, Large.html">View options</a></div>
+											<div class="text-center"><a class="btn btn-outline-dark mt-auto" href="Horse of Selene Sculpture, Large.php">View options</a></div>
 										</div>
 									</div>
 								</div>
@@ -346,7 +346,7 @@
 										</div>
 										<!-- Product actions-->
 										<div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-											<div class="text-center"><a class="btn btn-outline-dark mt-auto" href="Head of Hypnos Replica.html">View options</a></div>
+											<div class="text-center"><a class="btn btn-outline-dark mt-auto" href="Head of Hypnos Replica.php">View options</a></div>
 										</div>
 									</div>
 								</div>
@@ -399,7 +399,7 @@
 										</div>
 										<!-- Product actions-->
 										<div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-											<div class="text-center"><a class="btn btn-outline-dark mt-auto" href="Story of Troy Unisex T-Shirt (L).html">View options</a></div>
+											<div class="text-center"><a class="btn btn-outline-dark mt-auto" href="Story of Troy Unisex T-Shirt (L).php">View options</a></div>
 										</div>
 									</div>
 								</div>

@@ -47,7 +47,7 @@
 				  			</ul>
 				  		</div>	
 						  <div class="col-6 top-head-left">
-							<li><a href="profile.html"><i class='fa fa-user'></i></a></li>
+							<li><a href="profile.php"><i class='fa fa-user'></i></a></li>
 				  		</div>		  			
 			  		</div>
 			  	</div>
@@ -60,17 +60,17 @@
 				      <nav id="nav-menu-container">
 				        <ul class="nav-menu">
 				          <li class="menu-active"><a href="main.html">Home</a></li>
-				          <li><a href="gallery.html">Gallery</a></li>
-				          <li><a href="event.html">Events</a></li>
+				          <li><a href="gallery.php">Gallery</a></li>
+				          <li><a href="event.php">Events</a></li>
 				      
 				          <li><a href="Reserve restaurant.html">Restaurant</a></li>
-						  <li><a href="Membership.html">Membership</a></li>
-						  <li><a href="reserve study room.html">Study Rooms</a></li>
-				          <li><a href="contact.html">Contact</a></li>
+						  <li><a href="Membership.php">Membership</a></li>
+						  <li><a href="reserve study room.php">Study Rooms</a></li>
+				          <li><a href="contact.php">Contact</a></li>
 						 
-						  <li><a href="allproducts_shop.html">Shop</a></li>
-						  <li><a href="donation.html">Donate</a></li>
-						  <li><a href="feedback.html">FeedBack</a></li>
+						  <li><a href="allproducts_shop.php">Shop</a></li>
+						  <li><a href="donation.php">Donate</a></li>
+						  <li><a href="feedback.php">FeedBack</a></li>
 				          	          
 				        </ul>
 				      </nav><!-- #nav-menu-container -->		    		
@@ -87,7 +87,7 @@
 						<div class="banner-content col-lg-8">
 							
 							<h1 class="text-white">
-						Cart	
+								Head of Hypnos Replica	
 							</h1>
 							
 							
@@ -101,103 +101,159 @@
 
 
 			<!-- Start upcoming-exibition Area -->
+		
+			<!-- End banner Area -->	
+
+
+			<!-- Start upcoming-exibition Area -->
 			<section class="upcoming-exibition-area section-gap">
-				<div class="container">
-					<div class="row d-flex justify-content-center">
-						<div class="menu-content pb-70 col-lg-8">
-							<div class="title text-center">
-								<h1 class="mb-10">Every purchase supports the egyptian Museum</h1>
-							</div>
-						</div>
-					</div>						
-						<div class="row">
-							<div class="col-md-8 cart">
-								<div class="title">
-									<div class="row">
-										<div class="col"><h4><b>Shopping Cart</b></h4></div>
-										<div class="col align-self-center text-right text-muted">3 items</div>
-									</div>
-								</div>    
-								<div class="row border-top border-bottom">
-									<div class="row main align-items-center">
-										<div class="col-2"><img class="img-fluid" src="shopimages/image12.jpg"></div>
-										<div class="col">
-											<div class="row text-muted">clothing</div>
-											<div class="row">Fuji Wave Face Mask</div>
-										</div>
-										<div class="col">
-											<input type="number" class="number"id="quantity" name="quantity" min="1" max="5">
-											<input type="submit" class="submit-btn">
-										</div>
-										<div class="col">&euro; <span class="text-muted text-decoration-line-through">£7.00</span>
-											£6.00<span class="close">&#10005;</span></div>
-									</div>
+				
+				<section class="py-5">
+					<div class="container px-4 px-lg-5 my-5">
+						<div class="row gx-4 gx-lg-5 align-items-center">
+							<div class="col-md-6"><img class="card-img-top mb-5 mb-md-0" src="shopimages/image9.jpg" alt="Story of Troy Unisex T-Shirt (L)" /></div>
+							<div class="col-md-6">
+								<div class="small mb-1">SKU: BST-258</div>
+								<h1 class="display-5 fw-bolder">Head of Hypnos Replica</h1>
+								<div class="fs-5 mb-5">
+									<span > £7,150.00</span>
+				
 								</div>
-								<div class="row">
-									<div class="row main align-items-center">
-										<div class="col-2"><img class="img-fluid" src="shopimages/image10.jpg"></div>
-										<div class="col">
-											<div class="row text-muted">clothing</div>
-											<div class="row">Story of Troy Unisex T-Shirt (L)</div>
-										</div>
-										<div class="col">
-											<input type="number"class="number" id="quantity" name="quantity" min="1" max="5">
-											<input type="submit" class="submit-btn">
-										</div>
-										<div class="col">&euro; 450.00 <span class="close">&#10005;</span></div>
-									</div>
-								</div>
-								<div class="row border-top border-bottom">
-									<div class="row main align-items-center">
-										<div class="col-2"><img class="img-fluid" src="shopimages/image1.jpg"></div>
-										<div class="col">
-											<div class="row text-muted">jewellery</div>
-											<div class="row">Oval Hieroglyphs Stud Earrings</div>
-										</div>
-										<div class="col">
-  <input type="number"class="number" id="quantity" name="quantity" min="1" max="5">
-  <input type="submit" class="submit-btn">
-
-
-										</div>
-										<div class="col">&euro; 60.00 <span class="close">&#10005;</span></div>
-									</div>
-								</div>
-								<button class="btn">continue Shopping</button>
-							</div>
-							<div class="col-md-4 summary">
-								<div><h5><b>Summary</b></h5></div>
-								<hr>
-								<div class="row">
+								<p class="lead">This magnificent replica is cast and hand-finished in the UK from resin, 
 									
-									<div class="col text-right">&euro; 132.00</div>
+									using a mould taken from the original bronze winged head, which is now housed in the Department of Greek and Roman Antiquities in the British Museum.
+									</p>
+								<div class="d-flex">
+									<input class="form-control text-center me-3" id="inputQuantity" type="num" value="1" style="max-width: 3rem" />
+									<button class="btn btn-outline-dark flex-shrink-0" type="button">
+										<i class="bi-cart-fill me-1"></i>
+									add to Cart
+									</button>
 								</div>
-								<form>
-									<p>SHIPPING</p>
-									<select><option class="text-muted">Standard-Delivery- &euro;5.00</option></select>
-									<p>GIVE CODE</p>
-									<input id="code" placeholder="Enter your code">
-								</form>
-								<div class="row" style="border-top: 1px solid rgba(0,0,0,.1); padding: 2vh 0;">
-									<div class="col">TOTAL PRICE</div>
-									<div class="col text-right">&euro; 137.00</div>
-								</div>
-								<button class="btn">CHECKOUT</button>
 							</div>
 						</div>
-						
 					</div>
-											<script type='text/javascript' src='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js'></script>
-											<script type='text/javascript' src='#'></script>
-											<script type='text/javascript' src='#'></script>
-											<script type='text/javascript' src='#'></script>
-											<script type='text/javascript'></script>
-											<script type='text/javascript'>var myLink = document.querySelector('a[href="#"]');
-											myLink.addEventListener('click', function(e) {
-											  e.preventDefault();
-											});</script>
-					</section></section>
-
+				</section>
+				<!-- Related items section-->
+				<section class="py-5 bg-light">
+					<div class="container px-4 px-lg-5 mt-5">
+						<h2 class="fw-bolder mb-4">Related products</h2>
+						<div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
+							<div class="col mb-5">
+								<div class="card h-100">
+									<!-- Product image-->
+									<img class="card-img-top" src="shopimages/image10.jpg" alt="..." />
+									<!-- Product details-->
+									<div class="card-body p-4">
+										<div class="text-center">
+											<!-- Product name-->
+											<h5 class="fw-bolder">Story of Troy Unisex T-Shirt (L)</h5>
+											<!-- Product price-->
+											<div class="d-flex justify-content-center small text-warning mb-2">
+												<div class="bi-star-fill"></div>
+												<div class="bi-star-fill"></div>
+												<div class="bi-star-fill"></div>
+												<div class="bi-star-fill"></div>
+												<div class="bi-star-half"></div>
+											</div>
+											£450.00
+										</div>
+									</div>
+									<!-- Product actions-->
+									<div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+										<div class="text-center"><a class="btn btn-outline-dark mt-auto" href="Story of Troy Unisex T-Shirt (L).php">View options</a></div>
+									</div>
+								</div>
+							</div>
+							<div class="col mb-5">
+								<div class="card h-100">
+									<!-- Sale badge-->
+									<div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Sale</div>
+									<!-- Product image-->
+									<img class="card-img-top" src="shopimages/image1.jpg" alt="..." />
+									<!-- Product details-->
+									<div class="card-body p-4">
+										<div class="text-center">
+											<!-- Product name-->
+											<h5 class="fw-bolder">Oval Hieroglyphs Stud Earrings</h5>
+											<!-- Product reviews-->
+											<div class="d-flex justify-content-center small text-warning mb-2">
+												<div class="bi-star-fill"></div>
+												<div class="bi-star-fill"></div>
+												<div class="bi-star-fill"></div>
+												<div class="bi-star-fill"></div>
+												<div class="bi-star-half"></div>
+											</div>
+											<!-- Product price-->
+											<span>£60.00</span>
+										  
+										</div>
+									</div>
+									<!-- Product actions-->
+									<div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+										<div class="text-center"><a class="btn btn-outline-dark mt-auto" href="Oval Hieroglyphs Stud Earrings.php">view options</a></div>
+									</div>
+								</div>
+							</div>
+							<div class="col mb-5">
+								<div class="card h-100">
+									<!-- Sale badge-->
+									<div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Sale</div>
+									<!-- Product image-->
+									<img class="card-img-top" src="shopimages/image2.jpg" alt="..." />
+									<!-- Product details-->
+									<div class="card-body p-4">
+										<div class="text-center">
+											<!-- Product name-->
+											<h5 class="fw-bolder">Little Owl Badge</h5>
+											<!-- Product price-->
+											<div class="d-flex justify-content-center small text-warning mb-2">
+												<div class="bi-star-fill"></div>
+												<div class="bi-star-fill"></div>
+												<div class="bi-star-fill"></div>
+												<div class="bi-star-fill"></div>
+												<div class="bi-star-fill"></div>
+											</div>
+											<span class="text-muted text-decoration-line-through">£1.20</span>
+											£1.00
+										</div>
+									</div>
+									<!-- Product actions-->
+									<div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+										<div class="text-center"><a class="btn btn-outline-dark mt-auto" href="Little Owl Badge.php">view options</a></div>
+									</div>
+								</div>
+							</div>
+							<div class="col mb-5">
+								<div class="card h-100">
+									<!-- Product image-->
+									<img class="card-img-top" src="shopimages/image8.jpg" alt="..." />
+									<!-- Product details-->
+									<div class="card-body p-4">
+										<div class="text-center">
+											<!-- Product name-->
+											<h5 class="fw-bolder">Horse of Selene Sculpture, Large</h5>
+											<!-- Product reviews-->
+											<div class="d-flex justify-content-center small text-warning mb-2">
+												<div class="bi-star-fill"></div>
+												<div class="bi-star-fill"></div>
+												<div class="bi-star-fill"></div>
+												<div class="bi-star-fill"></div>
+												<div class="bi-star-fill"></div>
+											</div>
+											<!-- Product price-->
+											£650.00
+										</div>
+									</div>
+									<!-- Product actions-->
+									<div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+										<div class="text-center"><a class="btn btn-outline-dark mt-auto" href="Horse of Selene Sculpture, Large.php">view options</a></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section></section>
 
 			<!-- start footer Area -->		
 			<footer class="footer-area section-gap">

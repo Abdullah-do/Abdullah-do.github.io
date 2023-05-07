@@ -55,7 +55,7 @@
 					</ul>
 				</div>
 				<div class="col-6 top-head-left">
-					<li><a href="profile.html"><i class='fa fa-user'></i></a></li>
+					<li><a href="profile.php"><i class='fa fa-user'></i></a></li>
 				</div>
 			</div>
 		</div>
@@ -68,15 +68,15 @@
 				<nav id="nav-menu-container">
 					<ul class="nav-menu">
 						<li class="menu-active"><a href="main.html">Home</a></li>
-						<li><a href="gallery.html">Gallery</a></li>
-						<li><a href="event.html">Events</a></li>
+						<li><a href="gallery.php">Gallery</a></li>
+						<li><a href="event.php">Events</a></li>
 						<li><a href="Reserve restaurant.html">Restaurant</a></li>
-						<li><a href="Membership.html">Membership</a></li>
-						<li><a href="reserve study room.html">Study Rooms</a></li>
-						<li><a href="contact.html">Contact</a></li>
-						<li><a href="allproducts_shop.html">Shop</a></li>
-						<li><a href="donation.html">Donate</a></li>
-						<li><a href="feedback.html">FeedBack</a></li>
+						<li><a href="Membership.php">Membership</a></li>
+						<li><a href="reserve study room.php">Study Rooms</a></li>
+						<li><a href="contact.php">Contact</a></li>
+						<li><a href="allproducts_shop.php">Shop</a></li>
+						<li><a href="donation.php">Donate</a></li>
+						<li><a href="feedback.php">FeedBack</a></li>
 					</ul>
 				</nav><!-- #nav-menu-container -->
 			</div>
@@ -127,7 +127,7 @@
 						
 							<div class="content-card content-card--productive content-card--no-align">
 									<div class="card-image__wrapper card-image__wrapper-fixed-ratio ratio-16-9">
-									<a href="family.html" class="invisible-redundant-link" aria-hidden="true" tabindex="-1"></a>
+									<a href="family.php" class="invisible-redundant-link" aria-hidden="true" tabindex="-1"></a>
 										<img class="card-image lazy loaded" src="img\OIP (3).jfif" alt="A young girl leads her family across a granite-floored gallery of Egyptian stone figures and painted friezes" width="1024" height="724" >
 									</div>
 							</div>
@@ -145,7 +145,7 @@
 				
 							<div class="content-card content-card--productive content-card--no-align">
 									<div class="card-image__wrapper card-image__wrapper-fixed-ratio ratio-16-9">
-										<a href="adult.html" class="invisible-redundant-link" aria-hidden="true" tabindex="-1"></a>
+										<a href="adult.php" class="invisible-redundant-link" aria-hidden="true" tabindex="-1"></a>
 										<img class="card-image lazy loaded" src="img\R (1).jfif" alt="A young girl leads her family across a granite-floored gallery of Egyptian stone figures and painted friezes" width="1024" height="724" >
 									</div>
 				
@@ -165,7 +165,7 @@
 				
 							<div class="content-card content-card--productive content-card--no-align">
 									<div class="card-image__wrapper card-image__wrapper-fixed-ratio ratio-16-9">
-										<a href="teen.html" class="invisible-redundant-link" aria-hidden="true" tabindex="-1"></a>
+										<a href="teen.php" class="invisible-redundant-link" aria-hidden="true" tabindex="-1"></a>
 										<img class="card-image lazy loaded" src="img\190917125736-egypt-museums-tz1-super-tease.jpg" alt="A young girl leads her family across a granite-floored gallery of Egyptian stone figures and painted friezes" width="1024" height="724" >
 									</div>
 							</div>
