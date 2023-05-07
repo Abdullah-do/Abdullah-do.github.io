@@ -1,11 +1,4 @@
-<?php
-require_once '../controller/DBController.php';
 
-$db = new DataBase();
-
-$db->connect();
-
-?>
 <!DOCTYPE html>
 	<html lang="zxx" class="no-js">
 	<head>

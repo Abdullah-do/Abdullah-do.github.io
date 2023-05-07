@@ -14,6 +14,52 @@ if ($this->connection->connect_error){
     else
         return true;
 }
+
+
+public function close() {
+    if ($this->connection)
+    $this->connection->close();
+    else 
+    echo"Connection is not opened";  
+}
+
+
+public function insert($data) {
+    $this->connect();
+    $result = $this->connection->query($data);
+    if (!$result){
+       echo "error : " . mysqli_error($this->connection);
+       return false;
+           }
+           else{
+    $this->close();
+           }
+}
+
+public function update($data) {
+    $this->connect();
+    $result = $this->connection->query($data);
+    if (!$result){
+        echo "error : " . mysqli_error($this->connection);
+        return false;
+            }
+            else{
+     $this->close();
+            }
+}
+
+public function delete($query) {
+    $this->connect();
+    $result = $this->connection->query($query);
+    if (!$result){
+        echo "error : " . mysqli_error($this->connection);
+        return false;
+            }
+            else{
+     $this->close();
+            }
+}
+
 }
 
 
