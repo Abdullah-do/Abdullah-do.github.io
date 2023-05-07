@@ -30,7 +30,6 @@
 			<link rel="stylesheet" href="css/nice-select.css">					
 			<link rel="stylesheet" href="css/animate.min.css">
 			<link rel="stylesheet" href="css/owl.carousel.css">
-	
 			<link rel="stylesheet" href="css/main.css">
 		</head>
 		<body>
@@ -49,7 +48,7 @@
 				  			</ul>
 				  		</div>	
 						  <div class="col-6 top-head-left">
-							<li><a href="profile.html"><i class='fa fa-user'></i></a></li>
+							<li><a href="profile.php"><i class='fa fa-user'></i></a></li>
 				  		</div>		  			
 			  		</div>
 			  	</div>
@@ -57,22 +56,22 @@
 			    <div class="container">
 			    	<div class="row align-items-center justify-content-between d-flex">
 				      <div id="logo">
-				        <a href="main.html"><img src="img/logo-transparent-png.png"  alt="" title="" /></a>
+				        <a href="main.php"><img src="img/logo-transparent-png.png"  alt="" title="" /></a>
 				      </div>
 				      <nav id="nav-menu-container">
 				        <ul class="nav-menu">
-				          <li class="menu-active"><a href="main.html">Home</a></li>
-				          <li><a href="gallery.html">Gallery</a></li>
-				          <li><a href="event.html">Events</a></li>
+				          <li class="menu-active"><a href="main.php">Home</a></li>
+				          <li><a href="gallery.php">Gallery</a></li>
+				          <li><a href="event.php">Events</a></li>
 				      
-				          <li><a href="Reserve restaurant.html">Restaurant</a></li>
-						  <li><a href="Membership.html">Membership</a></li>
-						  <li><a href="reserve study room.html">Study Rooms</a></li>
-				          <li><a href="contact.html">Contact</a></li>
+				          <li><a href="Reserve restaurant.php">Restaurant</a></li>
+						  <li><a href="Membership.php">Membership</a></li>
+						  <li><a href="reserve study room.php">Study Rooms</a></li>
+				          <li><a href="contact.php">Contact</a></li>
 						 
-						  <li><a href="allproducts_shop.html">Shop</a></li>
-						  <li><a href="donation.html">Donate</a></li>
-						  <li><a href="feedback.html">FeedBack</a></li>
+						  <li><a href="allproducts_shop.php">Shop</a></li>
+						  <li><a href="donation.php">Donate</a></li>
+						  <li><a href="feedback.php">FeedBack</a></li>
 				          	          
 				        </ul>
 				      </nav><!-- #nav-menu-container -->		    		
@@ -89,7 +88,7 @@
 						<div class="banner-content col-lg-8">
 							
 							<h1 class="text-white">
-								Feedback	
+								Donation
 							</h1>
 						</div>											
 					</div>
@@ -98,80 +97,66 @@
 			<!-- End banner Area -->	
               
  <!-----------------------------------------------START CODE----------------------------------------->	
-<section>
- <div class="content-wrapper" style="margin-left: 380px; margin-right: 380px;">
-	<!-- Content -->
+ <section>
+  <!-- Content wrapper -->
 
-	<div class="container-xxl flex-grow-1 container-p-y">
-		<h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light">Forms/</span>Feedback</h4>
+  <div class="content-wrapper" style="margin-left: 380px; margin-right: 380px;">
+            <!-- Content -->
+            <div class="container-xxl flex-grow-1 container-p-y">
+              <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light">Forms/</span> donation</h4>
+              <!-- Basic Layout -->
+              <div class="row">
+                <div class="col-xl">
+                  <div class="card mb-4">
+                    <div class="card-header d-flex justify-content-between align-items-center">
+                    </div>
+                    <div class="card-body">
+                      <form>
+                        <div class="mb-3">
+                          <label class="form-label" for="basic-default-fullname">Name</label>
+                          <input type="text" class="form-control" id="basic-default-fullname" placeholder="John Doe" />
+                        </div>
+                      
+                        <div class="mb-3">
+                          <label class="form-label" for="basic-default-email">Email</label>
+                          <div class="input-group input-group-merge">
+                            <input
+                              type="text"
+                              id="basic-default-email"
+                              class="form-control"
+                              placeholder="john.doe"
+                              aria-label="john.doe"
+                              aria-describedby="basic-default-email2"
+                            />
+                            <span class="input-group-text" id="basic-default-email2">@example.com</span>
+                          </div>
+                          <div class="form-text">You can use letters, numbers & periods</div>
+                        </div>
+                        <div class="mb-3">
+                          <label class="form-label" for="basic-default-phone">price</label>
+                          <input
+                            type="text"
+                            id="basic-default-phone"
+                            class="form-control phone-mask"
+                            placeholder="200$"
+                          />
+                        </div>
+                        <div class="mb-3">
+                          <label class="form-label" for="basic-default-message">comment</label>
+                          <textarea
+                            id="basic-default-message"
+                            class="form-control"
+                            placeholder="Hi, Do you have a moment to talk Joe?"
+                          ></textarea>
+                        </div>
+                        <div class="text-center w-100"><button type="submit" class="btn btn-primary w-25">donate</button></div>
+                      </form>
+                      </div>
+                  </div>
+                </div>
+              </div>
 
-		<!-- Basic Layout -->
-		<div class="row">
-			<div class="col-xl">
-				<div class="card mb-4">
-					<div class="card-body">
-						<form>
-						<div class="mb-3">
-		  <label class="form-label" for="basic-icon-default-fullname">Full Name</label>
-		  <div class="input-group input-group-merge">
-			
-			<input
-			  type="text"
-			  class="form-control"
-			  id="basic-icon-default-fullname"
-			  placeholder="John Doe"
-			  aria-label="John Doe"
-			  aria-describedby="basic-icon-default-fullname2"
-			/>
-		  </div>
-		</div>
-		 
-		<div class="mb-3">
-		  <label class="form-label" for="basic-default-email">Email</label>
-		<div class="input-group input-group-merge">
-			<input
-			  type="text"
-			  id="basic-default-email"
-			  class="form-control"
-			  placeholder="john.doe"
-			  aria-label="john.doe"
-			  aria-describedby="basic-default-email2"
-			/>
-			<span class="input-group-text" id="basic-default-email2">@example.com</span>
-		  </div>
-		  <div class="form-text">You can use letters, numbers & periods</div>
-		</div>
-		
-		<div class="mb-3">
-		  <label class="form-label" for="basic-default-phone">subject</label>
-		  <input
-			type="text"
-			id="basic-default-phone"
-			class="form-control phone-mask"
-			placeholder="subject"
-		  />
-		</div>
-
-							<div class="mb-3">
-								<label class="form-label"
-									for="basic-icon-default-message">Message</label>
-								<div class="input-group input-group-merge">
-									
-									<textarea id="basic-icon-default-message" class="form-control"
-										placeholder="Hi, Do you have a moment to talk Joe?"
-										aria-label="Hi, Do you have a moment to talk Joe?"
-										aria-describedby="basic-icon-default-message2"></textarea>
-								</div>
-							</div>
-							
-						   <div class="text-center w-100 "> <button type="submit" class="btn ">Send</button></div>
-						</form>
-					</div>
-				</div>
-		</div>
-	</section>	
-
-
+			</section>
 
 <!-----------------------------------------------END CODE----------------------------------------->	
 			<!-- start footer Area -->		

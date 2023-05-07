@@ -50,8 +50,8 @@
 				  		</div>	
 						  <div class="col-6 top-head-left">
 						<ul>
-							<li><a href="profile.html"><i class='fa fa-user'></i></a></li>
-							<li><a href="index.html"><i class='fa fa-sign-out'></i></a></li>
+							<li><a href="profile.php"><i class='fa fa-user'></i></a></li>
+							<li><a href="index.php"><i class='fa fa-sign-out'></i></a></li>
 					    </ul>
 				  		</div>		  			
 			  		</div>
@@ -60,22 +60,22 @@
 			    <div class="container">
 			    	<div class="row align-items-center justify-content-between d-flex">
 				      <div id="logo">
-				        <a href="main.html"><img src="img/logo-transparent-png.png"  alt="" title="" /></a>
+				        <a href="main.php"><img src="img/logo-transparent-png.png"  alt="" title="" /></a>
 				      </div>
 				      <nav id="nav-menu-container">
 				        <ul class="nav-menu">
-				          <li class="menu-active"><a href="main.html">Home</a></li>
-				          <li><a href="gallery.html">Gallery</a></li>
-				          <li><a href="event.html">Events</a></li>
+				          <li class="menu-active"><a href="main.php">Home</a></li>
+				          <li><a href="gallery.php">Gallery</a></li>
+				          <li><a href="event.php">Events</a></li>
 				      
-				          <li><a href="Reserve restaurant.html">Restaurant</a></li>
-						  <li><a href="Membership.html">Membership</a></li>
-						  <li><a href="reserve study room.html">Study Rooms</a></li>
-				          <li><a href="contact.html">Contact</a></li>
+				          <li><a href="Reserve restaurant.php">Restaurant</a></li>
+						  <li><a href="Membership.php">Membership</a></li>
+						  <li><a href="reserve study room.php">Study Rooms</a></li>
+				          <li><a href="contact.php">Contact</a></li>
 						 
-						  <li><a href="allproducts_shop.html">Shop</a></li>
-						  <li><a href="donation.html">Donate</a></li>
-						  <li><a href="feedback.html">FeedBack</a></li>
+						  <li><a href="allproducts_shop.php">Shop</a></li>
+						  <li><a href="donation.php">Donate</a></li>
+						  <li><a href="feedback.php">FeedBack</a></li>
 				          	          
 				        </ul>
 				      </nav><!-- #nav-menu-container -->		    		
@@ -143,7 +143,7 @@
 							    	<p>
 							    		Here, I focus on a range of items and features that we use in life Here, I focus on a range of items and features that we use in life Here, I focus on a range of items and features.that we use in life
 							    	</p>
-							    	<a href="event.html" class="text-uppercase primary-btn">Buy ticket</a>
+							    	<a href="event.php" class="text-uppercase primary-btn">Buy ticket</a>
 							    </div>
 							  </div>
 							</div>							
@@ -162,7 +162,7 @@
 							    	<p>
 							    		Here, I focus on a range of items and features that we use in life Here, I focus on a range of items and features that we use in life Here, I focus on a range of items and features.that we use in life
 							    	</p>
-							    	<a href="event.html" class="text-uppercase primary-btn">Buy ticket</a>
+							    	<a href="event.php" class="text-uppercase primary-btn">Buy ticket</a>
 							    </div>
 							  </div>
 							</div>							

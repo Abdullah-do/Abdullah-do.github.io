@@ -18,7 +18,7 @@
 		<meta charset="UTF-8">
 		<!-- Site Title -->
 		<title>Egyptian Museum</title>
-
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
 		<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet"> 
 			<!--
 			CSS
@@ -49,8 +49,7 @@
 				  			</ul>
 				  		</div>	
 						  <div class="col-6 top-head-left">
-							<li><a href="profile.html"><i class='fa fa-user'></i></a></li>
-							<li><a href="login.html"><i class='fa fa-sign-out'></i></a></li>
+							<li><a href="profile.php"><i class='fa fa-user'></i></a></li>
 				  		</div>		  			
 			  		</div>
 			  	</div>
@@ -58,22 +57,22 @@
 			    <div class="container">
 			    	<div class="row align-items-center justify-content-between d-flex">
 				      <div id="logo">
-				        <a href="main.html"><img src="img/logo-transparent-png.png"  alt="" title="" /></a>
+				        <a href="main.php"><img src="img/logo-transparent-png.png"  alt="" title="" /></a>
 				      </div>
 				      <nav id="nav-menu-container">
 				        <ul class="nav-menu">
-				          <li class="menu-active"><a href="main.html">Home</a></li>
-				          <li><a href="gallery.html">Gallery</a></li>
-				          <li><a href="event.html">Events</a></li>
+				          <li class="menu-active"><a href="main.php">Home</a></li>
+				          <li><a href="gallery.php">Gallery</a></li>
+				          <li><a href="event.php">Events</a></li>
 				      
-				          <li><a href="Reserve restaurant.html">Restaurant</a></li>
-						  <li><a href="Membership.html">Membership</a></li>
-						  <li><a href="reserve study room.html">Study Rooms</a></li>
-				          <li><a href="contact.html">Contact</a></li>
+				          <li><a href="Reserve restaurant.php">Restaurant</a></li>
+						  <li><a href="Membership.php">Membership</a></li>
+						  <li><a href="reserve study room.php">Study Rooms</a></li>
+				          <li><a href="contact.php">Contact</a></li>
 						 
-						  <li><a href="allproducts_shop.html">Shop</a></li>
-						  <li><a href="donation.html">Donate</a></li>
-						  <li><a href="feedback.html">FeedBack</a></li>
+						  <li><a href="allproducts_shop.php">Shop</a></li>
+						  <li><a href="donation.php">Donate</a></li>
+						  <li><a href="feedback.php">FeedBack</a></li>
 				          	          
 				        </ul>
 				      </nav><!-- #nav-menu-container -->		    		
@@ -90,7 +89,7 @@
 						<div class="banner-content col-lg-8">
 							
 							<h1 class="text-white">
-								Horse of Selene Sculpture, Large
+						Replica		
 							</h1>
 							
 							
@@ -104,51 +103,40 @@
 
 
 			<!-- Start upcoming-exibition Area -->
-		
-			<!-- End banner Area -->	
-
-
-			<!-- Start upcoming-exibition Area -->
-			<section class="py-5">
-				<div class="container px-4 px-lg-5 my-5">
-					<div class="row gx-4 gx-lg-5 align-items-center">
-						<div class="col-md-6"><img class="card-img-top mb-5 mb-md-0" src="shopimages/image8.jpg" alt="Story of Troy Unisex T-Shirt (L)" /></div>
-						<div class="col-md-6">
-							<div class="small mb-1">SKU: BST-258</div>
-							<h1 class="display-5 fw-bolder">Horse of Selene Sculpture, Large</h1>
-							<div class="fs-5 mb-5">
-								<span > £650.00</span>
-			
-							</div>
-							<p class="lead">The Horse of Selene is a detail from the east pediment of the Parthenon in Athens, 
-								a temple from ancient Greece famed for its incredible marble sculptures. The horse originates from the Acropolis in Athens, and dates to 438-432 BC.
-								</p>
-							<div class="d-flex">
-								<input class="form-control text-center me-3" id="inputQuantity" type="num" value="1" style="max-width: 3rem" />
-								<button class="btn btn-outline-dark flex-shrink-0" type="button">
-									<i class="bi-cart-fill me-1"></i>
-									add to cart
-								</button>
+			<section class="upcoming-exibition-area section-gap">
+				<div class="container">
+					<div class="row d-flex justify-content-center">
+						<div class="menu-content pb-70 col-lg-8">
+							<div class="title text-center">
+								<h1 class="mb-10">Every purchase supports the egyptian Museum</h1>
+								
 							</div>
 						</div>
-					</div>
-				</div>
-			</section>
-					<!-- Related items section-->
-					<section class="py-5 bg-light">
+					</div>						
+					<div class="test"><a  href="cartt33.php"><div class ="cartt">
+						<button class="cart-btn">cart &nbsp;<i class="bi bi-basket"></i></button></div>	</a>				
+										<div class="dropdown">
+											<button class="dropbtn">categories</button>
+											<div class="dropdown-content">
+											  <a href="replica.php">replica</a>
+											  <a href="jewellery.php">jewellery</a>
+											  <a href="clothing.php">clothing</a>
+											</div>
+										</div>
+										</div>
+					  <section class="py-5">
 						<div class="container px-4 px-lg-5 mt-5">
-							<h2 class="fw-bolder mb-4">Related products</h2>
 							<div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
+								
 								<div class="col mb-5">
 									<div class="card h-100">
 										<!-- Product image-->
-										<img class="card-img-top" src="shopimages/image10.jpg" alt="..." />
+										<img class="card-img-top" src="shopimages\image6.jpg" alt="..." />
 										<!-- Product details-->
 										<div class="card-body p-4">
 											<div class="text-center">
 												<!-- Product name-->
-												<h5 class="fw-bolder">Story of Troy Unisex T-Shirt (L)</h5>
-												<!-- Product price-->
+												<h5 class="fw-bolder">Gayer-Anderson Cat Statue Replica</h5>
 												<div class="d-flex justify-content-center small text-warning mb-2">
 													<div class="bi-star-fill"></div>
 													<div class="bi-star-fill"></div>
@@ -156,12 +144,13 @@
 													<div class="bi-star-fill"></div>
 													<div class="bi-star-half"></div>
 												</div>
+												<!-- Product price-->
 												£450.00
 											</div>
 										</div>
 										<!-- Product actions-->
 										<div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-											<div class="text-center"><a class="btn btn-outline-dark mt-auto" href="Story of Troy Unisex T-Shirt (L).html">View options</a></div>
+											<div class="text-center"><a class="btn btn-outline-dark mt-auto" href="file:///D:/wed%20development/startbootstrap-shop-item-gh-pages/profile.php">View options</a></div>
 										</div>
 									</div>
 								</div>
@@ -170,28 +159,28 @@
 										<!-- Sale badge-->
 										<div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Sale</div>
 										<!-- Product image-->
-										<img class="card-img-top" src="shopimages/image1.jpg" alt="..." />
+										<img class="card-img-top" src="shopimages\image7.jpg" alt="..." />
 										<!-- Product details-->
 										<div class="card-body p-4">
 											<div class="text-center">
 												<!-- Product name-->
-												<h5 class="fw-bolder">Oval Hieroglyphs Stud Earrings</h5>
+												<h5 class="fw-bolder">Anglo-Saxon Instrument Case Replica</h5>
 												<!-- Product reviews-->
 												<div class="d-flex justify-content-center small text-warning mb-2">
 													<div class="bi-star-fill"></div>
 													<div class="bi-star-fill"></div>
 													<div class="bi-star-fill"></div>
 													<div class="bi-star-fill"></div>
-													<div class="bi-star-half"></div>
+													<div class="bi-star-fill"></div>
 												</div>
 												<!-- Product price-->
-												<span>£60.00</span>
-											  
+												<span class="text-muted text-decoration-line-through">£140.00</span>
+												$180.00
 											</div>
 										</div>
 										<!-- Product actions-->
 										<div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-											<div class="text-center"><a class="btn btn-outline-dark mt-auto" href="Oval Hieroglyphs Stud Earrings.html">view options</a></div>
+											<div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">View options</a></div>
 										</div>
 									</div>
 								</div>
@@ -200,34 +189,34 @@
 										<!-- Sale badge-->
 										<div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Sale</div>
 										<!-- Product image-->
-										<img class="card-img-top" src="shopimages/image2.jpg" alt="..." />
+										<img class="card-img-top" src="shopimages\image8.jpg" alt="Horse of Selene Sculpture, Large" />
 										<!-- Product details-->
 										<div class="card-body p-4">
 											<div class="text-center">
 												<!-- Product name-->
-												<h5 class="fw-bolder">Little Owl Badge</h5>
-												<!-- Product price-->
+												<h5 class="fw-bolder">Horse of Selene Sculpture, Large</h5>
 												<div class="d-flex justify-content-center small text-warning mb-2">
 													<div class="bi-star-fill"></div>
 													<div class="bi-star-fill"></div>
 													<div class="bi-star-fill"></div>
-													<div class="bi-star-fill"></div>
-													<div class="bi-star-fill"></div>
+													<div class="bi-star-half"></div>
+													<div class="bi-star-empty"></div>
 												</div>
-												<span class="text-muted text-decoration-line-through">£1.20</span>
-												£1.00
+												<!-- Product price-->
+												<span class="text-muted text-decoration-line-through">£750.00</span>
+												£650.00
 											</div>
 										</div>
 										<!-- Product actions-->
 										<div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-											<div class="text-center"><a class="btn btn-outline-dark mt-auto" href="Little Owl Badge.html">view options</a></div>
+											<div class="text-center"><a class="btn btn-outline-dark mt-auto" href="Horse of Selene Sculpture, Large.php">View options</a></div>
 										</div>
 									</div>
 								</div>
 								<div class="col mb-5">
 									<div class="card h-100">
 										<!-- Product image-->
-										<img class="card-img-top" src="shopimages/image9.jpg" alt="..." />
+										<img class="card-img-top" src="shopimages\image9.jpg" alt="Head of Hypnos Replica" />
 										<!-- Product details-->
 										<div class="card-body p-4">
 											<div class="text-center">
@@ -238,8 +227,8 @@
 													<div class="bi-star-fill"></div>
 													<div class="bi-star-fill"></div>
 													<div class="bi-star-fill"></div>
-													<div class="bi-star-fill"></div>
-													<div class="bi-star-fill"></div>
+													<div class="bi-star"></div>
+													<div class="bi-star"></div>
 												</div>
 												<!-- Product price-->
 												£7,150.00
@@ -247,13 +236,18 @@
 										</div>
 										<!-- Product actions-->
 										<div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-											<div class="text-center"><a class="btn btn-outline-dark mt-auto" href="Head of Hypnos Replica.html">view options</a></div>
+											<div class="text-center"><a class="btn btn-outline-dark mt-auto" href="Head of Hypnos Replica.php">View options</a></div>
 										</div>
 									</div>
 								</div>
+							
+					  
 							</div>
 						</div>
-					</section></section>
+					</section>
+					</section>
+
+
 
 			<!-- start footer Area -->		
 			<footer class="footer-area section-gap">
