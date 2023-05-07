@@ -4,7 +4,7 @@
     <head>
         <title>Sign up</title>
         <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css'>
-        <link rel="stylesheet" href="view/css/cssA/login.css">
+        <link rel="stylesheet" href="css/cssA/login.css">
         
     </head>
     <body>
