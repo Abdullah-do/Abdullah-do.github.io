@@ -53,13 +53,8 @@
 			<span>or use your account</span>
 			<input type="email" placeholder="Email" />
 			<input type="password" placeholder="Password" />
-<<<<<<< HEAD:view/index.php
 			<a href="forget.php">Forgot your password?</a>
 			<button><a href="main.php" style="color: white;">Sign In</a></button>
-=======
-			<a href="view/forget.html">Forgot your password?</a>
-			<button><a href="view/main.html" style="color: white;">Sign In</a></button>
->>>>>>> ef1f315c87d5355e88447278e00d2fd67af5e865:index.html
 		</form>
 	</div>
 	<div class="overlay-container">
