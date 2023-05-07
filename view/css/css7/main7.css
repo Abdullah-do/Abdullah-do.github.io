@@ -8,17 +8,13 @@
 
 /*--------------------------------------------------------------
 # Set main reusable colors and fonts using CSS variables
-# Learn more about CSS variables at https://developer.mozilla.org/en-US/docs/Web/css/Using_CSS_custom_properties
+# Learn more about CSS variables at https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties
 --------------------------------------------------------------*/
 /* Fonts */
 :root {
   --font-default: "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --font-primary: "Amatic SC", sans-serif;
   --font-secondary: "Inter", sans-serif;
-}
-#nav-menu-container {
-  margin-left: 363px;
-  margin-top: -45px;
 }
 
 /* Colors */
@@ -259,12 +255,12 @@ h6 {
   color: var(--color-primary);
 }
 
-.section-headeer {
+.section-header {
   text-align: center;
   padding-bottom: 30px;
 }
 
-.section-headeer h2 {
+.section-header h2 {
   font-size: 13px;
   letter-spacing: 1px;
   font-weight: 400;
@@ -275,17 +271,17 @@ h6 {
   font-family: var(--font-default);
 }
 
-.section-headeer p {
+.section-header p {
   margin: 0;
   font-size: 48px;
   font-weight: 400;
   font-family: var(--font-primary);
 }
 
-.section-headeer p span {
+.section-header p span {
   color: var(--color-primary);
 }
-.testimonials .section-headeer {
+.testimonials .section-header {
   margin-bottom: 40px;
 }
 /*--------------------------------------------------------------
