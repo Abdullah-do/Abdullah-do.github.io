@@ -88,7 +88,7 @@
 						<div class="banner-content col-lg-8">
 							
 							<h1 class="text-white">
-								CONTACT US		
+								CONTACT 		
 							</h1>
 						</div>											
 					</div>
