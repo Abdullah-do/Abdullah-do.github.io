@@ -1,15 +1,30 @@
+<<<<<<< HEAD:view/index.php
+=======
+<?php
+
+?>
+>>>>>>> ef1f315c87d5355e88447278e00d2fd67af5e865:index.html
 <!DOCTYPE html>
 <html>
     <head>
         <title>Sign up</title>
+<<<<<<< HEAD:view/index.php
         <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/./css/all.min.css'>
         <link rel="stylesheet" href="./css/cssA/login.css">
+=======
+        <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css'>
+        <link rel="stylesheet" href="view/css/cssA/login.css">
+>>>>>>> ef1f315c87d5355e88447278e00d2fd67af5e865:index.html
         
     </head>
     <body>
 <div class="container" id="container">
 	<div class="form-container sign-up-container">
+<<<<<<< HEAD:view/index.php
 		<form action="main.php">
+=======
+		<form action="#">
+>>>>>>> ef1f315c87d5355e88447278e00d2fd67af5e865:index.html
 			<h1>Create Account</h1>
 			<div class="social-container">
 				<a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
@@ -38,8 +53,13 @@
 			<span>or use your account</span>
 			<input type="email" placeholder="Email" />
 			<input type="password" placeholder="Password" />
+<<<<<<< HEAD:view/index.php
 			<a href="forget.php">Forgot your password?</a>
 			<button><a href="main.php" style="color: white;">Sign In</a></button>
+=======
+			<a href="view/forget.html">Forgot your password?</a>
+			<button><a href="view/main.html" style="color: white;">Sign In</a></button>
+>>>>>>> ef1f315c87d5355e88447278e00d2fd67af5e865:index.html
 		</form>
 	</div>
 	<div class="overlay-container">
@@ -57,5 +77,9 @@
 		</div>
 	</div>
 </div>
+<<<<<<< HEAD:view/index.php
 <script src="js/jsA/login.js"></script>
+=======
+<script src="view/js/jsA/login.js"></script>
+>>>>>>> ef1f315c87d5355e88447278e00d2fd67af5e865:index.html
 </body>
