@@ -23,6 +23,18 @@ public function close() {
     echo"Connection is not opened";  
 }
 
+public function select($query) {
+    $this->connect();
+    $result = $this->connection->query($query);
+    if (!$result){
+        echo "error : " . mysqli_error($this->connection);
+        return false;
+            }
+            else{
+     $this->close();
+    return $result->fetch_all(MYSQLI_ASSOC);
+            }
+}
 
 public function insert($data) {
     $this->connect();
@@ -33,6 +45,7 @@ public function insert($data) {
            }
            else{
     $this->close();
+    return true;
            }
 }
 
@@ -45,6 +58,7 @@ public function update($data) {
             }
             else{
      $this->close();
+     return true;
             }
 }
 
@@ -57,8 +71,12 @@ public function delete($query) {
             }
             else{
      $this->close();
+     return true;
             }
+    
 }
+
+
 
 }
 
