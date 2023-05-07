@@ -4,7 +4,7 @@
     <head>
         <title>Sign up</title>
         <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css'>
-        <link rel="stylesheet" href="view/css/cssA/login.css">
+        <link rel="stylesheet" href="css/cssA/login.css">
         
     </head>
     <body>
@@ -25,7 +25,7 @@
             <input type="text" placeholder="Nationality" />
 			<input type="email" placeholder="Email" />
 			<input type="password" placeholder="Password" />
-			<button>Sign Up</button>
+			<button><a href="main.html" style="color: white;">Sign Up</a></button>
 		</form>
 	</div>
 	<div class="form-container sign-in-container">
@@ -39,8 +39,8 @@
 			<span>or use your account</span>
 			<input type="email" placeholder="Email" />
 			<input type="password" placeholder="Password" />
-			<a href="view/forget.php">Forgot your password?</a>
-			<button><a href="view/main.html" style="color: white;">Sign In</a></button>
+			<a href="forget.php">Forgot your password?</a>
+			<button><a href="main.html" style="color: white;">Sign In</a></button>
 		</form>
 	</div>
 	<div class="overlay-container">
@@ -58,5 +58,5 @@
 		</div>
 	</div>
 </div>
-<script src="view/js/jsA/login.js"></script>
+<script src="js/jsA/login.js"></script>
 </body>
