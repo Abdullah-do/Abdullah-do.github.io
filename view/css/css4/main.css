@@ -760,7 +760,7 @@ th {
   overflow: hidden;
 }
 
-.overlay {
+.overlay1 {
   position: absolute;
   left: 0;
   right: 0;
@@ -2352,7 +2352,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   color: #a38c07;
 }
 
-.overlay {
+.overlay1 {
   position: absolute;
   left: 0;
   right: 0;
@@ -2366,7 +2366,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   height: 450px;
 }
 
-.banner-area .overlay-bg {
+.banner-area .overlay-bg1 {
   background-color: rgba(0, 0, 0, 0.7);
 }
 
@@ -2453,7 +2453,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   height: auto;
 }
 
-.single-service .overlay {
+.single-service .overlay1 {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -2466,7 +2466,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   background-color: #f9f9ff;
 }
 
-.single-service:hover .overlay {
+.single-service:hover .overlay1 {
   opacity: 1;
   cursor: pointer;
 }
@@ -2486,7 +2486,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   .single-service {
     margin-bottom: 30px;
   }
-  .single-service .overlay {
+  .single-service .overlay1 {
     height: 88%;
   }
 }
@@ -3182,7 +3182,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   background-size: cover;
 }
 
-.blog-banner-area .overlay-bg {
+.blog-banner-area .overlay-bg1 {
   background: rgba(0, 0, 0, 0.55);
 }
 
