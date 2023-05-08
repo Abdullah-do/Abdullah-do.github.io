@@ -224,13 +224,13 @@
                           
                           
                          <div class="mb-3 col-md-6">
-                            <label for="zipCode" class="form-label">national id</label>
+                            <label for="zipCode" class="form-label">ID</label>
                            <input
                               type="text"
                               class="form-control"
-                              id="national id"
-                              name="national id"
-                              placeholder="30306058866216"
+                              id="userID"
+                              name="userID"
+                              placeholder="5466"
                               maxlength="15"
                             />
                           </div>

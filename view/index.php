@@ -19,7 +19,7 @@
 			</div>
 			<span>or use your email for registration</span>
 			<input type="text" placeholder="Name" />
-            <input type="text" placeholder="National ID" />
+            <input type="text" placeholder="ID" />
             <input type="text" placeholder="Age" />
             <input type="text" placeholder="Phone Number" />
             <input type="text" placeholder="Nationality" />
@@ -37,7 +37,7 @@
 				<a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
 			</div>
 			<span>or use your account</span>
-			<input type="email" placeholder="Email" />
+			<input type="text" placeholder="ID" />
 			<input type="password" placeholder="Password" />
 			<a href="forget.php">Forgot your password?</a>
 			<button><a href="main.html" style="color: white;">Sign In</a></button>
