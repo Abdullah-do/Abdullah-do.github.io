@@ -16,6 +16,10 @@
   --font-primary: "Amatic SC", sans-serif;
   --font-secondary: "Inter", sans-serif;
 }
+#nav-menu-container {
+  margin-left: 363px;
+  margin-top: -45px;
+}
 
 /* Colors */
 :root {
@@ -255,12 +259,12 @@ h6 {
   color: var(--color-primary);
 }
 
-.section-header {
+.section-headeer {
   text-align: center;
   padding-bottom: 30px;
 }
 
-.section-header h2 {
+.section-headeer h2 {
   font-size: 13px;
   letter-spacing: 1px;
   font-weight: 400;
@@ -271,17 +275,17 @@ h6 {
   font-family: var(--font-default);
 }
 
-.section-header p {
+.section-headeer p {
   margin: 0;
   font-size: 48px;
   font-weight: 400;
   font-family: var(--font-primary);
 }
 
-.section-header p span {
+.section-headeer p span {
   color: var(--color-primary);
 }
-.testimonials .section-header {
+.testimonials .section-headeer {
   margin-bottom: 40px;
 }
 /*--------------------------------------------------------------
