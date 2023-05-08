@@ -22,10 +22,6 @@ public static function getInstance()
 
         return self::$instance;
     }
-    public function getConnection()
-    {
-        return $this->connection;
-    }
 public function close() {
     if ($this->connection)
     $this->connection->close();
@@ -34,7 +30,7 @@ public function close() {
 }
 
 public function select($query) {
-
+    
     $result = $this->connection->query($query);
     if (!$result){
         echo "error : " . mysqli_error($this->connection);
@@ -73,7 +69,7 @@ public function update($data) {
 }
 
 public function delete($query) {
-    
+
     $result = $this->connection->query($query);
     if (!$result){
         echo "error : " . mysqli_error($this->connection);
