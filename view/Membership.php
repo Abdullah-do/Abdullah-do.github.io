@@ -81,7 +81,7 @@
 
 			<!-- start banner Area -->
 			<section class="banner-area relative" id="home">
-				<div class="overlay1 overlay-bg1"></div>	
+				<div class="overlay overlay-bg"></div>	
 				<div class="container">
 					<div class="row fullscreen d-flex align-items-center justify-content-center">
 						<div class="banner-content col-lg-8" style="margin-bottom: 350px;">
