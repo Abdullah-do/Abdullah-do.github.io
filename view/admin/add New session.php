@@ -1,4 +1,50 @@
+<?php
 
+
+require_once "../../module/Session.php";
+require_once "../../controller/Sessioncontroller.php";
+
+$Sessioncontroller = new Sessioncontroller();
+$sessiontypes = $Sessioncontroller->GetSessiontype();
+$errmsg="";
+
+
+
+if(isset($_POST["name"])&&isset($_POST["money"])&&isset($_POST["duration"])&&isset($_POST["details"])&&isset($_FILES["image"])){
+
+            if(!empty($_POST["name"])&&!empty($_POST["money"])&&!empty($_POST["duration"])
+            &&!empty($_POST["details"])&&!empty($_FILES["image"])){
+            $session = new Session();
+            $session->SetSessionName($_POST["name"]);
+            $session->SetSessionCost($_POST["money"]);
+            $session->SetSessionDuration($_POST["duration"]);
+            $session->SetSessionDetails($_POST["details"]);
+            $session->SetSessionType_id($_POST["type"]);
+            $session->SetSessionDate($_POST["date"]);
+            $location = "../img/".$_FILES["image"]["name"];
+            if(move_uploaded_file($_FILES["image"]["tmp_name"],$location)){
+              $session->SetSessionImage($location);
+              if($Sessioncontroller->AddSession($session)){
+
+              }
+              else
+              $errmsg="somthing wrong";
+            }
+            else{
+              $errmsg="error in upload";
+            }
+            
+            
+            }
+            else{
+            $errmsg = "please fill all the fields";
+          }
+          }
+          
+        
+
+
+?>
 <!DOCTYPE html>
 
 <!-- =========================================================
@@ -81,22 +127,22 @@
 
               <ul class="menu-sub">
                 <li class="menu-item">
-                  <a href="add New session.php" class="menu-link">
+                  <a href="add New session.html" class="menu-link">
                     <div data-i18n="Without menu">New Session</div>
                   </a>
                 </li>
                 <li class="menu-item">
-                  <a href="add New Product.php" class="menu-link">
+                  <a href="add New Product.html" class="menu-link">
                     <div data-i18n="Without navbar">New Product</div>
                   </a>
                 </li>
                 <li class="menu-item">
-                  <a href="add New photo.php" class="menu-link">
+                  <a href="add New photo.html" class="menu-link">
                     <div data-i18n="Container">New Photo</div>
                   </a>
                 </li>
                 <li class="menu-item">
-                  <a href="add New exibit.php" class="menu-link">
+                  <a href="add New exibit.html" class="menu-link">
                     <div data-i18n="Fluid">New Exibit</div>
                   </a>
                 </li>
@@ -109,18 +155,22 @@
               </a>
              <ul class="menu-sub">
               <li class="menu-item">
-                <a href="member List.php" class="menu-link">
+                <a href="member List.html" class="menu-link">
                   <div data-i18n="Without menu">members</div>
                 </a>
               </li>
               <li class="menu-item">
-                <a href="purchased tickets.php" class="menu-link">
+                <a href="purchased tickets.html" class="menu-link">
                   <div data-i18n="Without navbar">purchased tickets</div>
                 </a>
               </li>
-              
               <li class="menu-item">
-                <a href="reserved tables.php" class="menu-link">
+                <a href="feedback List.html" class="menu-link">
+                  <div data-i18n="Without navbar">feedback</div>
+                </a>
+              </li>
+              <li class="menu-item">
+                <a href="reserved tables.html" class="menu-link">
                   <div data-i18n="Without navbar">booked tables</div>
                 </a>
               </li>
@@ -140,30 +190,49 @@
 
   <div class="container-xxl flex-grow-1 container-p-y">
     <h4 class="fw-bold py-3 mb-4"> Add new session</h4>
-
+   
     <div class="row">
       <!-- Basic -->
+      
       <div class="col-md-6">
-        <div class="card mb-4">
+        
+          <div class="card mb-4">
+        <form method="post" enctype ="multipart/form-data">
           <h5 class="card-header">session Details</h5>
+          <?php
+          if($errmsg!=""){
+            ?>
+              <div class="alert alert-danger" role ="alert">
+            <?php echo $errmsg?></div><?php
+          }
+          
+          
+          
+          ?>
           <div class="card-body demo-vertical-spacing demo-only-element">
             <div class="input-group">
               <span class="input-group-text" id="basic-addon11">session Name</span>
+            
               <input
                 type="text"
                 class="form-control"
-               
+               name ="name"
                 aria-label="Name"
                 aria-describedby="basic-addon11"
               />
             </div>
             <div class="mb-3">
                 <label for="exampleFormControlSelect1" class="form-label">Category</label>
-                <select class="form-select" id="exampleFormControlSelect1" aria-label="Default select example">
-                  <option selected>Open this select menu</option>
-                  <option value="1">one</option>
-                  <option value="2">Two</option>
-                  <option value="3">Three</option>
+                <select class="form-select" name ="type" id="exampleFormControlSelect1" aria-label="Default select example">
+                 
+                  
+                 <?php
+                 foreach($sessiontypes as $sessiontype){
+                 ?>
+                  <option value="<?php echo $sessiontype["id"]  ?>"><?php echo $sessiontype["name"]?></option>
+                 <?php
+                 }
+                 ?>
                 </select>
               </div>
             
@@ -172,7 +241,7 @@
                 <input
                   type="text"
                   class="form-control"
-                 
+                  name = "duration"
                   aria-label="Name"
                   aria-describedby="basic-addon11"
                 />
@@ -184,6 +253,7 @@
               <input
                 type="text"
                 class="form-control"
+                name="money"
                 placeholder="Amount"
                 aria-label="Amount (to the nearest dollar)"
               />
@@ -195,6 +265,7 @@
                 <input
                   class="form-control"
                   type="datetime-local"
+                  name = "date"
                   value="2021-06-18T12:30:00"
                   id="html5-datetime-local-input"
                 />
@@ -214,14 +285,17 @@
                 
             <div class="input-group">
               <span class="input-group-text">Details</span>
-              <textarea class="form-control" aria-label="Details" placeholder="Write the details of this session"></textarea>
+              <textarea class="form-control" aria-label="Details" name ="details" placeholder="Write the details of this session"></textarea>
             </div>
+        
             <div class="mb-3">
               <label for="formFile" class="form-label">Upload session's photo</label>
-              <input class="form-control" type="file" id="formFile" />
+              <input class="form-control" name="image" type="file" id="formFile" />
             </div>
-        <button type="submit" class="btn btn-primary">Add</button>
-      </div>
+          <button type="submit" class="btn btn-primary">Add</button>
+        </form> 
+    </div>
+      
     </div>
     <div class="content-backdrop fade"></div>
           </div>
