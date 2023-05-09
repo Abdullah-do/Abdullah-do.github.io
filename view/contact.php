@@ -1,4 +1,36 @@
-	
+<?php
+error_reporting(-1);
+ini_set('display_errors', 'On');
+set_error_handler("var_dump");
+
+
+ini_set("mail.log", "/tmp/mail.log");
+ini_set("mail.add_x_header", TRUE);
+
+// مكونات بريدنا الإلكتروني
+$to = 'bodivampire@yahoo.com';
+$subject = 'Email Subject';
+$message = 'This is the email message body';
+$headers = implode("\r\n", [
+    'From: webmaster@example.com',
+    'Reply-To: webmaster@example.com',
+    'X-Mailer: PHP/' . PHP_VERSION
+]);
+
+
+$result = mail($to, $subject, $message, $headers);
+
+
+if ($result) {
+    // (1)
+    header('Location: http://example.com/path/to/thank-you.php', true, 303);
+    exit;
+}
+else {
+    // (2)
+}
+
+?>	
 <!DOCTYPE html>
 	<html lang="zxx" class="no-js">
 	<head>

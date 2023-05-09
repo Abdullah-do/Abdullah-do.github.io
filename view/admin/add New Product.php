@@ -116,11 +116,7 @@
                   <div data-i18n="Without navbar">purchased tickets</div>
                 </a>
               </li>
-              <li class="menu-item">
-                <a href="feedback List.php" class="menu-link">
-                  <div data-i18n="Without navbar">feedback</div>
-                </a>
-              </li>
+              
               <li class="menu-item">
                 <a href="reserved tables.php" class="menu-link">
                   <div data-i18n="Without navbar">booked tables</div>
