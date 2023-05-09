@@ -1,5 +1,28 @@
 <?php
-include_once '../controller/donateController.php'
+include_once '../controller/donateController.php';
+include_once '../module/donation.php';
+$donate = new donation;
+$DC=new donateController;
+$nameErr = $idErr = $priceErr = $commentErr = "";
+if(isset($_POST['name'] ) && isset( $_POST['id']) && isset($_POST['price']) && isset($_POST['comment']) ){
+	if(!empty($_POST['name'] ) && !empty( $_POST['id']) && !empty($_POST['price']) && !empty($_POST['comment']) )
+	{
+		$donate->setAmount($_POST['price']);
+		$donate->setComment($_POST['comment']);
+		$donate->setId($_POST['id']);
+		$donate->setName($_POST['name']);
+		$DC->set_donation($donate->getId(),$donate->getAmount(),$donate->getComment());
+	}
+	else{
+		$nameErr    ="enter name" ;
+	    $idErr   ="enter id";
+		$priceErr  = "enter price";
+		$commentErr = "enter comment";
+	}
+
+}
+$email;
+
 
 ?>
 <!DOCTYPE html>
@@ -100,6 +123,7 @@ include_once '../controller/donateController.php'
  <!-----------------------------------------------START CODE----------------------------------------->	
  <section>
   <!-- Content wrapper -->
+ 
 
   <div class="content-wrapper" style="margin-left: 380px; margin-right: 380px;">
             <!-- Content -->
@@ -112,18 +136,20 @@ include_once '../controller/donateController.php'
                     <div class="card-header d-flex justify-content-between align-items-center">
                     </div>
                     <div class="card-body">
-                      <form>
+                      <form method="post">
                         <div class="mb-3">
+						
                           <label class="form-label" for="basic-default-fullname">Name</label>
-                          <input type="text" class="form-control" name="name" id="basic-default-fullname" placeholder="John Doe" />
+						  
+                          <input type="text" class="form-control" name="name" id="basic-default-fullname" placeholder="John Doe" /><p style="color: red; text-align: right;"><?php echo $priceErr ?></p>
                         </div>
                       
                         <div class="mb-3">
-                          <label class="form-label" for="basic-default-email">Email</label>
+                          <label class="form-label" for="basic-default-email">id</label>
                           <div class="input-group input-group-merge">
                             <input
-                              type="text"
-							  name="email"
+                              type="number"
+							  name="id"
                               id="basic-default-email"
                               class="form-control"
                               placeholder="john.doe"
@@ -132,7 +158,8 @@ include_once '../controller/donateController.php'
                             />
                             <span class="input-group-text" id="basic-default-email2">@example.com</span>
                           </div>
-                          <div class="form-text">You can use letters, numbers & periods</div>
+						  <p style="color: red; text-align: right;"><?php echo $idErr  ?></p>
+                        
                         </div>
                         <div class="mb-3">
                           <label class="form-label" for="basic-default-phone">price</label>
@@ -142,16 +169,16 @@ include_once '../controller/donateController.php'
                             id="basic-default-phone"
                             class="form-control phone-mask"
                             placeholder="200$"
-                          />
+                          /><p style="color: red; text-align: right;"><?php echo $priceErr ?></p>
                         </div>
                         <div class="mb-3">
-                          <label class="form-label" for="basic-default-message">comment</label>
+                          <label class="form-label" for="basic-default-message">comment</label> 
                           <textarea
 						   name="comment"
                             id="basic-default-message"
                             class="form-control"
                             placeholder="Hi, Do you have a moment to talk Joe?"
-                          ></textarea>
+                          ></textarea><p style="color: red; text-align: right;"><?php echo $commentErr ?></p>
                         </div>
                         <div class="text-center w-100"><button type="submit" class="btn btn-primary w-25">donate</button></div>
                       </form>
@@ -159,7 +186,7 @@ include_once '../controller/donateController.php'
                   </div>
                 </div>
               </div>
-
+ 
 			</section>
 
 <!-----------------------------------------------END CODE----------------------------------------->	
