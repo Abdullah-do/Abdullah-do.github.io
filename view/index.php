@@ -113,7 +113,6 @@ if(isset($_POST["username"]) && isset($_POST["userId"]) && isset($_POST["age"]) 
 			<h5><?php echo $errMsg1 ?></h5>
 			<input type="text" name ="id" placeholder="ID" />
 			<input type="password" name ="password" placeholder="Password" />
-			<a href="forget.php">Forgot your password?</a>
 			<button type="submit">Sign in</button>
 		</form>
 	</div>
