@@ -1,17 +1,31 @@
 <?php
+
+session_start();
+    if(!isset($_SESSION["useRole"]))
+    {
+        if($_SESSION["userRole"]!="Admin"){
+        header("location:../view/index.php");
+        }
+    }
+    else{
+        if($_SESSION["userRole"]!="Admin"){
+            header("location:../view/index.php");
+            }
+    }
+
 include_once '../controller/VisaController.php';
 
 $visa = new VisaController;
 
-$nameErr = $numberErr = $dateErr = $cvvErr = $idErr = "";
-if(isset($_POST['name'] ) && isset( $_POST['date']) && isset($_POST['cvv']) && isset($_POST['number']) && isset($_POST['id']) ){
-	if(!empty($_POST['name'] ) && !empty( $_POST['date']) && !empty($_POST['cvv']) && !empty($_POST['number']) && !empty($_POST['id']))
+$nameErr = $numberErr = $dateErr = $cvvErr = "";
+if(isset($_POST['name'] ) && isset( $_POST['date']) && isset($_POST['cvv']) && isset($_POST['number'])){
+	if(!empty($_POST['name'] ) && !empty( $_POST['date']) && !empty($_POST['cvv']) && !empty($_POST['number']) )
 	{
 		$name=($_POST['name']);
 		$date=($_POST['date']);
 		$number=($_POST['number']);
 		$cvv=($_POST['cvv']);
-		$id=($_POST['id']);
+		
 
 		$visa->set_visa($name , $date , $number , $cvv);
 		
@@ -21,7 +35,6 @@ if(isset($_POST['name'] ) && isset( $_POST['date']) && isset($_POST['cvv']) && i
 	    $dateErr   ="enter date";
 		$numberErr  = "enter number";
 		$cvvErr = "enter cvv";
-		$idErr = "enter id";
 	}
 
 }
@@ -91,11 +104,11 @@ if(isset($_POST['name'] ) && isset( $_POST['date']) && isset($_POST['cvv']) && i
 			    <div class="container">
 			    	<div class="row align-items-center justify-content-between d-flex">
 				      <div id="logo">
-				        <a href="main.html"><img src="img/logo-transparent-png.png"  alt="" title="" /></a>
+				        <a href="main.php"><img src="img/logo-transparent-png.png"  alt="" title="" /></a>
 				      </div>
 				      <nav id="nav-menu-container">
 				        <ul class="nav-menu">
-				          <li class="menu-active"><a href="main.html">Home</a></li>
+				          <li class="menu-active"><a href="main.php">Home</a></li>
 				          <li><a href="gallery.php">Gallery</a></li>
 				          <li><a href="event.php">Events</a></li>
 				      
