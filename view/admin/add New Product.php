@@ -8,7 +8,7 @@ if(!$_SESSION["Admin_check"]){
 header("location:../index.php");
 }*/
 require_once '../../controller/ProductController.php';
-require_once 'D:\xam\htdocs\Abdullah-do.github.io\module\product.php';
+require_once '../../module/product.php';
 $productController= new ProductController;
 $categories=$productController->getCategories();
 

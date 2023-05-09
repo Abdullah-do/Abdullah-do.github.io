@@ -1,4 +1,5 @@
-<?php
+<?php 
+require_once '../controller/ProductController.php';
 class Product{
 
 private $productName;
@@ -7,6 +8,7 @@ private $productDescription;
 private $productCategory;
 private $productQuantity;
 private $productState;
+public $image;
 
 
 	
