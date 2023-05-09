@@ -67,7 +67,7 @@
 				          <li><a href="Reserve restaurant.html">Restaurant</a></li>
 						  <li><a href="Membership.php">Membership</a></li>
 						  <li><a href="reserve study room.php">Study Rooms</a></li>
-				          <li><a href="contact.php">Contact</a></li>
+				          
 						 
 						  <li><a href="allproducts_shop.php">Shop</a></li>
 						  <li><a href="donation.php">Donate</a></li>
