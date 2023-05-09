@@ -13,7 +13,7 @@ if(isset($_POST['name'] ) && isset( $_POST['date']) && isset($_POST['cvv']) && i
 		$cvv=($_POST['cvv']);
 		$id=($_POST['id']);
 
-		$visa->set_visa($name , $date , $number , $cvv , $id);
+		$visa->set_visa($name , $date , $number , $cvv);
 		
 	}
 	else{
