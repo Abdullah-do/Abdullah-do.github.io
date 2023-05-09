@@ -1,36 +1,15 @@
+
 <?php
-error_reporting(-1);
-ini_set('display_errors', 'On');
-set_error_handler("var_dump");
-
-
-ini_set("mail.log", "/tmp/mail.log");
-ini_set("mail.add_x_header", TRUE);
-
-// مكونات بريدنا الإلكتروني
-$to = 'bodivampire@yahoo.com';
-$subject = 'Email Subject';
-$message = 'This is the email message body';
-$headers = implode("\r\n", [
-    'From: webmaster@example.com',
-    'Reply-To: webmaster@example.com',
-    'X-Mailer: PHP/' . PHP_VERSION
-]);
-
-
-$result = mail($to, $subject, $message, $headers);
-
-
-if ($result) {
-    // (1)
-    header('Location: http://example.com/path/to/thank-you.php', true, 303);
-    exit;
+$to = 'bob19u4947@gmail.com';
+$subject = 'Hello from XAMPP!';
+$message = 'This is a test';
+$headers = "From: bodivampire@yahoo.com\r\n";
+if (mail($to, $subject, $message, $headers)) {
+   echo "SUCCESS";
+} else {
+   echo "ERROR";
 }
-else {
-    // (2)
-}
-
-?>	
+?>
 <!DOCTYPE html>
 	<html lang="zxx" class="no-js">
 	<head>
@@ -64,6 +43,7 @@ else {
 		</head>
 		<body>
 
+		
 			  <header id="header" id="home">
 			  	<div class="container header-top">
 			  		<div class="row">
