@@ -1,4 +1,17 @@
+<?php
+/*session_start();
+if(!isset($_SESSION["Admin_check"]))
+{
+header("locaion:../index.php");
+}
+if(!$_SESSION["Admin_check"]){
+header("location:../index.php");
+}*/
+require_once '../../controller/ProductController.php';
+$productController= new ProductController;
+$categories=$productController->getCategories();
 
+?>
 <!DOCTYPE html>
 
 <!-- =========================================================
@@ -157,11 +170,17 @@
             <div class="mb-3">
                 <label for="exampleFormControlSelect1" class="form-label">Category</label>
                 <select class="form-select" id="exampleFormControlSelect1" aria-label="Default select example">
-                  <option selected>Open this select menu</option>
-                  <option value="1">one</option>
-                  <option value="2">Two</option>
-                  <option value="3">Three</option>
-                </select>
+               <?php
+               foreach($categories as $category){
+                ?>
+               <option value="<?php echo $category["Product_id"] ?>"><?php echo $category["Product_name"] ?></option>
+                
+            <?php 
+               }
+            
+            
+            ?>
+              </select>
               </div>
             
             <div class="input-group">
@@ -175,7 +194,7 @@
             </div>
 
             <div class="input-group">
-              <span class="input-group-text">$</span>
+              <span class="input-group-text">€</span>
               <input
                 type="text"
                 class="form-control"
