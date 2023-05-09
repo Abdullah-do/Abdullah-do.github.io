@@ -8,17 +8,41 @@ if(!$_SESSION["Admin_check"]){
 header("location:../index.php");
 }*/
 require_once '../../controller/ProductController.php';
-require_once '../module/product.php';
+require_once 'D:\xam\htdocs\Abdullah-do.github.io\module\product.php';
 $productController= new ProductController;
 $categories=$productController->getCategories();
-if(isset($_POST['name'])&&isset($_POST['quantity'])&&isset($_POST['price'])&&(isset($_POST['state1'])||isset($_POST['state2']))&&isset($_POST['details'])){
-  if(!empty($_POST['name'])&&!empty($_POST['quantity'])&&!empty($_POST['price'])&&(!empty($_POST['state1'])||!empty($_POST['state2']))&&!empty($_POST['details']))
+
+if(isset($_POST['name'])&&isset($_POST['quantity'])&&isset($_POST['price'])&&(isset($_POST['state1'])||isset($_POST['state2']))&&isset($_POST['details'])&&isset($_POST['category'])&&isset($_FILES["image"])){
+
+  if(!empty($_POST['name'])&&!empty($_POST['quantity'])&&!empty($_POST['price'])&&(!empty($_POST['state1'])||!empty($_POST['state2']))&&!empty($_POST['details'])&&!empty($_POST['category']))
 {
+ 
 $product=new Product;
 $product->setProductName($_POST['name']);
 $product->setproductQuantity($_POST['quantity']);
 $product->setproductPrice($_POST['price']);
 $product->setproductDescription($_POST['details']);
+$product->setProductCategory($_POST['category']);
+$location = "shopimages/".$_FILES["image"]["name"];
+if(move_uploaded_file($_FILES["image"]["tmp_name"],$location)){
+$product->image=$location;
+if($productController->addproduct($product))
+{
+
+  header("location:index.php");
+}
+else{
+
+  echo "failed";
+
+}
+}
+else{
+  echo "file upload failed";
+
+}
+
+}
 if(isset($_POST['state1']))
 {
   $product->setProductstate('in stock');
@@ -36,7 +60,8 @@ else {
 
 }
 }
-}
+
+
 ?>
 <!DOCTYPE html>
 
@@ -183,7 +208,9 @@ else {
         <div class="card mb-4">
           <h5 class="card-header">Product Details</h5>
           <div class="card-body demo-vertical-spacing demo-only-element">
-            <div class="input-group">
+          <form method="post" enctype ="multipart/form-data">
+          <div class="input-group">
+          <form action="add New Product.php" method="post" enctype='multipart/form-data'>
               <span class="input-group-text" id="basic-addon11">Product Name</span>
               <input
                 type="text"
@@ -193,23 +220,22 @@ else {
                 aria-describedby="basic-addon11"
               />
             </div>
-           <form id="addnewproduct" class="mb-3" action="add New Product.php" method="post">
+           
+           
             <div class="mb-3">
-                <label for="exampleFormControlSelect1" class="form-label">Category</label>
-                <select class="form-select" id="exampleFormControlSelect1" aria-label="Default select example">
-               <?php
-               foreach($categories as $category){
-                ?>
-               <option value="<?php echo $category["Product_id"] ?>"><?php echo $category["Product_categries"] ?></option>
-                
-            <?php 
-               }
+                <label for="exampleFormControlSelect1" class="form-label" >Category</label>
+                <select class="form-select" id="exampleFormControlSelect1" aria-label="Default select example"name="Category">
+            
+               <option value="replica">replica</option>
+               <option value="jewellery">jewellery</option>
+               <option value="clothing">clothing</option>
+              </select>
+              </div>
+            <?PHP
+          
             
             
             ?>
-              </select>
-              </div>
-            
             <div class="input-group">
               <span class="input-group-text" id="basic-addon11">Quantity</span>
               <input
@@ -265,12 +291,13 @@ else {
             </div>
                 <div class="mb-3">
                   <label for="formFile" class="form-label">Upload product's photo</label>
-                  <input class="form-control" name="photo"type="file" id="formFile" />
+                  <input class="form-control" type="file" id="formFile" name="image" />
                 </div>
-           </form>
+          
         <button type="submit" class="btn btn-primary">Add</button>
       </div>
     </div>
+              </form>
     <div class="content-backdrop fade"></div>
           </div>
           <!-- Content wrapper -->
