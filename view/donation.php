@@ -1,5 +1,5 @@
 <?php
-
+include_once '../controller/donateController.php'
 
 ?>
 <!DOCTYPE html>
