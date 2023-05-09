@@ -1,18 +1,18 @@
+<?php
+session_start();
+if (!isset($_SESSION["userRole"])) {
+  header("location:../Auth/login.php");
+}else {
+  if ($_SESSION["userRole"] != "Admin") {
+    header("location:../Auth/login.php");
+  }}
+   
+
+?>
+
+
 
 <!DOCTYPE html>
-
-<!-- =========================================================
-* Sneat - Bootstrap 5 HTML Admin Template - Pro | v1.0.0
-==============================================================
-
-* Product Page: https://themeselection.com/products/sneat-bootstrap-html-admin-template/
-* Created by: ThemeSelection
-* License: You must have a valid license purchased in order to legally use the theme for your project.
-* Copyright ThemeSelection (https://themeselection.com)
-
-=========================================================
- -->
-<!-- beautify ignore:start -->
 <html
   lang="en"
   class="light-style layout-menu-fixed"
@@ -116,11 +116,7 @@
                   <div data-i18n="Without navbar">purchased tickets</div>
                 </a>
               </li>
-              <li class="menu-item">
-                <a href="feedback List.php" class="menu-link">
-                  <div data-i18n="Without navbar">feedback</div>
-                </a>
-              </li>
+              
               <li class="menu-item">
                 <a href="reserved tables.php" class="menu-link">
                   <div data-i18n="Without navbar">booked tables</div>
@@ -153,7 +149,7 @@
               <input
                 type="text"
                 class="form-control"
-               
+               name="photo name"
                 aria-label="Name"
                 aria-describedby="basic-addon11"
               />
@@ -172,11 +168,11 @@
                  
             <div class="input-group">
               <span class="input-group-text">Details</span>
-              <textarea class="form-control" aria-label="Details" placeholder="Write the details of this photo"></textarea>
+              <textarea class="form-control" name="details" aria-label="Details" placeholder="Write the details of this photo"></textarea>
             </div>
                 <div class="mb-3">
                   <label for="formFile" class="form-label">Upload photo</label>
-                  <input class="form-control" type="file" id="formFile" />
+                  <input class="form-control" type="file" id="formFile" name="Upload photo"/>
                 </div>
         
         <button type="submit" class="btn btn-primary">Add</button>

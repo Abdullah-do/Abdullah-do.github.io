@@ -1,4 +1,43 @@
+<?php
+/*session_start();
+if(!isset($_SESSION["Admin_check"]))
+{
+header("locaion:../index.php");
+}
+if(!$_SESSION["Admin_check"]){
+header("location:../index.php");
+}*/
+require_once '../../controller/ProductController.php';
+require_once '../module/product.php';
+$productController= new ProductController;
+$categories=$productController->getCategories();
+if(isset($_POST['name'])&&isset($_POST['quantity'])&&isset($_POST['price'])&&(isset($_POST['state1'])||isset($_POST['state2']))&&isset($_POST['details'])){
+  if(!empty($_POST['name'])&&!empty($_POST['quantity'])&&!empty($_POST['price'])&&(!empty($_POST['state1'])||!empty($_POST['state2']))&&!empty($_POST['details']))
+{
+$product=new Product;
+$product->setProductName($_POST['name']);
+$product->setproductQuantity($_POST['quantity']);
+$product->setproductPrice($_POST['price']);
+$product->setproductDescription($_POST['details']);
+if(isset($_POST['state1']))
+{
+  $product->setProductstate('in stock');
+}
+else if(isset($_POST['state2']))
+{
+  $product->setProductstate('out of stock');
+}
+if( $productController->addproduct($product))
+{
+ header("location:add New Product.php");
+}
+else {
+  header("location:index.php");
 
+}
+}
+}
+?>
 <!DOCTYPE html>
 
 <!-- =========================================================
@@ -116,11 +155,7 @@
                   <div data-i18n="Without navbar">purchased tickets</div>
                 </a>
               </li>
-              <li class="menu-item">
-                <a href="feedback List.php" class="menu-link">
-                  <div data-i18n="Without navbar">feedback</div>
-                </a>
-              </li>
+              
               <li class="menu-item">
                 <a href="reserved tables.php" class="menu-link">
                   <div data-i18n="Without navbar">booked tables</div>
@@ -153,25 +188,33 @@
               <input
                 type="text"
                 class="form-control"
-               
+               name="name"
                 aria-label="Name"
                 aria-describedby="basic-addon11"
               />
             </div>
+           <form id="addnewproduct" class="mb-3" action="add New Product.php" method="post">
             <div class="mb-3">
                 <label for="exampleFormControlSelect1" class="form-label">Category</label>
                 <select class="form-select" id="exampleFormControlSelect1" aria-label="Default select example">
-                  <option selected>Open this select menu</option>
-                  <option value="1">one</option>
-                  <option value="2">Two</option>
-                  <option value="3">Three</option>
-                </select>
+               <?php
+               foreach($categories as $category){
+                ?>
+               <option value="<?php echo $category["Product_id"] ?>"><?php echo $category["Product_categries"] ?></option>
+                
+            <?php 
+               }
+            
+            
+            ?>
+              </select>
               </div>
             
             <div class="input-group">
               <span class="input-group-text" id="basic-addon11">Quantity</span>
               <input
                 type="text"
+                name="quantity"
                 class="form-control"
                 aria-label="Quantity"
                 aria-describedby="basic-addon11"
@@ -179,11 +222,12 @@
             </div>
 
             <div class="input-group">
-              <span class="input-group-text">$</span>
+              <span class="input-group-text">€</span>
               <input
                 type="text"
                 class="form-control"
                 placeholder="Amount"
+                name="price"
                 aria-label="Amount (to the nearest dollar)"
               />
               <span class="input-group-text">.00</span>
@@ -195,6 +239,7 @@
                   name="default-radio-1"
                   class="form-check-input"
                   type="radio"
+                  name="state1"
                   value=""
                   id="defaultRadio1"
                 />
@@ -205,6 +250,7 @@
                   name="default-radio-1"
                   class="form-check-input"
                   type="radio"
+                  name="stat2"
                   value=""
                   id="defaultRadio2"
                   checked
@@ -215,13 +261,13 @@
             </div>           
             <div class="input-group">
               <span class="input-group-text">Details</span>
-              <textarea class="form-control" aria-label="Details" placeholder="Write the details of this product"></textarea>
+              <textarea class="form-control" aria-label="Details" placeholder="Write the details of this product"name="details"></textarea>
             </div>
                 <div class="mb-3">
                   <label for="formFile" class="form-label">Upload product's photo</label>
-                  <input class="form-control" type="file" id="formFile" />
+                  <input class="form-control" name="photo"type="file" id="formFile" />
                 </div>
-        
+           </form>
         <button type="submit" class="btn btn-primary">Add</button>
       </div>
     </div>
