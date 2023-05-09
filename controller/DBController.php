@@ -12,8 +12,9 @@ class DataBase{
     $this->connection=new mysqli($this->DB_host,$this->db_user,$this->db_pass,$this->db_name);
       if ($this->connection->connect_error){
     die("Connection failed: ". $this->connection->connect_error);}
+    else
+        return true;
     //connection
-    return true;
   }
 public static function getInstance()
     {
@@ -22,6 +23,10 @@ public static function getInstance()
         }
 
         return self::$instance;
+    }
+    public function connect()
+    {
+        return $this->connection;
     }
 public function close() {
     if ($this->connection)
@@ -38,20 +43,19 @@ public function select($query) {
         return false;
             }
             else{
-
-                    return $result->fetch_all(MYSQLI_ASSOC);
+    
+    return $result->fetch_all(MYSQLI_ASSOC);
             }
 }
 
 public function insert($data) {
-
+    $this->connect();
     $result = $this->connection->query($data);
     if (!$result){
        echo "error : " . mysqli_error($this->connection);
        return false;
            }
-           else{
-
+    else{
     return true;
            }
 }
@@ -64,7 +68,6 @@ public function update($data) {
         return false;
             }
             else{
-
      return true;
             }
 }
@@ -77,7 +80,6 @@ public function delete($query) {
         return false;
             }
             else{
-                
      return true;
             }
     
