@@ -2,7 +2,7 @@
 include '../controller/DBController.php';
 include '../module/user.php';
 include '../controller/AuthController.php';
-include '../module/client.php';
+
 $errMsg="";
 
 if(isset($_GET["logout"]))
@@ -50,7 +50,7 @@ if(isset($_POST["username"]) && isset($_POST["userId"]) && isset($_POST["age"]) 
 {
 	if(!empty($_POST["username"]) && !empty($_POST["userId"]) && !empty($_POST["age"]) && !empty($_POST["phone"]) && !empty($_POST["nation"]) && !empty($_POST["email"]) && !empty($_POST["pass"]))
 	{
-         $client = new Client();
+         $client = new Client;
 		 $auth=new AuthController();
 		 $client->setId($_POST['userId']);
          $client->setPass($_POST['pass']);
@@ -59,7 +59,7 @@ if(isset($_POST["username"]) && isset($_POST["userId"]) && isset($_POST["age"]) 
 		$client->setAge($_POST["age"]);
 		$client->setNationality($_POST["nation"]);
 		$client->setEmail($_POST["email"]);
-		 if(!$auth->login($client))
+		 if(!$auth->register($client))
         {
             if(!isset($_SESSION["user_id"]))
             {

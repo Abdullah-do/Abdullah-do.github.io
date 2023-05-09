@@ -1,5 +1,5 @@
 <?php 
-
+require_once '../module/client.php';
 require_once '../module/user.php';
 require_once '../controller/DBController.php';
 class AuthController
@@ -55,7 +55,7 @@ class AuthController
         $age = $client->getAge();
         $nationality = $client->getNationality();
 
-            $query="insert into users values ('$id','$name','$phone','$age','$email','$pass','$nationality,0)";
+            $query="insert into users values ('$id','$name','$phone','$age','$email','$pass','$nationality',0)";
             $result=$this->db->insert($query);
             if($result!=false)
             {
