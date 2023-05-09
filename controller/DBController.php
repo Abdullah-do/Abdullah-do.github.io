@@ -13,6 +13,7 @@ class DataBase{
       if ($this->connection->connect_error){
     die("Connection failed: ". $this->connection->connect_error);}
     //connection
+    return true;
   }
 public static function getInstance()
     {
@@ -37,8 +38,8 @@ public function select($query) {
         return false;
             }
             else{
-     $this->close();
-    return $result->fetch_all(MYSQLI_ASSOC);
+
+                    return $result->fetch_all(MYSQLI_ASSOC);
             }
 }
 
@@ -50,7 +51,7 @@ public function insert($data) {
        return false;
            }
            else{
-    $this->close();
+
     return true;
            }
 }
@@ -63,7 +64,7 @@ public function update($data) {
         return false;
             }
             else{
-     $this->close();
+
      return true;
             }
 }
@@ -76,7 +77,7 @@ public function delete($query) {
         return false;
             }
             else{
-     $this->close();
+                
      return true;
             }
     
