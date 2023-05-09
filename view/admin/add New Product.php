@@ -158,9 +158,9 @@
                 <label for="exampleFormControlSelect1" class="form-label">Category</label>
                 <select class="form-select" id="exampleFormControlSelect1" aria-label="Default select example">
                   <option selected>Open this select menu</option>
-                  <option value="1">one</option>
-                  <option value="2">Two</option>
-                  <option value="3">Three</option>
+                  <option value="1">replica</option>
+                  <option value="2">jewellery</option>
+                  <option value="3">clothing</option>
                 </select>
               </div>
             
