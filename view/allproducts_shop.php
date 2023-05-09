@@ -1,4 +1,10 @@
-
+<?php
+require_once "../module/product.php";
+require_once "../controller/productcontroller.php";
+$productcontroller = new productcontroller();
+$products=$productcontroller->GetAllProducts();
+$errmsg="";
+?>
 <!DOCTYPE html>
 	<html lang="zxx" class="no-js">
 	<head>
@@ -125,15 +131,18 @@
 					<section class="py-5">
 						<div class="container px-4 px-lg-5 mt-5">
 							<div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
-								<div class="col mb-5">
+							<?php
+							foreach($products as $product)
+							{
+?>                                <div class="col mb-5">
 									<div class="card h-100">
 										<!-- Product image-->
-										<img class="card-img-top" src="shopimages\image1.jpg" alt="..." />
+										<img class="card-img-top" src="<?php echo 'view/'.$product["image"]?>" alt="..." />
 										<!-- Product details-->
 										<div class="card-body p-4">
 											<div class="text-center">
 												<!-- Product name-->
-												<h5 class="fw-bolder">Oval Hieroglyphs Stud Earrings</h5>
+												<h5 class="fw-bolder"><?php echo $product["Product_name"]; ?></h5>
 												<div class="d-flex justify-content-center small text-warning mb-2">
 													<div class="bi-star-fill"></div>
 													<div class="bi-star-fill"></div>
@@ -142,159 +151,23 @@
 													<div class="bi-star-half"></div>
 												</div>
 												<!-- Product price-->
-												£60.00
+												£<?php echo $product["Product_price"]; ?>
 											</div>
 										</div>
 										<!-- Product actions-->
 										<div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-											<div class="text-center"><a class="btn btn-outline-dark mt-auto" href="Oval Hieroglyphs Stud Earrings.php">View options</a></div>
+											<div class="text-center"><a class="btn btn-outline-dark mt-auto" href="Oval Hieroglyphs Stud Earrings.php">add to cart</a></div>
 										</div>
 									</div>
 								</div>
-								<div class="col mb-5">
-									<div class="card h-100">
-										<!-- Sale badge-->
-										<div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Sale</div>
-										<!-- Product image-->
-										<img class="card-img-top" src="shopimages\image2.jpg" alt="..." />
-										<!-- Product details-->
-										<div class="card-body p-4">
-											<div class="text-center">
-												<!-- Product name-->
-												<h5 class="fw-bolder">Little Owl Badge</h5>
-												<!-- Product reviews-->
-												<div class="d-flex justify-content-center small text-warning mb-2">
-													<div class="bi-star-fill"></div>
-													<div class="bi-star-fill"></div>
-													<div class="bi-star-fill"></div>
-													<div class="bi-star-fill"></div>
-													<div class="bi-star-fill"></div>
-												</div>
-												<!-- Product price-->
-												<span class="text-muted text-decoration-line-through">£1.20</span>
-												$1.00
-											</div>
-										</div>
-										<!-- Product actions-->
-										<div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-											<div class="text-center"><a class="btn btn-outline-dark mt-auto" href="Little Owl Badge.php">View options</a></div>
-										</div>
-									</div>
-								</div>
+<?php
+
+							}
 							
-								<div class="col mb-5">
-									<div class="card h-100">
-										<!-- Product image-->
-										<img class="card-img-top" src="shopimages\image4.jpg" alt="Love Conquers All' Ring 8/P" />
-										<!-- Product details-->
-										<div class="card-body p-4">
-											<div class="text-center">
-												<!-- Product name-->
-												<h5 class="fw-bolder">Love Conquers All' Ring 8/P</h5>
-												<!-- Product reviews-->
-												<div class="d-flex justify-content-center small text-warning mb-2">
-													<div class="bi-star-fill"></div>
-													<div class="bi-star-fill"></div>
-													<div class="bi-star-fill"></div>
-													<div class="bi-star"></div>
-													<div class="bi-star"></div>
-												</div>
-												<!-- Product price-->
-												£35.00
-											</div>
-										</div>
-										<!-- Product actions-->
-										<div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-											<div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">View options</a></div>
-										</div>
-									</div>
-								</div>
-								<div class="col mb-5">
-									<div class="card h-100">
-										<!-- Sale badge-->
-										<div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Sale</div>
-										<!-- Product image-->
-										<img class="card-img-top" src="shopimages\image3.jpg" alt="'Porcelain Orange Blossom Necklace" />
-										<!-- Product details-->
-										<div class="card-body p-4">
-											<div class="text-center">
-												<!-- Product name-->
-												<h5 class="fw-bolder">'Porcelain Orange Blossom Necklace</h5>
-												<div class="d-flex justify-content-center small text-warning mb-2">
-													<div class="bi-star-fill"></div>
-													<div class="bi-star-fill"></div>
-													<div class="bi-star-fill"></div>
-													<div class="bi-star-half"></div>
-													<div class="bi-star-empty"></div>
-												</div>
-												<!-- Product price-->
-												<span class="text-muted text-decoration-line-through">£55.00</span>
-												£50.00
-											</div>
-										</div>
-										<!-- Product actions-->
-										<div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-											<div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">View options</a></div>
-										</div>
-									</div>
-								</div>
-								<div class="col mb-5">
-									<div class="card h-100">
-										<!-- Product image-->
-										<img class="card-img-top" src="shopimages\image6.jpg" alt="..." />
-										<!-- Product details-->
-										<div class="card-body p-4">
-											<div class="text-center">
-												<!-- Product name-->
-												<h5 class="fw-bolder">Gayer-Anderson Cat Statue Replica</h5>
-												<div class="d-flex justify-content-center small text-warning mb-2">
-													<div class="bi-star-fill"></div>
-													<div class="bi-star-fill"></div>
-													<div class="bi-star-fill"></div>
-													<div class="bi-star-fill"></div>
-													<div class="bi-star-half"></div>
-												</div>
-												<!-- Product price-->
-												£450.00
-											</div>
-										</div>
-										<!-- Product actions-->
-										<div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-											<div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">View options</a></div>
-										</div>
-									</div>
-								</div>
-								<div class="col mb-5">
-									<div class="card h-100">
-										<!-- Sale badge-->
-										<div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Sale</div>
-										<!-- Product image-->
-										<img class="card-img-top" src="shopimages\image7.jpg" alt="..." />
-										<!-- Product details-->
-										<div class="card-body p-4">
-											<div class="text-center">
-												<!-- Product name-->
-												<h5 class="fw-bolder">Anglo-Saxon Instrument Case Replica</h5>
-												<!-- Product reviews-->
-												<div class="d-flex justify-content-center small text-warning mb-2">
-													<div class="bi-star-fill"></div>
-													<div class="bi-star-fill"></div>
-													<div class="bi-star-fill"></div>
-													<div class="bi-star-fill"></div>
-													<div class="bi-star-fill"></div>
-												</div>
-												<!-- Product price-->
-												<span class="text-muted text-decoration-line-through">£140.00</span>
-												$180.00
-											</div>
-										</div>
-										<!-- Product actions-->
-										<div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-											<div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">View options</a></div>
-										</div>
-									</div>
-								</div>
-								<div class="col mb-5">
+	?>						
+							
+						
+							<div class="col mb-5">
 									<div class="card h-100">
 										<!-- Sale badge-->
 										<div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Sale</div>
@@ -349,121 +222,8 @@
 											<div class="text-center"><a class="btn btn-outline-dark mt-auto" href="Head of Hypnos Replica.php">View options</a></div>
 										</div>
 									</div>
-								</div>
-								<div class="col mb-5">
-									<div class="card h-100">
-										<!-- Product image-->
-										<img class="card-img-top" src="shopimages\image13.jpg" alt="Fuji Wave Slim Fit T-shirt, (M)" />
-										<!-- Product details-->
-										<div class="card-body p-4">
-											<div class="text-center">
-												<!-- Product name-->
-												<h5 class="fw-bolder">Fuji Wave Slim Fit T-shirt, (M)</h5>
-												<!-- Product reviews-->
-												<div class="d-flex justify-content-center small text-warning mb-2">
-													<div class="bi-star-fill"></div>
-													<div class="bi-star-fill"></div>
-													<div class="bi-star-fill"></div>
-													<div class="bi-star"></div>
-													<div class="bi-star"></div>
-												</div>
-												<!-- Product price-->
-												£27.00
-											</div>
-										</div>
-										<!-- Product actions-->
-										<div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-											<div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">View options</a></div>
-										</div>
-									</div>
-								</div>
-								<div class="col mb-5">
-									<div class="card h-100">
-										<!-- Product image-->
-										<img class="card-img-top" src="shopimages\image10.jpg" alt="Story of Troy Unisex T-Shirt (L)" />
-										<!-- Product details-->
-										<div class="card-body p-4">
-											<div class="text-center">
-												<!-- Product name-->
-												<h5 class="fw-bolder">Story of Troy Unisex T-Shirt (L)</h5>
-												<div class="d-flex justify-content-center small text-warning mb-2">
-													<div class="bi-star-fill"></div>
-													<div class="bi-star-fill"></div>
-													<div class="bi-star-fill"></div>
-													<div class="bi-star-fill"></div>
-													<div class="bi-star-half"></div>
-												</div>
-												<!-- Product price-->
-												£450.00
-											</div>
-										</div>
-										<!-- Product actions-->
-										<div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-											<div class="text-center"><a class="btn btn-outline-dark mt-auto" href="Story of Troy Unisex T-Shirt (L).php">View options</a></div>
-										</div>
-									</div>
-								</div>
-								<div class="col mb-5">
-									<div class="card h-100">
-										<!-- Sale badge-->
-										<div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Sale</div>
-										<!-- Product image-->
-										<img class="card-img-top" src="shopimages\image11.jpg" alt="Eye of Horus Men's Socks" />
-										<!-- Product details-->
-										<div class="card-body p-4">
-											<div class="text-center">
-												<!-- Product name-->
-												<h5 class="fw-bolder">Eye of Horus Men's Socks</h5>
-												<!-- Product reviews-->
-												<div class="d-flex justify-content-center small text-warning mb-2">
-													<div class="bi-star-fill"></div>
-													<div class="bi-star-fill"></div>
-													<div class="bi-star-fill"></div>
-													<div class="bi-star-fill"></div>
-													<div class="bi-star-fill"></div>
-												</div>
-												<!-- Product price-->
-												<span class="text-muted text-decoration-line-through">£14.00</span>
-												$12.00
-											</div>
-										</div>
-										<!-- Product actions-->
-										<div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-											<div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">View options</a></div>
-										</div>
-									</div>
-								</div>
-								<div class="col mb-5">
-									<div class="card h-100">
-										<!-- Sale badge-->
-										<div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Sale</div>
-										<!-- Product image-->
-										<img class="card-img-top" src="shopimages\image12.jpg" alt="Fuji Wave Face Mask" />
-										<!-- Product details-->
-										<div class="card-body p-4">
-											<div class="text-center">
-												<!-- Product name-->
-												<h5 class="fw-bolder">Fuji Wave Face Mask</h5>
-												<div class="d-flex justify-content-center small text-warning mb-2">
-													<div class="bi-star-fill"></div>
-													<div class="bi-star-fill"></div>
-													<div class="bi-star-fill"></div>
-													<div class="bi-star-half"></div>
-													<div class="bi-star-empty"></div>
-												</div>
-												<!-- Product price-->
-												<span class="text-muted text-decoration-line-through">£7.00</span>
-												£6.00
-											</div>
-										</div>
-										<!-- Product actions-->
-										<div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-											<div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">View options</a></div>
-										</div>
-									</div>
-								</div>
-							
-							</div>
+								</div>	
+						</div>
 						</div>
 					</section>
 					</section>
