@@ -163,7 +163,7 @@
 										<div class="col">&euro; 60.00 <span class="close">&#10005;</span></div>
 									</div>
 								</div>
-								<button class="btn">continue Shopping</button>
+								<a href="allproducts_shop.php"><button class="btn">continue Shopping</button></a>
 							</div>
 							<div class="col-md-4 summary">
 								<div><h5><b>Summary</b></h5></div>
@@ -182,7 +182,7 @@
 									<div class="col">TOTAL PRICE</div>
 									<div class="col text-right">&euro; 137.00</div>
 								</div>
-								<button class="btn">CHECKOUT</button>
+								<a href="add visa.php"><button class="btn">CHECKOUT</button></a>
 							</div>
 						</div>
 						

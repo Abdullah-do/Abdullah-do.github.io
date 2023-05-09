@@ -223,12 +223,12 @@ $errmsg="";
 ?>                                <div class="col mb-5">
 									<div class="card h-100">
 										<!-- Product image-->
-										<img class="card-img-top" src="<?php echo $product['image'];?>" alt="..." />
+										<img class="card-img-top" src="<?php echo 'view/'.$product["image"]?>" alt="..." />
 										<!-- Product details-->
 										<div class="card-body p-4">
 											<div class="text-center">
 												<!-- Product name-->
-												<h5 class="fw-bolder">"<?php echo 'view/'.$product["image"]?></h5>
+												<h5 class="fw-bolder"><?php echo $product["Product_name"]; ?></h5>
 												<div class="d-flex justify-content-center small text-warning mb-2">
 													<div class="bi-star-fill"></div>
 													<div class="bi-star-fill"></div>
