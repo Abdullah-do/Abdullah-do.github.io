@@ -1,15 +1,16 @@
 <?php
-session_start();
+/*session_start();
 if(!isset($_SESSION["Admin_check"]))
 {
 header("locaion:../index.php");
 }
 if(!$_SESSION["Admin_check"]){
 header("location:../index.php");
-}
+}*/
 require_once '../../controller/ProductController.php';
 $productController= new ProductController;
 $categories=$productController->getCategories();
+
 ?>
 <!DOCTYPE html>
 
