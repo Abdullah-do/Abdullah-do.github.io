@@ -1,4 +1,15 @@
+<?php
 
+include_once '../controller/Sessioncontroller.php';
+
+
+
+$id = 1;
+$Sessioncontroller = new Sessioncontroller();
+$sessions = $Sessioncontroller->GetAllSession($id);
+$errmsg="";
+
+?>
 <!DOCTYPE html>
 <html lang="zxx" class="no-js">
 
@@ -20,7 +31,7 @@
 
 	<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet">
 	<!--
-			CSS
+			CS
 			============================================= -->
 	<link rel="stylesheet" href="css/linearicons.css">
 	<link rel="stylesheet" href="css/font-awesome.min.css">
@@ -30,9 +41,45 @@
 	<link rel="stylesheet" href="css/animate.min.css">
 	<link rel="stylesheet" href="css/owl.carousel.css">
 	<link rel="stylesheet" href="css/main.css">
-
-	<link href="css/css7/met-zodiac-generated.css" rel="stylesheet">
+	<link href="./css/css7/met-zodiac-generated.css" rel="stylesheet">
     <link rel="stylesheet" href="css/css7/style.css">
+
+
+
+	<style>
+		.session{
+			font-size: 20px;
+		}
+		
+		h5 {
+
+    font-size: 20px;
+    font-family: "Poppins-Medium";
+    color: #88d200;
+    font-weight: 500; }
+	.details{
+		font-size: 25px;
+	}
+	.btn{
+		
+		position: relative;
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 12px 24px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 8px;
+    left: 250px;
+
+	}
+
+
+	</style>
 </head>
 
 <body>
@@ -70,7 +117,7 @@
 						<li><a href="Reserve restaurant.html">Restaurant</a></li>
 						<li><a href="Membership.php">Membership</a></li>
 						<li><a href="reserve study room.php">Study Rooms</a></li>
-						
+						<li><a href="contact.php">Contact</a></li>
 
 						<li><a href="allproducts_shop.php">Shop</a></li>
 						<li><a href="donation.php">Donate</a></li>
@@ -91,7 +138,7 @@
 				<div class="banner-content col-lg-8">
 
 					<h1 class="text-white">
-						family and kids study room
+						family study room
 					</h1>
 
 
@@ -108,144 +155,67 @@
 
 
 
+
 			<div class="main-wrapper wrapper" id="main-content">
     <div class="wor">
         <div class="med-hide lrg-c2"></div>
         <div class="content content-centered">    <section class="image-block image-block--xlarge image-block--text-above-below z-container">
     </section>
     <h1 class="page-title">
-Family Guides
+family Guides
 </h1>
 
     <div class="rich-text z-container">
-<p>
+<p class = "details">
 A study room dedicated to ancient Egypt can be a great way to introduce kids to this fascinating civilization. It can be decorated with various replicas of ancient Egyptian artifacts, such as pyramids, sphinxes, hieroglyphics decoders, board games, pottery, and mummy replicas. A bookshelf filled with books about ancient Egypt can also be a great addition, with titles ranging from children's books to more in-depth histories.</p>
-<p>Kids can learn about the daily life, culture, art, religion, and achievements of ancient Egyptians through various interactive and educational activities, such as playing board games, decoding hieroglyphics, or creating their own pottery. This study room can not only provide a fun and engaging learning experience for kids but also foster a deeper appreciation for history and other cultures.</p>
+<p class = "details">Kids can learn about the daily life, culture, art, religion, and achievements of ancient Egyptians through various interactive and educational activities, such as playing board games, decoding hieroglyphics, or creating their own pottery. This study room can not only provide a fun and engaging learning experience for kids but also foster a deeper appreciation for history and other cultures.</p>
     </div>
+
+			<?php
+					foreach($sessions as $Session){
+						?>
+
+					<div class="promo-area--body z-container">
+							<div class="promo-area__image-container">
+									<img src="<?php echo 'view/'.$Session["image"]?>" class="image-block__image" alt="Cover of a brochure with a very colorful illustration of visitors and families on The Met&#39;s Plaza.">
+							</div>
+							<div class="image-block__description rich-text">
+								<h3><?php echo $Session["S_name"] ?></h3>
+								<h5>Duration: </h5><span class = "session"><?php echo $Session["S_duration"] ?> hours</span><br>
+								<h5>Cost: </h5><span class = "session"><?php echo $Session["S_fee"] ?> $</span><br>
+								<h5>Start Date: </h5><span class = "session"><?php echo $Session["s_schdule"]?></span><br>
+								<div>
+								<p class = "details"><?php echo $Session["S_details"]?></p>
+								</div>
+								<div>
+									<input type = "submit" class = "btn" value ="Book">
+								</div>
+							</div>
+						</div>
+
+
+							<?php
+					}
 
 
 
-<div class="promo-area--body z-container">
-    <div class="promo-area__image-container">
-            <img src="img\OIP (5).jpg" class="image-block__image" alt="Cover of a brochure with a very colorful illustration of visitors and families on The Met&#39;s Plaza.">
-        
-    </div>
-    <div class="image-block__description rich-text">
-        <h3>Canopic Jars</h3>
-        <p>Canopic jars were used by ancient Egyptians to store the organs of the deceased during the mummification process.<br>
-<br>
-<em>They are usually decorated with the heads of the four sons of Horus and can be a fascinating artifact to display.</em></p>
-    </div>
-</div>
-<div class="promo-area--body z-container">
-    <div class="promo-area__image-container">
-            <img src="img\croix_vie_or.jpg" class="image-block__image" alt="Cover of a brochure with a very colorful illustration of jousting knights on horseback galloping">
-     
-    </div>
-    <div class="image-block__description rich-text">
-        <h3>Ankh</h3>
-        <p>The ankh is a symbol of life and is often seen in ancient Egyptian art and inscriptions.</p>
-<p><em> A replica of an ankh can be a great way to teach kids about the beliefs and religion of ancient Egyptians.</em></p>
-    </div>
-</div>
-<div class="promo-area--body z-container">
-    <div class="promo-area__image-container">
-            <img src="img\R (3).jpg" class="image-block__image" alt="A brochure cover illustration depicting a warrior wearing gold arm rings, golden jewelry across his chest, and a golden sword.">
-       
-    </div>
-    <div class="image-block__description rich-text">
-        <h3>Rosetta Stone Replica</h3>
-        <p>The Rosetta Stone is one of the most famous artifacts in Egyptian history. It was inscribed with a decree issued at Memphis in 196 BC and is famous for its role in helping to decipher ancient Egyptian hieroglyphs.
-</p>
-<p><em>A replica of the Rosetta Stone can be a great way to spark interest in ancient Egyptian history and archaeology.</em></p>
-    </div>
-</div>
-<div class="promo-area--body z-container">
-    <div class="promo-area__image-container">
-            <img src="img\AN-EGYPTIAN-PAINTED-POTTERY-JAR-NEW-KINGDOM-LATE-DYNASTY-XVIII-1391-1307-BC.png" class="image-block__image" alt="Cover of a brochure with a very colorful illustration of visitors admiring The Astor Court gallery.">
-     
-    </div>
-    <div class="image-block__description rich-text">
-        <h3>Ancient Egyptian Pottery</h3>
-        <p>Ancient Egyptians created many beautiful pottery pieces, including vases, bowls, and jars.</p>
-<p><em>Replicas or authentic pieces of pottery can be a great way to teach kids about the ancient Egyptian art of pottery making and the use of symbols and colors in their artwork.</em></p>
-    </div>
-    
-</div>
+
+
+
+					?>
+
+	
+	
 </div>
 
         
 
-		<div class="wrapper" style="
-    
-    width: 900px;
-    right: 30px;
-    height: 900px;
-">
-			<div class="inner" style="
-    width: 750px;
-">
-				<form action="">
-					<h3>Book</h3>
-					<div class="form-row">
-						<div class="form-wrapper">
-							<label for="">Name *</label>
-							<input type="text" class="form-control" placeholder="Your Name">
-						</div>
-						<div class="form-wrapper">
-							<label for="">Phone *</label>
-							<input type="text" class="form-control" placeholder="Phone">
-						</div>
-					</div>
-					<div class="form-row">
-						<div class="form-wrapper">
-							<label for="">Email</label>
-							<span class="lnr lnr-calendar-full"></span>
-							<input type="text" class="form-control datepicker-here" data-language="en" data-date-format="dd M yyyy" id="dp1">
-						</div>
-						<div class="form-wrapper">
-							<label for="">Date</label>
-							<span class="lnr lnr-calendar-full"></span>
-							<input type="text" class="form-control datepicker-here" data-language="en" data-date-format="dd M yyyy" id="dp2">
-						</div>
-					</div>
-					<div class="form-row last">
-						<div class="form-wrapper">
-							<label for="">Adults *</label>
-							<select name="" id="" class="form-control">
-								<option value="1">1</option>
-								<option value="2">2</option>
-								<option value="3">3</option>
-								<option value="4">4</option>
-								<option value="5">5</option>
-								<option value="6">6</option>
-							</select>
-							<i class="zmdi zmdi-chevron-down"></i>
-						</div>
-						<div class="form-wrapper">
-							<label for="">Chidren *</label>
-							<select name="" id="" class="form-control">
-								<option value="1">1</option>
-								<option value="2">2</option>
-								<option value="3">3</option>
-								<option value="4">4</option>
-								<option value="5">5</option>
-								<option value="6">6</option>
-							</select>
-							<i class="zmdi zmdi-chevron-down"></i>
-						</div>
-					</div>
-					
-					<button data-text="Book Room">
-						<span>Book Room</span>
-					</button>
-				</form>
-			</div>
-		</div>
+		
 <!-- End Reservation Form -->
         <div class="med-hide lrg-c2"></div>
     </div>
 </div>
+			
 
 
 
