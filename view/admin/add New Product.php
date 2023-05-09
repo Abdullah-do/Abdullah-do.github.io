@@ -1,65 +1,43 @@
 <?php
-/*session_start();
-if(!isset($_SESSION["Admin_check"]))
-{
-header("locaion:../index.php");
-}
-if(!$_SESSION["Admin_check"]){
-header("location:../index.php");
-}*/
-require_once '../../controller/ProductController.php';
-require_once 'D:\xam\htdocs\Abdullah-do.github.io\module\product.php';
-$productController= new ProductController;
-$categories=$productController->getCategories();
 
-if(isset($_POST['name'])&&isset($_POST['quantity'])&&isset($_POST['price'])&&(isset($_POST['state1'])||isset($_POST['state2']))&&isset($_POST['details'])&&isset($_POST['category'])&&isset($_FILES["image"])){
 
-  if(!empty($_POST['name'])&&!empty($_POST['quantity'])&&!empty($_POST['price'])&&(!empty($_POST['state1'])||!empty($_POST['state2']))&&!empty($_POST['details'])&&!empty($_POST['category']))
-{
- 
-$product=new Product;
-$product->setProductName($_POST['name']);
-$product->setproductQuantity($_POST['quantity']);
-$product->setproductPrice($_POST['price']);
-$product->setproductDescription($_POST['details']);
-$product->setProductCategory($_POST['category']);
-$location = "shopimages/".$_FILES["image"]["name"];
-if(move_uploaded_file($_FILES["image"]["tmp_name"],$location)){
-$product->image=$location;
-if($productController->addproduct($product))
-{
+require_once "../../module/product.php";
+require_once "../../controller/productcontroller.php";
 
-  header("location:index.php");
-}
-else{
+$productcontroller = new productcontroller();
 
-  echo "failed";
+$errmsg="";
 
-}
-}
-else{
-  echo "file upload failed";
+if(isset($_POST["name"])&&isset($_POST["money"])&&isset($_POST["Quantity"])&&isset($_POST["details"])&&isset($_FILES["image"])){
 
-}
-
-}
-if(isset($_POST['state1']))
-{
-  $product->setProductstate('in stock');
-}
-else if(isset($_POST['state2']))
-{
-  $product->setProductstate('out of stock');
-}
-if( $productController->addproduct($product))
-{
- header("location:add New Product.php");
-}
-else {
-  header("location:index.php");
-
-}
-}
+            if(!empty($_POST["name"])&&!empty($_POST["money"])&&!empty($_POST["Quantity"])
+            &&!empty($_POST["details"])&&!empty($_FILES["image"])){
+            $product = new product();
+            $product->SetproductName($_POST["name"]);
+            $product->Setproductprice($_POST["money"]);
+            $product->SetproductQuantity($_POST["Quantity"]);
+            $product->SetproductDetails($_POST["details"]);
+            $product->SetproductType_id($_POST["type"]);
+            $product->setCatagory($_POST["type"]);
+            $location = "../img/".$_FILES["image"]["name"];
+            if(move_uploaded_file($_FILES["image"]["tmp_name"],$location)){
+              $product->SetproductImage($location);
+              if($productcontroller->Addproduct($product)){
+              }
+              else
+              $errmsg="somthing wrong";
+            }
+            else{
+              $errmsg="error in upload";
+            }
+          
+            }
+            else{
+            $errmsg = "please fill all the fields";
+          }
+          }
+          
+        
 
 
 ?>
@@ -132,6 +110,8 @@ else {
     <!-- Layout wrapper -->
     <div class="layout-wrapper layout-content-navbar">
       <div class="layout-container">
+        <!-- Menu -->
+
         <aside id="layout-menu" class="layout-menu menu-vertical menu bg-menu-theme">
           <ul class="menu-inner py-1">
            <!-- Layouts -->
@@ -143,22 +123,22 @@ else {
 
               <ul class="menu-sub">
                 <li class="menu-item">
-                  <a href="add New session.php" class="menu-link">
-                    <div data-i18n="Without menu">New Session</div>
+                  <a href="add New product.html" class="menu-link">
+                    <div data-i18n="Without menu">New product</div>
                   </a>
                 </li>
                 <li class="menu-item">
-                  <a href="add New Product.php" class="menu-link">
+                  <a href="add New Product.html" class="menu-link">
                     <div data-i18n="Without navbar">New Product</div>
                   </a>
                 </li>
                 <li class="menu-item">
-                  <a href="add New photo.php" class="menu-link">
+                  <a href="add New photo.html" class="menu-link">
                     <div data-i18n="Container">New Photo</div>
                   </a>
                 </li>
                 <li class="menu-item">
-                  <a href="add New exibit.php" class="menu-link">
+                  <a href="add New exibit.html" class="menu-link">
                     <div data-i18n="Fluid">New Exibit</div>
                   </a>
                 </li>
@@ -171,18 +151,22 @@ else {
               </a>
              <ul class="menu-sub">
               <li class="menu-item">
-                <a href="member List.php" class="menu-link">
+                <a href="member List.html" class="menu-link">
                   <div data-i18n="Without menu">members</div>
                 </a>
               </li>
               <li class="menu-item">
-                <a href="purchased tickets.php" class="menu-link">
+                <a href="purchased tickets.html" class="menu-link">
                   <div data-i18n="Without navbar">purchased tickets</div>
                 </a>
               </li>
-              
               <li class="menu-item">
-                <a href="reserved tables.php" class="menu-link">
+                <a href="feedback List.html" class="menu-link">
+                  <div data-i18n="Without navbar">feedback</div>
+                </a>
+              </li>
+              <li class="menu-item">
+                <a href="reserved tables.html" class="menu-link">
                   <div data-i18n="Without navbar">booked tables</div>
                 </a>
               </li>
@@ -191,6 +175,7 @@ else {
             
           </ul>
         </aside>
+        
         <!-- / Menu -->
 
         <!-- Layout container -->
@@ -200,104 +185,85 @@ else {
   <!-- Content -->
 
   <div class="container-xxl flex-grow-1 container-p-y">
-    <h4 class="fw-bold py-3 mb-4"> Add new Product</h4>
-
+    <h4 class="fw-bold py-3 mb-4"> Add new product</h4>
+   
     <div class="row">
       <!-- Basic -->
+      
       <div class="col-md-6">
-        <div class="card mb-4">
-          <h5 class="card-header">Product Details</h5>
+        
+          <div class="card mb-4">
+        <form method="post" enctype ="multipart/form-data">
+          <h5 class="card-header">product Details</h5>
+          <?php
+          if($errmsg!=""){
+            ?>
+              <div class="alert alert-danger" role ="alert">
+            <?php echo $errmsg?></div><?php
+          }
+          
+          
+          
+          ?>
           <div class="card-body demo-vertical-spacing demo-only-element">
-          <form method="post" enctype ="multipart/form-data">
-          <div class="input-group">
-          <form action="add New Product.php" method="post" enctype='multipart/form-data'>
-              <span class="input-group-text" id="basic-addon11">Product Name</span>
+            <div class="input-group">
+              <span class="input-group-text" id="basic-addon11">product Name</span>
+            
               <input
                 type="text"
                 class="form-control"
-               name="name"
+               name ="name"
                 aria-label="Name"
                 aria-describedby="basic-addon11"
               />
             </div>
-           
-           
             <div class="mb-3">
-                <label for="exampleFormControlSelect1" class="form-label" >Category</label>
-                <select class="form-select" id="exampleFormControlSelect1" aria-label="Default select example"name="Category">
-            
-               <option value="replica">replica</option>
-               <option value="jewellery">jewellery</option>
-               <option value="clothing">clothing</option>
-              </select>
+                <label for="exampleFormControlSelect1" class="form-label">Category</label>
+                <select class="form-select" name ="type" id="exampleFormControlSelect1" aria-label="Default select example">
+                <option value="clothing">clothin</option>
+                  <option value="replica">replica</option>
+                  <option value="jewellery">jewellery</option>
+                </select>
               </div>
-            <?PHP
-          
             
-            
-            ?>
-            <div class="input-group">
-              <span class="input-group-text" id="basic-addon11">Quantity</span>
-              <input
-                type="text"
-                name="quantity"
-                class="form-control"
-                aria-label="Quantity"
-                aria-describedby="basic-addon11"
-              />
-            </div>
+              <div class="input-group">
+                <span class="input-group-text" id="basic-addon11">product Quantity</span>
+                <input
+                  type="text"
+                  class="form-control"
+                  name = "Quantity"
+                  aria-label="Name"
+                  aria-describedby="basic-addon11"
+                />
+              </div>
+
 
             <div class="input-group">
-              <span class="input-group-text">€</span>
+              <span class="input-group-text">$</span>
               <input
                 type="text"
                 class="form-control"
+                name="money"
                 placeholder="Amount"
-                name="price"
                 aria-label="Amount (to the nearest dollar)"
               />
               <span class="input-group-text">.00</span>
             </div>
-            <div class="col-md">
-              <small class="text-light fw-semibold">State</small>
-              <div class="form-check mt-3">
-                <input
-                  name="default-radio-1"
-                  class="form-check-input"
-                  type="radio"
-                  name="state1"
-                  value=""
-                  id="defaultRadio1"
-                />
-                <label class="form-check-label" for="defaultRadio1"> In Stock </label>
-              </div>
-              <div class="form-check">
-                <input
-                  name="default-radio-1"
-                  class="form-check-input"
-                  type="radio"
-                  name="stat2"
-                  value=""
-                  id="defaultRadio2"
-                  checked
-                />
-                <label class="form-check-label" for="defaultRadio2"> Out of Stock</label>
-              </div>
-              
-            </div>           
+                
             <div class="input-group">
               <span class="input-group-text">Details</span>
-              <textarea class="form-control" aria-label="Details" placeholder="Write the details of this product"name="details"></textarea>
+              <textarea class="form-control" aria-label="Details" name ="details" placeholder="Write the details of this product"></textarea>
             </div>
-                <div class="mb-3">
-                  <label for="formFile" class="form-label">Upload product's photo</label>
-                  <input class="form-control" type="file" id="formFile" name="image" />
-                </div>
-          
-        <button type="submit" class="btn btn-primary">Add</button>
-      </div>
+        
+            <div class="mb-3">
+              <label for="formFile" class="form-label">Upload product's photo</label>
+              <input class="form-control" name="image" type="file" id="formFile" />
+            </div>
+          <button type="submit" class="btn btn-primary">Add</button>
+        </form> 
     </div>
-              </form>
+      
+    </div>
     <div class="content-backdrop fade"></div>
           </div>
           <!-- Content wrapper -->

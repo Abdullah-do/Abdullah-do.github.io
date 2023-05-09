@@ -9,14 +9,15 @@ $query="select * from gift_shop";
 return $this->db->select($query);
 }
 public function addproduct(Product $product){
-    $pc=$product->getProductCategory();
+    $pc=$product->GetProductType_id();
     $pr=$product->getProductPrice();
     $pn=$product->getProductName();
+$pcatagory=$product->getCatagory();
     $pq= $product->getProductQuantity();
-    $ps=$product->getProductState();
-    $pd=$product->getProductDescription();
+    $pd=$product->getProductDetails();
+    $image = $product->GetProductImage();
     $this->db=DataBase::getInstance();
-    $query="INSERT INTO gift_shop VALUES (NULL,  $pr, ' $pn', '$pr', $pq, ' $ps', '$pd')";
+    $query="INSERT INTO gift_shop VALUES (NULL,  $pr, ' $pn', '$pr', $pq, ' $pd', '$image')";
     return $this->db->insert($query);
 }}
 ?>

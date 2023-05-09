@@ -1,76 +1,75 @@
-<?php
+<?php 
 class Product{
+    private $name; 
+    private $price;
+private $quantity;
+    private $details;
+    private $image;
+    private $type_id;
+  private $catagory;
+    
+    public function SetProductName($name) {
+        $this->name = $name;
+      }
+    
+      public function GetProductName() {
+        return $this->name;
+      }
+     
+      public function SetProductprice($price) {
+        $this->price = $price;
+      }
+    
+      public function GetProductprice() {
+        return $this->price;
+      }
+      public function SetProductQuantity($quantity) {
+        $this->quantity = $quantity;
+      }
+    
+      public function GetProductQuantity() {
+        return $this->quantity;
+      }
+      public function SetProductDetails($details) {
+        $this->details = $details;
+      }
+    
+      public function GetProductDetails() {
+        return $this->details;
+      }
+      public function SetProductImage($image) {
+        $this->image = $image;
+      }
+    
+      public function GetProductImage() {
+        return $this->image;
+      }
+      public function SetProductType_id($type_id) {
+        $this->type_id = $type_id;
+      }
+    
+      public function GetProductType_id() {
+        return $this->type_id;
+      }
+   
 
-private $productName;
-private $productPrice;
-private $productDescription;
-private $productCategory;
-private $productQuantity;
-private $productState;
-
-
+	/**
+	 * @return mixed
+	 */
+	public function getCatagory() {
+		return $this->catagory;
+	}
 	
-	public function getProductPrice() {
-		return $this->productPrice;
-	}
-	public function setProductPrice($productPrice): self {
-		$this->productPrice = $productPrice;
-		return $this;
-	}
-
-	public function getProductState() {
-		return $this->productState;
-	}
-	
-
-	public function setProductState($productState): self {
-		$this->productState = $productState;
-		return $this;
-	}
-
-
-	public function getProductQuantity() {
-		return $this->productQuantity;
-	}
-	
-	
-	public function setProductQuantity($productQuantity): self {
-		$this->productQuantity = $productQuantity;
-		return $this;
-	}
-
-	
-	public function getProductCategory() {
-		return $this->productCategory;
-	}
-	
-	public function setProductCategory($productCategory): self {
-		$this->productCategory = $productCategory;
-		return $this;
-	}
-
-
-	public function getProductDescription() {
-		return $this->productDescription;
-	}
-	
-/**
-	 * @param mixed $productDescription 
+	/**
+	 * @param mixed $catagory 
 	 * @return self
 	 */
-	public function setProductDescription($productDescription): self {
-		$this->productDescription = $productDescription;
-		return $this;
-	}
-
-	public function getProductName() {
-		return $this->productName;
-	}
-	
-	
-	public function setProductName($productName): self {
-		$this->productName = $productName;
+	public function setCatagory($catagory): self {
+		$this->catagory = $catagory;
 		return $this;
 	}
 }
+
+
+
 ?>
