@@ -1,4 +1,38 @@
-	
+<?php
+include_once '../controller/VisaController.php';
+
+$visa = new VisaController;
+
+$nameErr = $numberErr = $dateErr = $cvvErr = $idErr = "";
+if(isset($_POST['name'] ) && isset( $_POST['date']) && isset($_POST['cvv']) && isset($_POST['number']) && isset($_POST['id']) ){
+	if(!empty($_POST['name'] ) && !empty( $_POST['date']) && !empty($_POST['cvv']) && !empty($_POST['number']) && !empty($_POST['id']))
+	{
+		$name=($_POST['name']);
+		$date=($_POST['date']);
+		$number=($_POST['number']);
+		$cvv=($_POST['cvv']);
+		$id=($_POST['id']);
+
+		$visa->set_visa($name , $date , $number , $cvv , $id);
+		
+	}
+	else{
+		$nameErr    ="enter name" ;
+	    $dateErr   ="enter date";
+		$numberErr  = "enter number";
+		$cvvErr = "enter cvv";
+		$idErr = "enter id";
+	}
+
+}
+
+
+
+?>
+
+
+
+
 <!DOCTYPE html>
 	<html lang="zxx" class="no-js">
 	<head>
@@ -202,26 +236,38 @@
 				  </div>
 			  </div>
 			  <div class="form-container">
-				  <div class="field-container">
+				 <form action="" method="post">
+			        <div class="field-container">
+					
 					  <label for="name">Name</label>
-					  <input id="name" maxlength="23" type="text">
-				  </div>
+				      <input id="name" name="name"maxlength="23" type="text">
+					  <p style="color: red; text-align: right;"><?php echo $nameErr ?></p>
+					</div> 
+				    
 				  <div class="field-container">
-					  <label for="cardnumber">Card Number</label><span id="generatecard">generate random</span>
-					  <input id="cardnumber" type="text" pattern="[0-9]*" inputmode="numeric">
+					  <label >Card Number</label><span id="generatecard">generate random</span>
+					  <input id="cardnumber" type="text" name="number" >
 					  <svg id="ccicon" class="ccicon" width="750" height="471" viewBox="0 0 750 471" version="1.1" xmlns="http://www.w3.org/2000/svg"
 						  xmlns:xlink="http://www.w3.org/1999/xlink">
 		  
 					  </svg>
+					  <p style="color: red; text-align: right;"><?php echo $numberErr ?></p>
 				  </div>
 				  <div class="field-container">
-					  <label for="expirationdate">Expiration (mm/yy)</label>
-					  <input id="expirationdate" type="text" pattern="[0-9]*" inputmode="numeric">
+					  <label >Expiration (mm/yy)</label>
+					  <input id="expirationdate" type="text" name="date" >
+					  <p style="color: red; text-align: right;"><?php echo $dateErr ?></p>
 				  </div>
 				  <div class="field-container">
-					  <label for="securitycode">Security Code</label>
-					  <input id="securitycode" type="text" pattern="[0-9]*" inputmode="numeric">
+					  <label for="securitycode">cvv</label>
+					  <input id="securitycode" type="text" name="cvv" pattern="[0-9]*" inputmode="numeric">
+					  <p style="color: red; text-align: right;"><?php echo $cvvErr ?></p>
 				  </div>
+				 
+					 <div><button type="submit" class="btn btn-primary w-25">Add</button></div> 
+					 
+					
+				 </form>
 			  </div>
 			 </section>
 
