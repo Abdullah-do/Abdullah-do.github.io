@@ -1,5 +1,5 @@
 <?php
-
+include_once '../controller/donateController.php'
 
 ?>
 <!DOCTYPE html>
@@ -115,7 +115,7 @@
                       <form>
                         <div class="mb-3">
                           <label class="form-label" for="basic-default-fullname">Name</label>
-                          <input type="text" class="form-control" id="basic-default-fullname" placeholder="John Doe" />
+                          <input type="text" class="form-control" name="name" id="basic-default-fullname" placeholder="John Doe" />
                         </div>
                       
                         <div class="mb-3">
@@ -123,6 +123,7 @@
                           <div class="input-group input-group-merge">
                             <input
                               type="text"
+							  name="email"
                               id="basic-default-email"
                               class="form-control"
                               placeholder="john.doe"
@@ -137,6 +138,7 @@
                           <label class="form-label" for="basic-default-phone">price</label>
                           <input
                             type="text"
+							name="price"
                             id="basic-default-phone"
                             class="form-control phone-mask"
                             placeholder="200$"
@@ -145,6 +147,7 @@
                         <div class="mb-3">
                           <label class="form-label" for="basic-default-message">comment</label>
                           <textarea
+						   name="comment"
                             id="basic-default-message"
                             class="form-control"
                             placeholder="Hi, Do you have a moment to talk Joe?"

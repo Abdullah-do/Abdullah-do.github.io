@@ -1,5 +1,4 @@
 <?php
-require_once '../controller/ProductController.php';
 class Product{
 
 private $productName;
