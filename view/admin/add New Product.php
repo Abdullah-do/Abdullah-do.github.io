@@ -156,7 +156,7 @@
             </div>
             <div class="mb-3">
                 <label for="exampleFormControlSelect1" class="form-label">Category</label>
-                <select class="form-select" id="exampleFormControlSelect1"value="Open this select menu">
+                <select class="form-select" id="exampleFormControlSelect1" aria-label="Default select example">
                   <option value="1">replica</option>
                   <option value="2">jewellery</option>
                   <option value="3">clothing</option>
