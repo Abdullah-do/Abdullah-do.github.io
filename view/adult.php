@@ -106,11 +106,11 @@ $errmsg="";
 		<div class="container">
 			<div class="row align-items-center justify-content-between d-flex">
 				<div id="logo">
-					<a href="main.php"><img src="img/logo-transparent-png.png" alt="" title="" /></a>
+					<a href="main.html"><img src="img/logo-transparent-png.png" alt="" title="" /></a>
 				</div>
 				<nav id="nav-menu-container">
 					<ul class="nav-menu">
-						<li class="menu-active"><a href="main.php">Home</a></li>
+						<li class="menu-active"><a href="main.html">Home</a></li>
 						<li><a href="gallery.php">Gallery</a></li>
 						<li><a href="event.php">Events</a></li>
 
@@ -187,9 +187,7 @@ A study room dedicated to ancient Egypt can be a great way to introduce kids to 
 								<div>
 								<p class = "details"><?php echo $Session["S_details"]?></p>
 								</div>
-								<div>
-									<input type = "submit" class = "btn" value ="Book">
-								</div>
+								
 							</div>
 						</div>
 

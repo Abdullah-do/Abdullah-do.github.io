@@ -1,3 +1,32 @@
+require_once "../controller/Restaurantcontroller.php";
+require_once "../module/Reservation.php";
+
+$Reasturantcontroller = new Reasturantcontroller();
+
+
+
+if(isset($_POST["id"])&&isset($_POST["date"])&&isset($_POST["time"])&&isset($_POST["people"])&&isset($_POST["msg"])){
+              if(!empty($_POST["id"])&&!empty($_POST["date"])&&!empty($_POST["time"])&&!empty($_POST["people"])&&!empty($_POST["msg"])){
+              $Reserv = new Reservation();
+              $Reserv->SetReservationUser_id($_POST["id"]);
+              $Reserv->SetReservationDate($_POST["date"]);
+              $Reserv->SetReservationTime($_POST["time"]);
+              $Reserv->SetReservationNo_people($_POST["people"]);
+              $Reserv->SetReservationMsg($_POST["msg"]);
+              
+                if($Reasturantcontroller->AddReservation($Reserv)){
+
+                }
+                else
+                $errmsg="somthing wrong";
+              }
+            }
+    else{
+              $errmsg = "please fill all the fields";
+            }
+
+
+?>
 <!DOCTYPE html>
 <html lang="zxx" class="no-js">
 
@@ -18,6 +47,7 @@
 	<title>Egyptian Museum</title>
 
 	<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css">
 	<!--
 			CSS
 			============================================= -->
@@ -31,9 +61,10 @@
 	<link rel="stylesheet" href="css/css7/main.css">
 
 	
-
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&family=Amatic+SC:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
- 
+ <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
  
  <link href="css/css7/bootstrap.min.css" rel="stylesheet">
   <link href="css/css7/bootstrap-icons.css" rel="stylesheet">
@@ -44,52 +75,61 @@
 </head>
 
 <body>
+<style>
+  .success{
+    color: green;
+    font-weight: bold
+  }
+  .error{
+    color:red;
+    font-weight: bold
+  }
+</style>
 
-	 <header id="header" id="home">
-			  	<div class="container header-top">
-			  		<div class="row">
-				  		
-						
-				  		<div class="col-6 top-head-right">
-				  			<ul>
-		  						<li><a href="#"><i class="fa fa-facebook"></i></a></li>
-								<li><a href="#"><i class="fa fa-twitter"></i></a></li>
-								<li><a href="#"><i class="fa fa-dribbble"></i></a></li>
-								<li><a href="#"><i class="fa fa-behance"></i></a></li>
-				  			</ul>
-				  		</div>	
-						  <div class="col-6 top-head-left">
-							<li><a href="profile.php"><i class='fa fa-user'></i></a></li>
-				  		</div>		  			
-			  		</div>
-			  	</div>
-			  	<hr>
-			    <div class="container">
-			    	<div class="row align-items-center justify-content-between d-flex">
-				      <div id="logo">
-				        <a href="main.php"><img src="img/logo-transparent-png.png"  alt="" title="" /></a>
-				      </div>
-				      <nav id="nav-menu-container" style="
-              margin-right: 77px;">
-				        <ul class="nav-menu">
-				          <li class="menu-active"><a href="main.php">Home</a></li>
-				          <li><a href="gallery.php">Gallery</a></li>
-				          <li><a href="event.php">Events</a></li>
-				      
-				          <li><a href="Reserve restaurant.html">Restaurant</a></li>
-						  <li><a href="Membership.php">Membership</a></li>
-						  <li><a href="reserve study room.php">Study Rooms</a></li>
-				          
-						 
-						  <li><a href="allproducts_shop.php">Shop</a></li>
-						  <li><a href="donation.php">Donate</a></li>
-						  <li><a href="feedback.php">FeedBack</a></li>
-				          	          
-				        </ul>
-				      </nav><!-- #nav-menu-container -->		    		
-			    	</div>
-			    </div>
-			  </header><!-- #header -->
+	<header id="header" id="home">
+		<div class="container header-top">
+			<div class="row">
+
+
+				<div class="col-6 top-head-right">
+					<ul>
+						<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+						<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+						<li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+						<li><a href="#"><i class="fa fa-behance"></i></a></li>
+					</ul>
+				</div>
+				<div class="col-6 top-head-left">
+					<li><a href="profile.php"><i class='fa fa-user'></i></a></li>
+				</div>
+			</div>
+		</div>
+		<hr>
+		<div class="container">
+			<div class="row align-items-center justify-content-between d-flex">
+				<div id="logo">
+					<a href="main.html"><img src="img/logo-transparent-png.png" alt="" title="" /></a>
+				</div>
+				<nav id="nav-menu-container">
+					<ul class="nav-menu">
+						<li class="menu-active"><a href="main.html">Home</a></li>
+						<li><a href="gallery.php">Gallery</a></li>
+						<li><a href="event.php">Events</a></li>
+
+						<li><a href="Reserve restaurant.html">Restaurant</a></li>
+						<li><a href="Membership.php">Membership</a></li>
+						<li><a href="reserve study room.php">Study Rooms</a></li>
+						<li><a href="contact.php">Contact</a></li>
+
+						<li><a href="allproducts_shop.php">Shop</a></li>
+						<li><a href="donation.php">Donate</a></li>
+						<li><a href="feedback.php">FeedBack</a></li>
+
+					</ul>
+				</nav><!-- #nav-menu-container -->
+			</div>
+		</div>
+	</header><!-- #header -->
 
 
 	<!-- start banner Area -->
@@ -608,44 +648,39 @@
           <div class="col-lg-4 reservation-img" style="background-image: url(img/reservation.jpg);" data-aos="zoom-out" data-aos-delay="200"></div>
 
           <div class="col-lg-8 d-flex align-items-center reservation-form-bg">
-            <form action="forms/book-a-table.php" method="post" role="form" class="php-email-form" data-aos="fade-up" data-aos-delay="100">
+            <form method = "post"   class="php-email-form" >
               <div class="row gy-4">
-                <div class="col-lg-4 col-md-6">
-                  <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars">
+                 <div class="col-lg-4 col-md-6">
+                  <input type="number" name="id" class="form-control" id="name" placeholder="Your ID" data-rule="minlen:4" required >
                   <div class="validate"></div>
-                </div>
+                </div> 
                 <div class="col-lg-4 col-md-6">
-                  <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email">
+                  <input type="date" name="date" class="form-control" id="date" placeholder="Date" data-rule="minlen:4" data-msg="Please enter at least 4 chars" required>
                   <div class="validate"></div>
-                </div>
+               </div>
+               <div class="col-lg-4 col-md-6">
+                  <input type="time" name="time" class="form-control" id="date" placeholder="Date" data-rule="minlen:4" data-msg="Please enter at least 4 chars" required>
+                  <div class="validate"></div>
+               </div>
                 <div class="col-lg-4 col-md-6">
-                  <input type="text" class="form-control" name="phone" id="phone" placeholder="Your Phone" data-rule="minlen:4" data-msg="Please enter at least 4 chars">
+                  <input type="number" class="form-control" name="people" id="people" placeholder="# of people" data-rule="minlen:1" data-msg="Please enter at least 1 chars"required>
                   <div class="validate"></div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                  <input type="text" name="date" class="form-control" id="date" placeholder="Date" data-rule="minlen:4" data-msg="Please enter at least 4 chars">
-                  <div class="validate"></div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                  <input type="text" class="form-control" name="time" id="time" placeholder="Time" data-rule="minlen:4" data-msg="Please enter at least 4 chars">
-                  <div class="validate"></div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                  <input type="number" class="form-control" name="people" id="people" placeholder="# of people" data-rule="minlen:1" data-msg="Please enter at least 1 chars">
-                  <div class="validate"></div>
-                </div>
+                
               </div>
-              <div class="form-group mt-3">
-                <textarea class="form-control" name="message" rows="5" placeholder="Message"></textarea>
+              <div class="col-lg-4 col-md-6">
+                <input type="number" class="form-control" id="price" name="price" placeholder = "Total Price" readonly>
+                </div>
+                  <div class="form-group mt-3">
+                <textarea class="form-control" name="msg" rows="5" placeholder="Message"></textarea>
                 <div class="validate"></div>
               </div>
-              <div class="mb-3">
-                <div class="loading">Loading</div>
-                <div class="error-message"></div>
-                <div class="sent-message">Your booking request was sent. We will call back or send an Email to confirm your reservation. Thank you!</div>
+           
+            <div class="mb-3">
+                
+                
               </div>
               <div class="text-center"><button type="submit">Book a Table</button></div>
-            </form>
+          </form>
           </div><!-- End Reservation Form -->
 
         </div>
@@ -682,7 +717,23 @@
 
 
 
+    <script>
 
+const guestsInput = document.getElementById('people');
+const priceElement = document.getElementById('price');
+
+
+const basePrice = 5;
+
+
+guestsInput.addEventListener('input', (event) => {
+  const guests = parseInt(event.target.value); // Get the number of guests as an integer
+  const totalPrice = basePrice * guests; // Calculate the new total price
+  priceElement.value = totalPrice; // Update the price displayed on the page
+});
+
+
+</script>
 
 
 
@@ -777,7 +828,7 @@
   <script src="js/js7/glightbox.min.js"></script>
   <script src="js/js7/purecounter_vanilla.js"></script>
   <script src="js/js7/swiper-bundle.min.js"></script>
-  <script src="js/js7/validate.js"></script>
+  
   <!-- Template Main JS File -->
   <script src="js/js7/main7.js"></script>
 

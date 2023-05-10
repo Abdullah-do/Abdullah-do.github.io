@@ -39,7 +39,7 @@ if(isset($_POST["id"]) && isset($_POST["password"]))
             }
             else
             {
-                header("location:../view/main.php");
+                header("location:../view/main.html");
             }
 	}
 }
@@ -74,7 +74,7 @@ if(isset($_POST["username"]) && isset($_POST["userId"]) && isset($_POST["age"]) 
             {
                 session_start();
 			}
-       header("location:../view/main.php");
+       header("location:../view/main.html");
 	}
 }
 	else {
