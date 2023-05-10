@@ -72,7 +72,7 @@
 						 
 						  <li><a href="allproducts_shop.html">Shop</a></li>
 						  <li><a href="donation.html">Donate</a></li>
-						  <li><a href="Feedback.html">FeedBack</a></li>
+						  <li><a href="feedback.php">FeedBack</a></li>
 				          	          
 				        </ul>
 				      </nav><!-- #nav-menu-container -->		    		
@@ -110,7 +110,7 @@
 			<div class="col-xl">
 				<div class="card mb-4">
 					<div class="card-body">
-						<form action="send.php">
+	 <form action="send.php" method="post">
 						<div class="mb-3">
 		  <label class="form-label" for="basic-icon-default-fullname">Full Name</label>
 		  <div class="input-group input-group-merge">
@@ -131,14 +131,11 @@
 		<div class="input-group input-group-merge">
 			<input
 			  type="text"
-			  name="Email"
+			  name="email"
 			  id="basic-default-email"
 			  class="form-control"
-			  placeholder="john.doe"
-			  aria-label="john.doe"
-			  aria-describedby="basic-default-email2"
 			/>
-			<span class="input-group-text" id="basic-default-email2">@example.com</span>
+		
 		  </div>
 		  <div class="form-text">You can use letters, numbers & periods</div>
 		</div>
@@ -159,16 +156,17 @@
 									for="basic-icon-default-message">Message</label>
 								<div class="input-group input-group-merge">
 									
-									<textarea id="basic-icon-default-message" class="form-control"
-									name="message"
+									<input id="basic-icon-default-message" class="form-control"
+									   name="message"
 										placeholder="Hi, Do you have a moment to talk Joe?"
 										aria-label="Hi, Do you have a moment to talk Joe?"
-										aria-describedby="basic-icon-default-message2"></textarea>
+										aria-describedby="basic-icon-default-message2"
+										/>
 								</div>
 							</div>
 							
 						   <div class="text-center w-100 "> <button type="submit" name="send" class="btn ">Send</button></div>
-						</form>
+	 </form>
 					</div>
 				</div>
 		</div>
