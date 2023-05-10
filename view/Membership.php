@@ -2,21 +2,27 @@
 require_once '../module/Membership.php';
 require_once '../controller/membercontroller.php';
 require_once '../controller/DBController.php';
+$errMsg1 = "";
 
 
 
 
 if (isset($_POST['name']) && isset($_POST['country']) && isset($_POST['address']) && isset($_POST['email']) && isset($_POST['phonenumber']) && isset($_POST['mtype']) && isset($_POST['user_id'])) {
-	$form = new Membership;
-	$form->setname($_POST['name']);
-	$form->setcountry($_POST['country']);
-	$form->setaddress($_POST['address']);
-	$form->setemail($_POST['email']);
-	$form->setphonenumber($_POST['phonenumber']);
-	$form->setmtype($_POST['mtype']);
-	$form->setuserid($_POST['user_id']);
-	$m = new memberController;
-	$m->set_member($form);
+	if (!empty($_POST["name"]) && !empty($_POST["country"]) && !empty($_POST["address"]) && !empty($_POST["email"]) && !empty($_POST["phonenumber"]) && !empty($_POST["mtype"]) && !empty($_POST["user_id"])) {
+		$form = new Membership;
+		$form->setname($_POST['name']);
+		$form->setcountry($_POST['country']);
+		$form->setaddress($_POST['address']);
+		$form->setemail($_POST['email']);
+		$form->setphonenumber($_POST['phonenumber']);
+		$form->setmtype($_POST['mtype']);
+		$form->setuserid($_POST['user_id']);
+		$m = new memberController;
+		$m->set_member($form);
+
+	} else {
+		$errMsg1 = "Please fill all fields";
+	}
 
 
 
@@ -30,10 +36,8 @@ if (isset($_POST['name']) && isset($_POST['country']) && isset($_POST['address']
 
 
 } else {
-	echo 'zpy';
-
+	echo 'values not sent';
 }
-
 
 
 ?>
@@ -147,6 +151,9 @@ if (isset($_POST['name']) && isset($_POST['country']) && isset($_POST['address']
 
 				<div class="container-xxl flex-grow-1 container-p-y">
 					<h4 class="fw-bold py-3 mb-4" style="margin-top: 50px;margin-left: 380px;">Membership Details </h4>
+					<h5 style="margin-left: 700px; color: red; font-size: large;">
+						<?php echo $errMsg1 ?>
+					</h5>
 
 					<div class="row">
 						<!-- Basic -->
