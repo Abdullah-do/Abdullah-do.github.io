@@ -20,7 +20,7 @@ class Reasturantcontroller{
         
         $this->db = DataBase::getInstance();
     if ($this->db) {
-        $query = "SELECT Email, First_Name, phone_no, restaurant_reservations.date, booking_time, Num_of_people, msg
+        $query = "SELECT Email, User_Name, phone_no, restaurant_reservations.date, booking_time, Num_of_people, msg
         FROM restaurant_reservations, users
         WHERE restaurant_reservations.user_id = users.user_id";
         return $this->db->select($query);
