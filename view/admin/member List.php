@@ -160,10 +160,13 @@
                       <tr>
                         <th>Membership ID</th>
                         <th>Name</th>
+                        <th>User Id</th>
+                        <th>Country</th>
                         <th>E-mail</th>
-                        <th>Age</th>
+                        <th>phone</th>
+                      
                         <th>Type</th>
-                        <th>State</th>
+                        
                         <th>Action</th>
 
                       </tr>
@@ -173,11 +176,11 @@
                         <td><i class="fab fa-angular fa-lg text-danger me-3"></i> 202151452156</td>
                         <td>Betengan Me5alel</td>
                         <td>djbdsshjshdb@gmail.com</td>
-                        <td>50</td>
+                        
                         <td>
                           Normal
                         </td>
-                        <td><span class="badge bg-label-primary me-1">Active</span></td>
+                       
                         <td>
                           <a href="#">
                             <img src="../assets/img/icons/unicons/delete.png" alt="delete" style="width:25px;height:25px;">
@@ -188,11 +191,11 @@
                         <td><i class="fab fa-angular fa-lg text-danger me-3"></i> 202151452156</td>
                         <td>Betengan Me5alel</td>
                         <td>djbdsshjshdb@gmail.com</td>
-                        <td>25</td>
+                       
                         <td>
                           Normal
                         </td>
-                        <td><span class="badge bg-label-primary me-1">Active</span></td>
+                        
                         <td>
                           <a href="#">
                             <img src="../assets/img/icons/unicons/delete.png" alt="delete" style="width:25px;height:25px;">
@@ -203,11 +206,11 @@
                         <td><i class="fab fa-angular fa-lg text-danger me-3"></i> 202151452156</td>
                         <td>Betengan Me5alel</td>
                         <td>djbdsshjshdb@gmail.com</td>
-                        <td>44</td>
+                        
                         <td>
                           Normal
                         </td>
-                        <td><span class="badge bg-label-primary me-1">Active</span></td>
+                       
                         <td>
                           <a href="#">
                             <img src="../assets/img/icons/unicons/delete.png" alt="delete" style="width:25px;height:25px;">
