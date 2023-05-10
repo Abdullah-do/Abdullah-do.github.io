@@ -1,11 +1,34 @@
 <?php
+require_once "user.php";
  class Client extends User{
     private $name;
     private $email;
     private $phone;
     private $nationality;
     private $age;
+    private $visa_number;
+    private $visa_cvv;
+    private $card_holder_name;
+    private $card_date;
 
+
+
+    public function setvisa_number($visa_number)
+    {
+        $this->visa_number = $visa_number;
+    }
+    public function setvisa_cvv($visa_cvv)
+    {
+        $this->visa_cvv = $visa_cvv;
+    }
+    public function setcard_holder_name($card_holder_name)
+    {
+        $this->card_holder_name = $card_holder_name;
+    }
+    public function setcard_date($card_date)
+    {
+        $this->card_date = $card_date;
+    }
     public function setName($name)
     {
         $this->name = $name;
@@ -44,6 +67,22 @@
     public function getAge()
     {
         return $this->age;
+    }
+    public function getvisa_number()
+    {
+        return $this->visa_number;
+    }
+    public function getvisa_cvv()
+    {
+        return $this->visa_cvv;
+    }
+    public function getcard_holder_name()
+    {
+        return $this->card_holder_name;
+    }
+    public function getcard_date()
+    {
+        return $this->card_date;
     }
 } 
 
