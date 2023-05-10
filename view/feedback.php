@@ -167,7 +167,7 @@
 								</div>
 							</div>
 							
-						   <div class="text-center w-100 "> <button type="submit" class="btn ">Send</button></div>
+						   <div class="text-center w-100 "> <button type="submit" name="send" class="btn ">Send</button></div>
 						</form>
 					</div>
 				</div>
