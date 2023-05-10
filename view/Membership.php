@@ -1,8 +1,12 @@
 <?php
 require_once '../module/Membership.php';
+require_once '../controller/membercontroller.php';
+require_once '../controller/DBController.php';
 
 
-if (isset($_POST['name']) && isset($_POST['country']) && isset($_POST['address']) && isset($_POST['email']) && isset($_POST['phonenumber']) && isset($_POST['mtype'])) {
+
+
+if (isset($_POST['name']) && isset($_POST['country']) && isset($_POST['address']) && isset($_POST['email']) && isset($_POST['phonenumber']) && isset($_POST['mtype']) && isset($_POST['user_id'])) {
 	$form = new Membership;
 	$form->setname($_POST['name']);
 	$form->setcountry($_POST['country']);
@@ -10,8 +14,26 @@ if (isset($_POST['name']) && isset($_POST['country']) && isset($_POST['address']
 	$form->setemail($_POST['email']);
 	$form->setphonenumber($_POST['phonenumber']);
 	$form->setmtype($_POST['mtype']);
-	echo 'name' . $form->getname();
+	$form->setuserid($_POST['user_id']);
+	$m = new memberController;
+	$m->set_member($form);
+
+
+
+
+
+
+
+
+
+
+
+
+} else {
+	echo 'zpy';
+
 }
+
 
 
 ?>
@@ -119,7 +141,7 @@ if (isset($_POST['name']) && isset($_POST['country']) && isset($_POST['address']
 
 	<!-----------------------------------------------START CODE----------------------------------------->
 	<section>
-		<form method="POST" action="Membership.php">
+		<form method="post" action="Membership.php">
 			<div class="content-wrapper">
 				<!-- Content -->
 
@@ -137,6 +159,12 @@ if (isset($_POST['name']) && isset($_POST['country']) && isset($_POST['address']
 										<span class="input-group-text" id="basic-addon11">Name</span>
 										<input type="text" class="form-control" aria-label="Name" aria-describedby="basic-addon11"
 											name="name" />
+									</div>
+									<div class="input-group" style="    margin-top: 2rem !important;
+			margin-bottom: 0 !important;">
+										<span class="input-group-text" id="basic-addon11">User ID</span>
+										<input type="text" class="form-control" aria-label="Name" aria-describedby="basic-addon11"
+											name="user_id" />
 									</div>
 									<div class="mb-3" style="    margin-top: 2rem !important;
 			margin-bottom: 0 !important;">
@@ -486,9 +514,9 @@ if (isset($_POST['name']) && isset($_POST['country']) && isset($_POST['address']
 										<select class="form-select" id="exampleFormControlSelect1" aria-label="Default select example"
 											name="mtype">
 											<option value="">Please Select</option>
-											<option value="United States">Standard ($100)</option>
-											<option value="Afghanistan">Premeium ($200)</option>
-											<option value="Albania">Ultimate ($300)</option>
+											<option>Standard ($100)</option>
+											<option>Premeium ($200)</option>
+											<option>Ultimate ($300)</option>
 										</select>
 									</div>
 

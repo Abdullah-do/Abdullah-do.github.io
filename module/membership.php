@@ -9,6 +9,7 @@ class Membership
   private $email;
   private $phonenumber;
   private $mtype;
+  private $userid;
   public function getname()
   {
     return $this->name;
@@ -37,6 +38,11 @@ class Membership
   public function getmtype()
   {
     return $this->mtype;
+
+  }
+  public function getuserid()
+  {
+    return $this->userid;
 
   }
 
@@ -79,6 +85,12 @@ class Membership
   public function setmtype($m)
   {
     $this->mtype = $m;
+
+
+  }
+  public function setuserid($id)
+  {
+    $this->userid = $id;
 
 
   }
