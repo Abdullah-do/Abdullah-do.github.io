@@ -114,8 +114,7 @@ $errmsg="";
 							</div>
 						</div>
 					</div>						
-					<div class="test"><a  href="cartt33.php"><div class ="cartt">
-						<button class="cart-btn">cart &nbsp;<i class="bi bi-basket"></i></button></div>	</a>				
+								
 										<div class="dropdown">
 											<button class="dropbtn">categories</button>
 											<div class="dropdown-content">
