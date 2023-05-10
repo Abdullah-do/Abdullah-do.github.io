@@ -1,3 +1,17 @@
+<?php
+
+include_once '../../controller/Restaurantcontroller.php';
+
+
+$Reasturantcontroller = new Reasturantcontroller();
+$reservs = $Reasturantcontroller->GetAllReservation();
+$errmsg="";
+
+?>
+
+
+
+
 <!DOCTYPE html>
 
 <!-- =========================================================
@@ -80,22 +94,22 @@
 
               <ul class="menu-sub">
                 <li class="menu-item">
-                  <a href="add New session.php" class="menu-link">
+                  <a href="add New session.html" class="menu-link">
                     <div data-i18n="Without menu">New Session</div>
                   </a>
                 </li>
                 <li class="menu-item">
-                  <a href="add New Product.php" class="menu-link">
+                  <a href="add New Product.html" class="menu-link">
                     <div data-i18n="Without navbar">New Product</div>
                   </a>
                 </li>
                 <li class="menu-item">
-                  <a href="add New photo.php" class="menu-link">
+                  <a href="add New photo.html" class="menu-link">
                     <div data-i18n="Container">New Photo</div>
                   </a>
                 </li>
                 <li class="menu-item">
-                  <a href="add New exibit.php" class="menu-link">
+                  <a href="add New exibit.html" class="menu-link">
                     <div data-i18n="Fluid">New Exibit</div>
                   </a>
                 </li>
@@ -108,23 +122,27 @@
               </a>
              <ul class="menu-sub">
               <li class="menu-item">
-                <a href="member List.php" class="menu-link">
+                <a href="member List.html" class="menu-link">
                   <div data-i18n="Without menu">members</div>
                 </a>
               </li>
               <li class="menu-item">
-                <a href="purchased tickets.php" class="menu-link">
+                <a href="purchased tickets.html" class="menu-link">
                   <div data-i18n="Without navbar">purchased tickets</div>
                 </a>
               </li>
-              
               <li class="menu-item">
-                <a href="reserved tables.php" class="menu-link">
+                <a href="feedback List.html" class="menu-link">
+                  <div data-i18n="Without navbar">feedback</div>
+                </a>
+              </li>
+              <li class="menu-item">
+                <a href="reserved tables.html" class="menu-link">
                   <div data-i18n="Without navbar">booked tables</div>
                 </a>
               </li>
               <li class="menu-item">
-                <a href="reserved tables.php" class="menu-link">
+                <a href="reserved tables.html" class="menu-link">
                   <div data-i18n="Without navbar">booked tables</div>
                 </a>
               </li>
@@ -167,34 +185,26 @@
                       </tr>
                     </thead>
                     <tbody class="table-border-bottom-0">
-                      <tr>
-                        <td><i class="fab fa-angular fa-lg text-danger me-3"></i>djbdsshjshdb@gmail.com</td>
-                        <td>Betengan Me5alel</td>
-                        <td> 011564789</td>
-                        <td>10/4</td>
-                        <td>12:30</td>
-                        <td>5</td>
-                        <td>none</td>
-                                         
-                      </tr>
-                      <tr>
-                        <td><i class="fab fa-angular fa-lg text-danger me-3"></i>djbdsshjshdb@gmail.com</td>
-                        <td>ezbar m8lyh</td>
-                        <td> 011564789</td>
-                        <td>10/4</td>
-                        <td>12:30</td>
-                        <td>5</td>
-                        <td>none</td>
-                      <tr>
-                        <td><i class="fab fa-angular fa-lg text-danger me-3"></i>djbdsshjshdb@gmail.com</td>
-                        <td>Betengan Me5alel</td>
-                        <td> 011564789</td>
-                        <td>10/4</td>
-                        <td>12:30</td>
-                        <td>5</td>
-                        <td>none</td>
+                     
+                      <?php 
+                      foreach($reservs as $reserv){
+                        ?> 
                         
-                      </tr>
+                        <tr>
+                    <td><i class="fab fa-angular fa-lg text-danger me-3"></i><?php echo $reserv['Email'] ?></td>
+                                            <td><?php echo $reserv['First_Name'] ?></td>
+                                            <td> <?php echo $reserv['phone_no'] ?></td>
+                                            <td><?php echo $reserv['date'] ?></td>
+                                            <td><?php echo $reserv['booking_time'] ?></td>
+                                            <td><?php echo $reserv['Num_of_people'] ?></td>
+                                            <td><?php echo $reserv['msg']?> </td>
+                                              </tr>
+                        <?php
+                      }
+                      
+                      ?>
+                       
+                                         
                       
                     </tbody>
                   </table>
