@@ -1,6 +1,3 @@
-<?php
-
-?>
 <!DOCTYPE html>
 	<html lang="zxx" class="no-js">
 	<head>
@@ -49,7 +46,7 @@
 				  			</ul>
 				  		</div>	
 						  <div class="col-6 top-head-left">
-							<li><a href="profile.html"><i class='fa fa-user'></i></a></li>
+							<li><a href="profile.php"><i class='fa fa-user'></i></a></li>
 				  		</div>		  			
 			  		</div>
 			  	</div>
@@ -62,16 +59,16 @@
 				      <nav id="nav-menu-container">
 				        <ul class="nav-menu">
 				          <li class="menu-active"><a href="main.html">Home</a></li>
-				          <li><a href="gallery.html">Gallery</a></li>
-				          <li><a href="event.html">Events</a></li>
+				          <li><a href="gallery.php">Gallery</a></li>
+				          <li><a href="event.php">Events</a></li>
 				      
-				          <li><a href="Reserve restaurant.html">Restaurant</a></li>
-						  <li><a href="Membership.html">Membership</a></li>
-						  <li><a href="reserve study room.html">Study Rooms</a></li>
-				          <li><a href="contact.html">Contact</a></li>
+				          <li><a href="Reserve restaurant.php">Restaurant</a></li>
+						  <li><a href="Membership.php">Membership</a></li>
+						  <li><a href="reserve study room.php">Study Rooms</a></li>
+				          <li><a href="contact.php">Contact</a></li>
 						 
-						  <li><a href="allproducts_shop.html">Shop</a></li>
-						  <li><a href="donation.html">Donate</a></li>
+						  <li><a href="allproducts_shop.php">Shop</a></li>
+						  <li><a href="donation.php">Donate</a></li>
 						  <li><a href="feedback.php">FeedBack</a></li>
 				          	          
 				        </ul>
@@ -111,20 +108,7 @@
 				<div class="card mb-4">
 					<div class="card-body">
 	 <form action="send.php" method="post">
-						<div class="mb-3">
-		  <label class="form-label" for="basic-icon-default-fullname">Full Name</label>
-		  <div class="input-group input-group-merge">
-			
-			<input
-			  type="text"
-			  class="form-control"
-			  id="basic-icon-default-fullname"
-			  placeholder="John Doe"
-			  aria-label="John Doe"
-			  aria-describedby="basic-icon-default-fullname2"
-			/>
-		  </div>
-		</div>
+						
 		 
 		<div class="mb-3">
 		  <label class="form-label" for="basic-default-email">Email</label>
@@ -140,16 +124,7 @@
 		  <div class="form-text">You can use letters, numbers & periods</div>
 		</div>
 		
-		<div class="mb-3">
-		  <label class="form-label" for="basic-default-phone">subject</label>
-		  <input
-		  name="subject" 
-			type="text"
-			id="basic-default-phone"
-			class="form-control phone-mask"
-			placeholder="subject"
-		  />
-		</div>
+		
 
 							<div class="mb-3">
 								<label class="form-label"
@@ -163,9 +138,9 @@
 										aria-describedby="basic-icon-default-message2"
 										/>
 								</div>
-							</div>
-							
-						   <div class="text-center w-100 "> <button type="submit" name="send" class="btn ">Send</button></div>
+							</div>	
+						   <button type="submit" name="send" class="btn ">Send</button>
+
 	 </form>
 					</div>
 				</div>

@@ -2,12 +2,12 @@
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
-include_once 'phpmailer/src/Exception.php';
+require 'phpmailer/src/Exception.php';
 require 'phpmailer/src/PHPMailer.php';
 require 'phpmailer/src/SMTP.php';
 
 
-if (isset($_post["send"])){
+if (isset($_POST["send"])){
 
 $mail = new PHPMailer(true);
 
@@ -20,15 +20,16 @@ $mail->SMTPSecure = 'ssl';
 $mail->Port = 465;
 
 
+
 $mail->setFrom('theegyptiaanmuseum@gmail.com');
 
-$mail->addAddress($_post["email"]);
+$mail->addAddress('theegyptiaanmuseum@gmail.com');
 
 $mail->isHTML(true);
 
-$mail->Subject = $_post["Subject"];
+$mail->Subject = $_POST["email"];
 
-$mail->Body = $_post["message"];
+$mail->Body = $_POST["message"];
 
 $mail->send();
 
