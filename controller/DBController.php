@@ -49,7 +49,7 @@ public function select($query) {
 }
 
 public function insert($data) {
-    $this->connect();
+    
     $result = $this->connection->query($data);
     if (!$result){
        echo "error : " . mysqli_error($this->connection);
