@@ -1,16 +1,42 @@
 <?php
 require_once '../module/Membership.php';
+require_once '../controller/membercontroller.php';
+require_once '../controller/DBController.php';
+$errMsg1 = "";
 
 
-if (isset($_POST['name']) && isset($_POST['country']) && isset($_POST['address']) && isset($_POST['email']) && isset($_POST['phonenumber']) && isset($_POST['mtype'])) {
-	$form = new Membership;
-	$form->setname($_POST['name']);
-	$form->setcountry($_POST['country']);
-	$form->setaddress($_POST['address']);
-	$form->setemail($_POST['email']);
-	$form->setphonenumber($_POST['phonenumber']);
-	$form->setmtype($_POST['mtype']);
-	echo 'name' . $form->getname();
+
+
+if (isset($_POST['name']) && isset($_POST['country']) && isset($_POST['address']) && isset($_POST['email']) && isset($_POST['phonenumber']) && isset($_POST['mtype']) && isset($_POST['user_id'])) {
+	if (!empty($_POST["name"]) && !empty($_POST["country"]) && !empty($_POST["address"]) && !empty($_POST["email"]) && !empty($_POST["phonenumber"]) && !empty($_POST["mtype"]) && !empty($_POST["user_id"])) {
+		$form = new Membership;
+		$form->setname($_POST['name']);
+		$form->setcountry($_POST['country']);
+		$form->setaddress($_POST['address']);
+		$form->setemail($_POST['email']);
+		$form->setphonenumber($_POST['phonenumber']);
+		$form->setmtype($_POST['mtype']);
+		$form->setuserid($_POST['user_id']);
+		$m = new memberController;
+		$m->set_member($form);
+
+	} else {
+		$errMsg1 = "Please fill all fields";
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+} else {
+	echo 'values not sent';
 }
 
 
@@ -119,12 +145,15 @@ if (isset($_POST['name']) && isset($_POST['country']) && isset($_POST['address']
 
 	<!-----------------------------------------------START CODE----------------------------------------->
 	<section>
-		<form method="POST" action="Membership.php">
+		<form method="post" action="Membership.php">
 			<div class="content-wrapper">
 				<!-- Content -->
 
 				<div class="container-xxl flex-grow-1 container-p-y">
 					<h4 class="fw-bold py-3 mb-4" style="margin-top: 50px;margin-left: 380px;">Membership Details </h4>
+					<h5 style="margin-left: 700px; color: red; font-size: large;">
+						<?php echo $errMsg1 ?>
+					</h5>
 
 					<div class="row">
 						<!-- Basic -->
@@ -137,6 +166,12 @@ if (isset($_POST['name']) && isset($_POST['country']) && isset($_POST['address']
 										<span class="input-group-text" id="basic-addon11">Name</span>
 										<input type="text" class="form-control" aria-label="Name" aria-describedby="basic-addon11"
 											name="name" />
+									</div>
+									<div class="input-group" style="    margin-top: 2rem !important;
+			margin-bottom: 0 !important;">
+										<span class="input-group-text" id="basic-addon11">User ID</span>
+										<input type="text" class="form-control" aria-label="Name" aria-describedby="basic-addon11"
+											name="user_id" />
 									</div>
 									<div class="mb-3" style="    margin-top: 2rem !important;
 			margin-bottom: 0 !important;">
@@ -486,9 +521,9 @@ if (isset($_POST['name']) && isset($_POST['country']) && isset($_POST['address']
 										<select class="form-select" id="exampleFormControlSelect1" aria-label="Default select example"
 											name="mtype">
 											<option value="">Please Select</option>
-											<option value="United States">Standard ($100)</option>
-											<option value="Afghanistan">Premeium ($200)</option>
-											<option value="Albania">Ultimate ($300)</option>
+											<option>Standard ($100)</option>
+											<option>Premeium ($200)</option>
+											<option>Ultimate ($300)</option>
 										</select>
 									</div>
 

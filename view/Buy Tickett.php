@@ -1,3 +1,48 @@
+<?php
+include "../module/reserved_ticket.php";
+include "../Controller/Ticketcontroller.php";
+include "../module/user.php";
+include "../Controller/UserController.php";
+session_start();
+$errmsg = "";
+if (isset($_POST['name']) && isset($_POST['email']) && isset($_POST['mobile']) && isset($_POST['Exhibition']) && isset($_POST['date']) && isset($_POST['price']) && isset($_POST['travelars'])) {
+	$reservedticket1 = new Reserved_ticket;
+	$ticketcontroller = new Ticket_controlloer;
+	$reservedticket1->set_Quantity($_POST['travelars']);
+	$reservedticket1->set_Date($_POST['date']);
+	$reservedticket1->set_price($_POST['price']);
+	$user1 = new UserController;
+	$usersinfo = $user1->getuser();
+	foreach ($usersinfo as $userinfo):
+		if ($userinfo['Email'] == $_POST['email']) {
+			$reservedticket1->set_User_id($userinfo['user_id']);
+			// $_SESSION["errmsg"] = "Your information are saved";
+		}
+	endforeach;
+	foreach ($usersinfo as $userinfo):
+		if ($userinfo['Email'] == $_POST['email'] && $userinfo['Admin_check'] == 1) {
+			$reservedticket1->set_MS_Discount(0.1);
+			$reservedticket1->set_price($reservedticket1->get_price() * 0.9);
+		} else if ($userinfo['Email'] == $_POST['email'] && $userinfo['Admin_check'] != 1) {
+			$reservedticket1->set_MS_Discount(0); //visitor
+		}
+	endforeach;
+	$ticketcontroller->reserve_ticket($reservedticket1);
+
+}
+// if (isset($_POST['Emaill'])) {
+// 	$ticketcontroller1 = new Ticket_controlloer;
+// 	$user2 = new UserController;
+// 	$usersinfo = $user2->getuser();
+// 	foreach ($usersinfo as $userinfo):
+// 		if ($userinfo['Email'] == $_POST['Emaill']) {
+// 			$ticketcontroller1->delete_ticket($userinfo['user_id']);
+// 			echo $userinfo['user_id'];
+// 		}
+// 	endforeach;
+// }
+
+?>
 
 <!DOCTYPE html>
 <html lang="zxx" class="no-js">
@@ -54,46 +99,46 @@
 	<header id="header" id="home">
 		<div class="container header-top">
 			<div class="row">
-				
-			  
+
+
 				<div class="col-6 top-head-right">
 					<ul>
 						<li><a href="#"><i class="fa fa-facebook"></i></a></li>
-					  <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-					  <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
-					  <li><a href="#"><i class="fa fa-behance"></i></a></li>
+						<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+						<li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+						<li><a href="#"><i class="fa fa-behance"></i></a></li>
 					</ul>
-				</div>	
+				</div>
 				<div class="col-6 top-head-left">
-				  <li><a href="profile.php"><i class='fa fa-user'></i></a></li>
-				</div>		  			
+					<li><a href="profile.php"><i class='fa fa-user'></i></a></li>
+				</div>
 			</div>
 		</div>
 		<hr>
-	  <div class="container">
-		  <div class="row align-items-center justify-content-between d-flex">
-			<div id="logo">
-			  <a href="main.html"><img src="img/logo-transparent-png.png"  alt="" title="" /></a>
+		<div class="container">
+			<div class="row align-items-center justify-content-between d-flex">
+				<div id="logo">
+					<a href="main.html"><img src="img/logo-transparent-png.png" alt="" title="" /></a>
+				</div>
+				<nav id="nav-menu-container">
+					<ul class="nav-menu">
+						<li class="menu-active"><a href="main.html">Home</a></li>
+						<li><a href="gallery.php">Gallery</a></li>
+						<li><a href="event.php">Events</a></li>
+
+						<li><a href="Reserve restaurant.html">Restaurant</a></li>
+						<li><a href="Membership.php">Membership</a></li>
+						<li><a href="reserve study room.php">Study Rooms</a></li>
+						<li><a href="contact.php">Contact</a></li>
+
+						<li><a href="allproducts_shop.php">Shop</a></li>
+						<li><a href="donation.php">Donate</a></li>
+						<li><a href="feedback.php">FeedBack</a></li>
+
+					</ul>
+				</nav><!-- #nav-menu-container -->
 			</div>
-			<nav id="nav-menu-container">
-			  <ul class="nav-menu">
-				<li class="menu-active"><a href="main.html">Home</a></li>
-				<li><a href="gallery.php">Gallery</a></li>
-				<li><a href="event.php">Events</a></li>
-			
-				<li><a href="Reserve restaurant.html">Restaurant</a></li>
-				<li><a href="Membership.php">Membership</a></li>
-				<li><a href="reserve study room.php">Study Rooms</a></li>
-				
-			   
-				<li><a href="allproducts_shop.php">Shop</a></li>
-				<li><a href="donation.php">Donate</a></li>
-				<li><a href="feedback.php">FeedBack</a></li>
-							  
-			  </ul>
-			</nav><!-- #nav-menu-container -->		    		
-		  </div>
-	  </div>
+		</div>
 	</header><!-- #header -->
 
 
@@ -141,13 +186,14 @@
 								<div class="col-md-6 grid-margin stretch-card">
 									<div class="card">
 										<div class="card-body">
-											<form class="forms-sample">
+											<form class="forms-sample" action="Buy Tickett.php" method="POST">
 												<div class="form-group row">
 													<label for="exampleInputUsername2" class="col-sm-3 col-form-label"
 														style="font-weight: 700;    color: #697a8d;">Name</label>
 													<div class="col-sm-9" style="    margin-top: 10px;">
-														<input type="text" class="form-control"
-															id="exampleInputUsername2" placeholder="Username">
+														<input required type="text" class="form-control"
+															id="exampleInputConfirmPassword2" name="name"
+															placeholder="your name" required>
 													</div>
 												</div>
 												<div class="form-group row">
@@ -155,15 +201,17 @@
 														style="font-weight: 700;   color: #697a8d;">Email</label>
 													<div class="col-sm-9" style="    margin-top: 10px;">
 														<input required type="email" class="form-control"
-															id="exampleInputEmail2" placeholder="Email">
+															id="exampleInputConfirmPassword2" name="email"
+															placeholder="Email" required>
 													</div>
 												</div>
 												<div class="form-group row">
 													<label for="exampleInputMobile" class="col-sm-3 col-form-label"
 														style="font-weight: 700;    color: #697a8d;">Mobile</label>
 													<div class="col-sm-9" style="    margin-top: 10px;">
-														<input type="text" class="form-control" id="exampleInputMobile"
-															placeholder="Mobile number">
+														<input required type="text" class="form-control"
+															id="exampleInputConfirmPassword2" name="mobile"
+															placeholder="Phone number" required>
 													</div>
 												</div>
 												<div class="form-group row">
@@ -172,43 +220,63 @@
 														style="font-weight: 700;    color: #697a8d;">Exhibition</label>
 													<div class="col-sm-9" style="    margin-top: 10px;">
 														<input required type="text" class="form-control"
-															id="exampleInputConfirmPassword2"
-															placeholder="Exhibition name">
+															id="exampleInputConfirmPassword2" name="Exhibition"
+															placeholder="Exhibition name" required>
 													</div>
 												</div>
 												<div class="form-group row">
 													<label for="exampleInputConfirmPassword2"
 														class="col-sm-3 col-form-label"
-														style="font-weight: 700;    color: #697a8d;">Date</label>
+														style="font-weight: 700;    color: #697a8d;"
+														required>Date</label>
 													<div class="col-sm-9" style="    margin-top: 10px;">
-														<input type="date" class="form-control"
-															id="exampleInputConfirmPassword2" placeholder="Date"
-															value="2021-06-18">
+														<input required type="date" class="form-control"
+															id="exampleInputConfirmPassword2" name="date"
+															placeholder="Date" required>
 													</div>
 												</div>
 												<div class="form-group row">
 													<label for="exampleInputConfirmPassword2"
 														class="col-sm-3 col-form-label"
-														style="font-weight: 700;    color: #697a8d;">Time</label>
+														style="font-weight: 700;    color: #697a8d;"
+														required>Price</label>
 													<div class="col-sm-9" style="    margin-top: 10px;">
-														<input type="time" class="form-control" value="12:30:00"
-															id="exampleInputConfirmPassword2" placeholder="Time">
+														<input required type="text" class="form-control"
+															id="exampleInputConfirmPassword2" name="price"
+															placeholder="price of ticket" required>
 													</div>
 												</div>
 												<div class="form-group row">
-													<label for="exampleInputConfirmPassword2"
-														class="col-sm-3 col-form-label"
-														style="font-weight: 700;    color: #697a8d;">Travelers</label>
+													<label for="exampleInputUsername2" class="col-sm-3 col-form-label"
+														style="font-weight: 700;    color: #697a8d;">Travelars</label>
 													<div class="col-sm-9" style="    margin-top: 10px;">
-														<input type="text" class="form-control"
-															id="exampleInputConfirmPassword2"
-															placeholder="Number of Travelers">
+														<input required type="text" required class="form-control"
+															id="exampleInputConfirmPassword2" name="travelars"
+															placeholder="number of tickets">
 													</div>
 												</div>
 												<button class="btn btn-light" style="background-color: #a38c07;"
 													style="font-weight:bolder;"><span style="font-size: medium;">Buy
 														Ticket</span></button>
 												<button class="btn btn-light">Cancel</button>
+											</form>
+										</div>
+									</div>
+									<div class="card">
+										<div class="card-body">
+											<form class="forms-sample" action="Buy Tickett.php" method="POST">
+												<div class="form-group row">
+													<label for="exampleInputEmail2" class="col-sm-3 col-form-label"
+														style="font-weight: 700;   color: #697a8d;">Email</label>
+													<div class="col-sm-9" style="    margin-top: 10px;">
+														<input required type="email" class="form-control"
+															id="exampleInputConfirmPassword2" name="Emaill"
+															placeholder="Email" required>
+													</div>
+												</div>
+												<button class="btn btn-light" style="background-color: #a38c07;"
+													style="font-weight:bolder;"><span style="font-size: medium;">Delete
+														Ticket</span></button>
 											</form>
 										</div>
 									</div>
@@ -258,9 +326,8 @@
 								<input class="form-control" name="EMAIL" placeholder="Enter Email"
 									onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Email '"
 									required="" type="email">
-								<button class="click-btn btn btn-default"><span
-									class="lnr lnr-arrow-right"></span>
-										</button>
+								<button class="click-btn btn btn-default"><span class="lnr lnr-arrow-right"></span>
+								</button>
 								<div style="position: absolute; left: -5000px;">
 									<input name="b_36c4fd991d266f23781ded980_aefe40901a" tabindex="-1" value=""
 										type="text">

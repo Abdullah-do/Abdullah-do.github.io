@@ -192,7 +192,7 @@ $errmsg="";
                         
                         <tr>
                     <td><i class="fab fa-angular fa-lg text-danger me-3"></i><?php echo $reserv['Email'] ?></td>
-                                            <td><?php echo $reserv['First_Name'] ?></td>
+                                            <td><?php echo $reserv['User_Name'] ?></td>
                                             <td> <?php echo $reserv['phone_no'] ?></td>
                                             <td><?php echo $reserv['date'] ?></td>
                                             <td><?php echo $reserv['booking_time'] ?></td>
