@@ -3,6 +3,7 @@ include '../controller/DBController.php';
 include '../module/user.php';
 include '../controller/AuthController.php';
 
+$errMsg1="";
 $errMsg="";
 
 if(isset($_GET["logout"]))
@@ -24,7 +25,7 @@ if(isset($_POST["id"]) && isset($_POST["password"]))
             {
                 session_start();
             }
-            $errMsg=$_SESSION["errMsg"];
+            $errMsg1=$_SESSION["errMsg"];
         }
         else
         {
@@ -43,7 +44,7 @@ if(isset($_POST["id"]) && isset($_POST["password"]))
 	}
 }
 	else {
-		$errMsg="Please fill all fields";
+		$errMsg1="Please fill all fields";
 	}
 }
 if(isset($_POST["username"]) && isset($_POST["userId"]) && isset($_POST["age"]) && isset($_POST["phone"]) && isset($_POST["nation"]) && isset($_POST["email"]) && isset($_POST["pass"]))
@@ -95,6 +96,7 @@ if(isset($_POST["username"]) && isset($_POST["userId"]) && isset($_POST["age"]) 
 	<div class="form-container sign-up-container">
 		<form action="index.php" method="POST" >
 			<h1>Create Account</h1>
+			<h5><?php echo $errMsg ?></h5>
 			<input type="text" name="username" placeholder="Name" />
             <input type="text" name ="userId" placeholder="ID" />
             <input type="text" name="age" placeholder="Age" />
@@ -102,15 +104,15 @@ if(isset($_POST["username"]) && isset($_POST["userId"]) && isset($_POST["age"]) 
             <input type="text" name="nation" placeholder="Nationality" />
 			<input type="email" name="email" placeholder="Email" />
 			<input type="password" name="pass" placeholder="Password" />
-			<button type="submit">Sign Up</button>
+			<button type="submit">Sign Up</button>  
 		</form>
 	</div>
 	<div class="form-container sign-in-container">
 		<form action="index.php" method="POST">
 			<h1>Sign in</h1>
+			<h5><?php echo $errMsg1 ?></h5>
 			<input type="text" name ="id" placeholder="ID" />
 			<input type="password" name ="password" placeholder="Password" />
-			<a href="forget.php">Forgot your password?</a>
 			<button type="submit">Sign in</button>
 		</form>
 	</div>

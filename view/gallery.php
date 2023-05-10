@@ -1,4 +1,17 @@
-
+<?php
+session_start();
+	if(!isset($_SESSION["useRole"]))
+	{
+		if($_SESSION["userRole"]!="Admin"){
+		header("location:../view/index.php");
+		}
+	}
+	else{
+		if($_SESSION["userRole"]!="Admin"){
+			header("location:../view/index.php");
+			}
+	}
+?>
 <!DOCTYPE html>
 <html lang="zxx" class="no-js">
 

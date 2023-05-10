@@ -1,5 +1,16 @@
 <?php
-
+session_start();
+if(!isset($_SESSION["useRole"]))
+{
+    if($_SESSION["userRole"]!="Admin"){
+    header("location:../view/index.php");
+    }
+}
+else{
+    if($_SESSION["userRole"]!="Admin"){
+        header("location:../view/index.php");
+        }
+}
 
 require_once "../../module/product.php";
 require_once "../../controller/productcontroller.php";
@@ -220,7 +231,7 @@ if(isset($_POST["name"])&&isset($_POST["money"])&&isset($_POST["Quantity"])&&iss
             <div class="mb-3">
                 <label for="exampleFormControlSelect1" class="form-label">Category</label>
                 <select class="form-select" name ="type" id="exampleFormControlSelect1" aria-label="Default select example">
-                <option value="clothing">clothin</option>
+                <option value="clothing">clothing</option>
                   <option value="replica">replica</option>
                   <option value="jewellery">jewellery</option>
                 </select>

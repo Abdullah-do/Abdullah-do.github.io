@@ -9,13 +9,11 @@ if(isset($_POST['name'] ) && isset( $_POST['id']) && isset($_POST['price']) && i
 	{
 		$donate->setAmount($_POST['price']);
 		$donate->setComment($_POST['comment']);
-		$donate->setId($_POST['id']);
 		$donate->setName($_POST['name']);
-		$DC->set_donation($donate->getId(),$donate->getAmount(),$donate->getComment());
+		$DC->set_donation($donate->getAmount(),$donate->getComment());
 	}
 	else{
 		$nameErr    ="enter name" ;
-	    $idErr   ="enter id";
 		$priceErr  = "enter price";
 		$commentErr = "enter comment";
 	}
@@ -145,10 +143,10 @@ $email;
                         </div>
                       
                         <div class="mb-3">
-                          <label class="form-label" for="basic-default-email">id</label>
+                          <label class="form-label" for="basic-default-email">Email</label>
                           <div class="input-group input-group-merge">
                             <input
-                              type="number"
+                              type="email"
 							  name="id"
                               id="basic-default-email"
                               class="form-control"

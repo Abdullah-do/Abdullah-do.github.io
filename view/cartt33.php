@@ -163,7 +163,7 @@
 										<div class="col">&euro; 60.00 <span class="close">&#10005;</span></div>
 									</div>
 								</div>
-								<button class="btn">continue Shopping</button>
+								<a href="allproducts_shop.php"><button class="btn">continue Shopping</button></a>
 							</div>
 							<div class="col-md-4 summary">
 								<div><h5><b>Summary</b></h5></div>
@@ -182,7 +182,7 @@
 									<div class="col">TOTAL PRICE</div>
 									<div class="col text-right">&euro; 137.00</div>
 								</div>
-								<button class="btn">CHECKOUT</button>
+								<a href="add visa.php"><button class="btn">CHECKOUT</button></a>
 							</div>
 						</div>
 						
@@ -252,7 +252,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 				</div>
 			</footer>	
 			<!-- End footer Area -->		
-
+<script src="js3/js3.js"></script>
 			<script src="js/vendor/jquery-2.2.4.min.js"></script>
 			<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 			<script src="js/vendor/bootstrap.min.js"></script>			
