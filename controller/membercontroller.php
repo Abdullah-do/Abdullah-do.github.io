@@ -21,7 +21,7 @@ class memberController
 
     // $idd = $user->getId();
     // $passs = $user->getPass();
-    $query = "insert into member values ('',$userid,'$name',1,'$phone','$address','$country','$email')";
+    $query = "insert into member values ('',$userid,'$mtype','$name','$country','$address','$email','$phone')";
     $result = $this->db->insert($query);
     // // $this->DB = DataBase::getInstance();
     // $query = "INSERT INTO `donations` (`D_id`, `User_id`, `Amount`, `comment`) VALUES ('NULL', '$id', '$price', '$comment')";
