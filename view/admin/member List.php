@@ -191,7 +191,7 @@
                         <td><i class="fab fa-angular fa-lg text-danger me-3"></i> 202151452156</td>
                         <td>Betengan Me5alel</td>
                         <td>djbdsshjshdb@gmail.com</td>
-                        <td>25</td>
+                       
                         <td>
                           Normal
                         </td>
