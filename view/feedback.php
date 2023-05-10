@@ -110,7 +110,7 @@
 			<div class="col-xl">
 				<div class="card mb-4">
 					<div class="card-body">
-						<form>
+						<form action="send.php">
 						<div class="mb-3">
 		  <label class="form-label" for="basic-icon-default-fullname">Full Name</label>
 		  <div class="input-group input-group-merge">
@@ -131,6 +131,7 @@
 		<div class="input-group input-group-merge">
 			<input
 			  type="text"
+			  name="Email"
 			  id="basic-default-email"
 			  class="form-control"
 			  placeholder="john.doe"
@@ -145,6 +146,7 @@
 		<div class="mb-3">
 		  <label class="form-label" for="basic-default-phone">subject</label>
 		  <input
+		  name="subject" 
 			type="text"
 			id="basic-default-phone"
 			class="form-control phone-mask"
@@ -158,6 +160,7 @@
 								<div class="input-group input-group-merge">
 									
 									<textarea id="basic-icon-default-message" class="form-control"
+									name="message"
 										placeholder="Hi, Do you have a moment to talk Joe?"
 										aria-label="Hi, Do you have a moment to talk Joe?"
 										aria-describedby="basic-icon-default-message2"></textarea>
