@@ -1,5 +1,16 @@
 <?php
-
+session_start();
+if(!isset($_SESSION["useRole"]))
+{
+    if($_SESSION["userRole"]!="Admin"){
+    header("location:../view/index.php");
+    }
+}
+else{
+    if($_SESSION["userRole"]!="Admin"){
+        header("location:../view/index.php");
+        }
+}
 
 require_once "../../module/product.php";
 require_once "../../controller/productcontroller.php";
