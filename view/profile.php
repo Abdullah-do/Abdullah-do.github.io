@@ -1,4 +1,52 @@
+<?php
+require_once "../controller/ProfileController.php";
+require_once "../module/client.php";
+session_start();
+$ProfileController =new ProfileController();
+$id = $_SESSION["user_id"];
 
+$info = $ProfileController->GetAlluserinfo($id);
+if(isset($_POST["firstName"])&&isset($_POST["email"])&&isset($_POST["pass"])
+&&isset($_POST["age"])&&isset($_POST["phoneNumber"])&&isset($_POST["nation"])){
+
+  if(!empty($_POST["firstName"])&&!empty($_POST["email"])&&!empty($_POST["pass"])
+  &&!empty($_POST["age"])&&!empty($_POST["phoneNumber"])&&!empty($_POST["nation"])){
+  $Client = new Client();
+  $Client->setName($_POST["firstName"]);
+  $Client->setEmail($_POST["email"]);
+  $Client->setPass($_POST["pass"]);
+  $Client->setAge($_POST["age"]);
+  $Client->setPhone($_POST["phoneNumber"]);
+  $Client->setNationality($_POST["nation"]);
+  
+    if($ProfileController->updateuser($Client,$id)){
+
+    }
+    else
+    $errmsg="somthing wrong";
+  }
+  
+  
+}
+  
+
+if(isset($_POST["card holder name"])&&isset($_POST["cvv"])&&isset($_POST["visa_number"])){
+  if(!empty($_POST["card holder name"])&&!empty($_POST["cvv"])&&!empty($_POST["visa_number"])){
+  $Client = new Client();
+  $Client->setcard_date($_POST["Expired_Date"]);
+  $Client->setcard_holder_name($_POST["card holder name"]);
+  $Client->setvisa_cvv($_POST["cvv"]);
+  $Client->setvisa_number($_POST["visa_number"]);
+  if($ProfileController->updatevisa($Client,$id)){
+
+  }
+  else
+    $errmsg="somthing wrong";
+
+}
+}
+
+?>
 <!DOCTYPE html>
 <html lang="zxx" class="no-js">
 
@@ -73,7 +121,7 @@
 						<li><a href="Reserve restaurant.html">Restaurant</a></li>
 						<li><a href="Membership.php">Membership</a></li>
 						<li><a href="reserve study room.php">Study Rooms</a></li>
-						
+						<li><a href="contact.php">Contact</a></li>
 
 						<li><a href="allproducts_shop.php">Shop</a></li>
 						<li><a href="donation.php">Donate</a></li>
@@ -123,55 +171,23 @@
                   <div class="card mb-4">
                     <h5 class="card-header">Profile Details</h5>
                     <!-- Account -->
-                    <div class="card-body">
-                      <div class="d-flex align-items-start align-items-sm-center gap-4">
-                        <img
-                          src="img/c2.jpg"
-                          alt="user-avatar"
-                          class="d-block rounded"
-                          height="100"
-                          width="100"
-                          id="uploadedAvatar"
-                        />
-                        <div class="button-wrapper">
-                          <label for="upload" class="btn btn-primary me-2 mb-4" tabindex="0">
-                            <span class="d-none d-sm-block">Upload new photo</span>
-                            <i class="bx bx-upload d-block d-sm-none"></i>
-                            <input
-                              type="file"
-                              id="upload"
-                              class="account-file-input"
-                              hidden
-                              accept="image/png, image/jpeg"
-                            />
-                          </label>
-                          <button type="button" class="btn btn-outline-secondary account-image-reset mb-4">
-                            <i class="bx bx-reset d-block d-sm-none"></i>
-                            <span class="d-none d-sm-block">Reset</span>
-                          </button>
-
-                          <p class="text-muted mb-0">Allowed JPG, GIF or PNG. Max size of 800K</p>
-                        </div>
-                      </div>
-                    </div>
+                   
                     <hr class="my-0" />
                     <div class="card-body">
-                      <form id="formAccountSettings" method="POST" onsubmit="return false">
+                      <form id="formAccountSettings" method="POST" enctype ="multipart/form-data" action ="profile.php">
                         <div class="wor">
                           <div class="mb-3 col-md-6">
-                            <label for="firstName" class="form-label">First Name</label>
+                            <label for="firstName" class="form-label">Name</label>
                             <input
                               class="form-control"
                               type="text"
                               id="firstName"
                               name="firstName"
-                              value="John"
-                              autofocus
+                              
+                              value="<?php echo $info[0]["User_Name"];?>"
+                              
+                             
                             />
-                          </div>
-                          <div class="mb-3 col-md-6">
-                            <label for="lastName" class="form-label">Last Name</label>
-                            <input class="form-control" type="text" name="lastName" id="lastName" value="Doe" />
                           </div>
                           <div class="mb-3 col-md-6">
                             <label for="email" class="form-label">E-mail</label>
@@ -180,8 +196,7 @@
                               type="text"
                               id="email"
                               name="email"
-                              value="john.doe@example.com"
-                              placeholder="john.doe@example.com"
+                              value="<?php echo $info[0]["Email"]?>"
                             />
                           </div>
                           <div class="mb-3 col-md-6">
@@ -191,9 +206,9 @@
                               <input
                                 type="text"
                                 id="phoneNumber"
-                                name="phoneNumber"
+                                name="pass"
                                 class="form-control"
-                                
+                                value="<?php echo $info[0]["password"] ?>"
                               />
                             </div>
                           <div class="mb-3 col-md-6">
@@ -203,8 +218,9 @@
                               class="form-control"
                               id="age"
                               name="age"
-                              placeholder="20"
+                              
                               maxlength="3"
+                              value = "<?php echo $info[0]["age"]?>"
                             />
                           </div>
                           <div class="mb-3 col-md-6">
@@ -216,28 +232,14 @@
                                 id="phoneNumber"
                                 name="phoneNumber"
                                 class="form-control"
-                                placeholder="01111111111"
+                                value = "<?php echo $info[0]["phone_no"]?>"
                               />
                             </div>
                           </div>
-                          
-                          
-                          
-                         <div class="mb-3 col-md-6">
-                            <label for="zipCode" class="form-label">ID</label>
-                           <input
-                              type="text"
-                              class="form-control"
-                              id="userID"
-                              name="userID"
-                              placeholder="5466"
-                              maxlength="15"
-                            />
-                          </div>
                           <div class="mb-3 col-md-6">
                             <label class="form-label" for="country">nationalty</label>
-                            <select id="country" class="select2 form-select">
-                              <option value="">Select</option>
+                            <select id="country" class="select2 form-select" name ="nation">
+                              <option value = ""><?php echo $info[0]["nationality"]?></option>
                               <option value="Australia">Australia</option>
                               <option value="Bangladesh">Bangladesh</option>
                               <option value="Belarus">Belarus</option>
@@ -248,7 +250,6 @@
                               <option value="Germany">Germany</option>
                               <option value="India">India</option>
                               <option value="Indonesia">Indonesia</option>
-                              <option value="Israel">Israel</option>
                               <option value="Italy">Italy</option>
                               <option value="Japan">Japan</option>
                               <option value="Korea">Korea, Republic of</option>
@@ -270,7 +271,8 @@
                             <input
                               class="form-control"
                               type="date"
-                              
+                              name = "card_date"
+                              value="<?php echo $info[0]["Expired_Date"]?>"
                             />
                           </div>
                           <div class="mb-3 col-md-6">
@@ -280,8 +282,8 @@
                               type="text"
                               id="card holder name"
                               name="card holder name"
-                              value="john"
-                              placeholder="john"
+                              value="<?php echo $info[0]["Card_Holder_Name"]?>"
+                              
                             />
                           </div>
                           <div class="mb-3 col-md-6">
@@ -290,9 +292,10 @@
                               type="text"
                               class="form-control"
                               id="age"
-                              name="age"
-                              placeholder="202"
+                              name="cvv"
+                              value="<?php echo $info[0]["Cvv"]?>"
                               maxlength="3"
+                              
                             />
                           </div>
                          <div class="mb-3 col-md-6">
@@ -301,9 +304,10 @@
                               type="text"
                               class="form-control"
                               id="age"
-                             name="age"
-                              placeholder="2205 5501 1100 0111"
+                             name="visa_number"
+
                               maxlength="16"
+                              value="<?php echo $info[0]["Visa_number"]?>"
                             />
                           </div>
                         </div>
@@ -316,31 +320,7 @@
                     </div>
                     <!-- /Account -->
                   </div>
-                  <div class="card">
-                    <h5 class="card-header">Delete Account</h5>
-                    <div class="card-body">
-                      <div class="mb-3 col-12 mb-0">
-                        <div class="alert alert-warning">
-                          <h6 class="alert-heading fw-bold mb-1">Are you sure you want to delete your account?</h6>
-                          <p class="mb-0">Once you delete your account, there is no going back. Please be certain.</p>
-                        </div>
-                      </div>
-                      <form id="formAccountDeactivation" onsubmit="return false">
-                        <div class="form-check mb-3">
-                          <input
-                            class="form-check-input"
-                            type="checkbox"
-                            name="accountActivation"
-                            id="accountActivation"
-                          />
-                          <label class="form-check-label" for="accountActivation"
-                            >I confirm my account deactivation</label
-                          >
-                        </div>
-                        <button type="submit" class="btn btn-danger deactivate-account">Deactivate Account</button>
-                      </form>
-                    </div>
-                  </div>
+                  
                 </div>
               </div>
             </div>
