@@ -187,9 +187,7 @@ A study room dedicated to ancient Egypt can be a great way to introduce kids to 
 								<div>
 								<p class = "details"><?php echo $Session["S_details"]?></p>
 								</div>
-								<div>
-									<input type = "submit" class = "btn" value ="Book">
-								</div>
+								
 							</div>
 						</div>
 
