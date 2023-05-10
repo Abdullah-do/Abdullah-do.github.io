@@ -24,7 +24,7 @@ class AuthController
             } else {
                 session_start();
                 $_SESSION["user_id"] = $result[0]["user_id"];
-                $_SESSION["userName"] = $result[0]["First_Name"] + $result[0]["Last_Name"];
+                $_SESSION["userName"] = $result[0]["User_Name"];
                 if ($result[0]["Admin_check"] == 1) {
                     $_SESSION["userRole"] = "Admin";
                 } else {
