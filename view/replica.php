@@ -184,7 +184,7 @@ $errmsg="";
 										</div>
 										<!-- Product actions-->
 										<div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-											<div class="text-center"><a class="btn btn-outline-dark mt-auto" href="Oval Hieroglyphs Stud Earrings.php">add to cart</a></div>
+											<div class="text-center"><a class="btn btn-outline-dark mt-auto" href="Oval Hieroglyphs Stud Earrings.php">View options</a></div>
 										</div>
 									</div>
 								</div>
