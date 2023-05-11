@@ -118,7 +118,7 @@ if(isset($_POST["card holder name"])&&isset($_POST["cvv"])&&isset($_POST["visa_n
 						<li><a href="gallery.php">Gallery</a></li>
 						<li><a href="event.php">Events</a></li>
 
-						<li><a href="Reserve restaurant.html">Restaurant</a></li>
+						<li><a href="Reserve restaurant.php">Restaurant</a></li>
 						<li><a href="Membership.php">Membership</a></li>
 						<li><a href="reserve study room.php">Study Rooms</a></li>
 						<li><a href="contact.php">Contact</a></li>

@@ -1,6 +1,6 @@
 <?php
 
-require_once "C:/xampp/htdocs/Abdullah-do.github.io-index/module/Session.php";
+require_once "C:/xampp/htdocs/Abdullah-do.github.io/module/Session.php";
 require_once "DBController.php";
 
 

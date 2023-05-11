@@ -1,3 +1,5 @@
+
+<?php
 require_once "../controller/Restaurantcontroller.php";
 require_once "../module/Reservation.php";
 
@@ -116,7 +118,7 @@ if(isset($_POST["id"])&&isset($_POST["date"])&&isset($_POST["time"])&&isset($_PO
 						<li><a href="gallery.php">Gallery</a></li>
 						<li><a href="event.php">Events</a></li>
 
-						<li><a href="Reserve restaurant.html">Restaurant</a></li>
+						<li><a href="Reserve restaurant.php">Restaurant</a></li>
 						<li><a href="Membership.php">Membership</a></li>
 						<li><a href="reserve study room.php">Study Rooms</a></li>
 						<li><a href="contact.php">Contact</a></li>

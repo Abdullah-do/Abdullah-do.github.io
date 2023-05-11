@@ -64,7 +64,7 @@
 				          <li><a href="gallery.php">Gallery</a></li>
 				          <li><a href="event.php">Events</a></li>
 				      
-				          <li><a href="Reserve restaurant.html">Restaurant</a></li>
+				          <li><a href="Reserve restaurant.php">Restaurant</a></li>
 						  <li><a href="Membership.php">Membership</a></li>
 						  <li><a href="reserve study room.php">Study Rooms</a></li>
 				          

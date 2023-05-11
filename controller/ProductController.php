@@ -1,6 +1,6 @@
 <?php
-require_once 'D:\xam\htdocs\Abdullah-do.github.io\controller\DBController.php';
-include_once 'D:\xam\htdocs\Abdullah-do.github.io\module\product.php';
+require_once 'C:/xampp/htdocs/Abdullah-do.github.io/controller/DBController.php';
+include_once 'C:/xampp/htdocs/Abdullah-do.github.io/module/product.php';
 class ProductController{
 protected $db;
 public function getCategories(){

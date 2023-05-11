@@ -1,6 +1,6 @@
 <?php
 
-require_once "C:/xampp/htdocs/Abdullah-do.github.io-index/module/Reservation.php";
+require_once "C:/xampp/htdocs/Abdullah-do.github.io/module/Reservation.php";
 require_once "DBController.php";
 
 class Reasturantcontroller{

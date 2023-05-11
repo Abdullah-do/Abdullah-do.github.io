@@ -1,17 +1,6 @@
 <?php
 
-session_start();
-    if(!isset($_SESSION["useRole"]))
-    {
-        if($_SESSION["userRole"]!="Admin"){
-        header("location:../view/index.php");
-        }
-    }
-    else{
-        if($_SESSION["userRole"]!="Admin"){
-            header("location:../view/index.php");
-            }
-    }
+
 
 include_once '../controller/VisaController.php';
 
@@ -112,7 +101,7 @@ if(isset($_POST['name'] ) && isset( $_POST['date']) && isset($_POST['cvv']) && i
 				          <li><a href="gallery.php">Gallery</a></li>
 				          <li><a href="event.php">Events</a></li>
 				      
-				          <li><a href="Reserve restaurant.html">Restaurant</a></li>
+				          <li><a href="Reserve restaurant.php">Restaurant</a></li>
 						  <li><a href="Membership.php">Membership</a></li>
 						  <li><a href="reserve study room.php">Study Rooms</a></li>
 				          

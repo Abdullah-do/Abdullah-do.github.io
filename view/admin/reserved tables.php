@@ -99,17 +99,17 @@ $errmsg="";
                   </a>
                 </li>
                 <li class="menu-item">
-                  <a href="add New Product.html" class="menu-link">
+                  <a href="add New product.php" class="menu-link">
                     <div data-i18n="Without navbar">New Product</div>
                   </a>
                 </li>
                 <li class="menu-item">
-                  <a href="add New photo.html" class="menu-link">
+                  <a href="add New photo.php" class="menu-link">
                     <div data-i18n="Container">New Photo</div>
                   </a>
                 </li>
                 <li class="menu-item">
-                  <a href="add New exibit.html" class="menu-link">
+                  <a href="add New exibit.php" class="menu-link">
                     <div data-i18n="Fluid">New Exibit</div>
                   </a>
                 </li>
@@ -122,20 +122,16 @@ $errmsg="";
               </a>
              <ul class="menu-sub">
               <li class="menu-item">
-                <a href="member List.html" class="menu-link">
+                <a href="member List.php" class="menu-link">
                   <div data-i18n="Without menu">members</div>
                 </a>
               </li>
               <li class="menu-item">
-                <a href="purchased tickets.html" class="menu-link">
+                <a href="purchased tickets.php" class="menu-link">
                   <div data-i18n="Without navbar">purchased tickets</div>
                 </a>
               </li>
-              <li class="menu-item">
-                <a href="feedback List.html" class="menu-link">
-                  <div data-i18n="Without navbar">feedback</div>
-                </a>
-              </li>
+              
               <li class="menu-item">
                 <a href="reserved tables.html" class="menu-link">
                   <div data-i18n="Without navbar">booked tables</div>
