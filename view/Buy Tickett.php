@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <?php
 include "../module/reserved_ticket.php";
 include "../Controller/Ticketcontroller.php";
@@ -44,6 +45,8 @@ if (isset($_POST['name']) && isset($_POST['email']) && isset($_POST['mobile']) &
 // }
 
 ?>
+=======
+>>>>>>> parent of f757b96 (Delete Buy Tickett.php)
 =======
 >>>>>>> parent of f757b96 (Delete Buy Tickett.php)
 
@@ -103,6 +106,7 @@ if (isset($_POST['name']) && isset($_POST['email']) && isset($_POST['mobile']) &
 		<div class="container header-top">
 			<div class="row">
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 				<div class="col-6 top-head-right">
@@ -144,6 +148,8 @@ if (isset($_POST['name']) && isset($_POST['email']) && isset($_POST['mobile']) &
 			</div>
 		</div>
 =======
+=======
+>>>>>>> parent of f757b96 (Delete Buy Tickett.php)
 				
 			  
 				<div class="col-6 top-head-right">
@@ -184,6 +190,9 @@ if (isset($_POST['name']) && isset($_POST['email']) && isset($_POST['mobile']) &
 			</nav><!-- #nav-menu-container -->		    		
 		  </div>
 	  </div>
+<<<<<<< HEAD
+>>>>>>> parent of f757b96 (Delete Buy Tickett.php)
+=======
 >>>>>>> parent of f757b96 (Delete Buy Tickett.php)
 	</header><!-- #header -->
 
@@ -233,7 +242,11 @@ if (isset($_POST['name']) && isset($_POST['email']) && isset($_POST['mobile']) &
 									<div class="card">
 										<div class="card-body">
 <<<<<<< HEAD
+<<<<<<< HEAD
 											<form class="forms-sample" action="Buy Tickett.php" method="POST">
+=======
+											<form class="forms-sample">
+>>>>>>> parent of f757b96 (Delete Buy Tickett.php)
 =======
 											<form class="forms-sample">
 >>>>>>> parent of f757b96 (Delete Buy Tickett.php)
@@ -242,9 +255,14 @@ if (isset($_POST['name']) && isset($_POST['email']) && isset($_POST['mobile']) &
 														style="font-weight: 700;    color: #697a8d;">Name</label>
 													<div class="col-sm-9" style="    margin-top: 10px;">
 <<<<<<< HEAD
+<<<<<<< HEAD
 														<input required type="text" class="form-control"
 															id="exampleInputConfirmPassword2" name="name"
 															placeholder="your name" required>
+=======
+														<input type="text" class="form-control"
+															id="exampleInputUsername2" placeholder="Username">
+>>>>>>> parent of f757b96 (Delete Buy Tickett.php)
 =======
 														<input type="text" class="form-control"
 															id="exampleInputUsername2" placeholder="Username">
@@ -257,8 +275,12 @@ if (isset($_POST['name']) && isset($_POST['email']) && isset($_POST['mobile']) &
 													<div class="col-sm-9" style="    margin-top: 10px;">
 														<input required type="email" class="form-control"
 <<<<<<< HEAD
+<<<<<<< HEAD
 															id="exampleInputConfirmPassword2" name="email"
 															placeholder="Email" required>
+=======
+															id="exampleInputEmail2" placeholder="Email">
+>>>>>>> parent of f757b96 (Delete Buy Tickett.php)
 =======
 															id="exampleInputEmail2" placeholder="Email">
 >>>>>>> parent of f757b96 (Delete Buy Tickett.php)
@@ -269,9 +291,14 @@ if (isset($_POST['name']) && isset($_POST['email']) && isset($_POST['mobile']) &
 														style="font-weight: 700;    color: #697a8d;">Mobile</label>
 													<div class="col-sm-9" style="    margin-top: 10px;">
 <<<<<<< HEAD
+<<<<<<< HEAD
 														<input required type="text" class="form-control"
 															id="exampleInputConfirmPassword2" name="mobile"
 															placeholder="Phone number" required>
+=======
+														<input type="text" class="form-control" id="exampleInputMobile"
+															placeholder="Mobile number">
+>>>>>>> parent of f757b96 (Delete Buy Tickett.php)
 =======
 														<input type="text" class="form-control" id="exampleInputMobile"
 															placeholder="Mobile number">
@@ -285,8 +312,13 @@ if (isset($_POST['name']) && isset($_POST['email']) && isset($_POST['mobile']) &
 													<div class="col-sm-9" style="    margin-top: 10px;">
 														<input required type="text" class="form-control"
 <<<<<<< HEAD
+<<<<<<< HEAD
 															id="exampleInputConfirmPassword2" name="Exhibition"
 															placeholder="Exhibition name" required>
+=======
+															id="exampleInputConfirmPassword2"
+															placeholder="Exhibition name">
+>>>>>>> parent of f757b96 (Delete Buy Tickett.php)
 =======
 															id="exampleInputConfirmPassword2"
 															placeholder="Exhibition name">
@@ -297,6 +329,7 @@ if (isset($_POST['name']) && isset($_POST['email']) && isset($_POST['mobile']) &
 													<label for="exampleInputConfirmPassword2"
 														class="col-sm-3 col-form-label"
 <<<<<<< HEAD
+<<<<<<< HEAD
 														style="font-weight: 700;    color: #697a8d;"
 														required>Date</label>
 													<div class="col-sm-9" style="    margin-top: 10px;">
@@ -304,17 +337,23 @@ if (isset($_POST['name']) && isset($_POST['email']) && isset($_POST['mobile']) &
 															id="exampleInputConfirmPassword2" name="date"
 															placeholder="Date" required>
 =======
+=======
+>>>>>>> parent of f757b96 (Delete Buy Tickett.php)
 														style="font-weight: 700;    color: #697a8d;">Date</label>
 													<div class="col-sm-9" style="    margin-top: 10px;">
 														<input type="date" class="form-control"
 															id="exampleInputConfirmPassword2" placeholder="Date"
 															value="2021-06-18">
+<<<<<<< HEAD
+>>>>>>> parent of f757b96 (Delete Buy Tickett.php)
+=======
 >>>>>>> parent of f757b96 (Delete Buy Tickett.php)
 													</div>
 												</div>
 												<div class="form-group row">
 													<label for="exampleInputConfirmPassword2"
 														class="col-sm-3 col-form-label"
+<<<<<<< HEAD
 <<<<<<< HEAD
 														style="font-weight: 700;    color: #697a8d;"
 														required>Price</label>
@@ -332,6 +371,8 @@ if (isset($_POST['name']) && isset($_POST['email']) && isset($_POST['mobile']) &
 															id="exampleInputConfirmPassword2" name="travelars"
 															placeholder="number of tickets">
 =======
+=======
+>>>>>>> parent of f757b96 (Delete Buy Tickett.php)
 														style="font-weight: 700;    color: #697a8d;">Time</label>
 													<div class="col-sm-9" style="    margin-top: 10px;">
 														<input type="time" class="form-control" value="12:30:00"
@@ -346,6 +387,9 @@ if (isset($_POST['name']) && isset($_POST['email']) && isset($_POST['mobile']) &
 														<input type="text" class="form-control"
 															id="exampleInputConfirmPassword2"
 															placeholder="Number of Travelers">
+<<<<<<< HEAD
+>>>>>>> parent of f757b96 (Delete Buy Tickett.php)
+=======
 >>>>>>> parent of f757b96 (Delete Buy Tickett.php)
 													</div>
 												</div>
@@ -356,6 +400,7 @@ if (isset($_POST['name']) && isset($_POST['email']) && isset($_POST['mobile']) &
 											</form>
 										</div>
 									</div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 									<div class="card">
 										<div class="card-body">
@@ -375,6 +420,8 @@ if (isset($_POST['name']) && isset($_POST['email']) && isset($_POST['mobile']) &
 											</form>
 										</div>
 									</div>
+=======
+>>>>>>> parent of f757b96 (Delete Buy Tickett.php)
 =======
 >>>>>>> parent of f757b96 (Delete Buy Tickett.php)
 								</div>
@@ -424,8 +471,14 @@ if (isset($_POST['name']) && isset($_POST['email']) && isset($_POST['mobile']) &
 									onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Email '"
 									required="" type="email">
 <<<<<<< HEAD
+<<<<<<< HEAD
 								<button class="click-btn btn btn-default"><span class="lnr lnr-arrow-right"></span>
 								</button>
+=======
+								<button class="click-btn btn btn-default"><span
+									class="lnr lnr-arrow-right"></span>
+										</button>
+>>>>>>> parent of f757b96 (Delete Buy Tickett.php)
 =======
 								<button class="click-btn btn btn-default"><span
 									class="lnr lnr-arrow-right"></span>
